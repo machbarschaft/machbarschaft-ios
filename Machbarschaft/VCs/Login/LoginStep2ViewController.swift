@@ -21,6 +21,12 @@ class LoginStep2ViewController: UIViewController {
         
     }
     
+    @IBAction func confirm(_ sender: Any) {
+        // TODO: validations here
+        
+        performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
+    }
+    
     @IBAction func dismissVC(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
