@@ -84,6 +84,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - OverlayContainer (3.3.0)
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
@@ -91,6 +92,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - M13Checkbox
+  - OverlayContainer
 
 SPEC REPOS:
   trunk:
@@ -111,6 +113,7 @@ SPEC REPOS:
     - leveldb-library
     - M13Checkbox
     - nanopb
+    - OverlayContainer
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -131,8 +134,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  OverlayContainer: d48ca33fbefe91dc2943622c4a5a8ea2b8d16ead
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 6df66fe2f872812ff8c17940de3b3f26bb02fb3e
+PODFILE CHECKSUM: 5f95ba6fa423a538ba3b96967ef5fd230f6c8e4a
 
 COCOAPODS: 1.8.4

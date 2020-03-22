@@ -11,5 +11,6 @@ target 'Machbarschaft' do
   pod 'Firebase/Database'
 
   pod 'M13Checkbox'
+  pod 'OverlayContainer'
 
 end
