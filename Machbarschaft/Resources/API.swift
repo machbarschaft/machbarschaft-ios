@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import CoreLocation
 
 class APIClass {
     
@@ -51,6 +52,33 @@ class APIClass {
         }
         return result
     }
+    
+    func getOrdersInArea(location: CLLocationCoordinate2D, range: Double) -> Any? {
+        var result : Any?
+        
+        let locationBounds = getEdgeCoordinates(midCoordinate: location, distance: range)
+        
+        let docRef = db.collection("Order")
+        docRef.whereField("lat", isLessThan: locationBounds.upperBound.latitude)
+        docRef.whereField("lat", isGreaterThan: locationBounds.lowerBound.latitude)
+        docRef.whereField("lng", isLessThan: locationBounds.rightBound.longitude)
+        docRef.whereField("lng", isGreaterThan: locationBounds.leftBound.longitude)
+        
+        docRef.getDocuments { (document, error) in
+            if let error = error {
+                print("Error getting documents: \(error)")
+                    result = nil
+                } else {
+                    for document in document!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                    result = document!.documents
+                }
+            }
+        return result
+    }
+        
+    
     
     // Flag withStatus can be omitted, then all Statuses are called.
     // Status e.g. "open"
