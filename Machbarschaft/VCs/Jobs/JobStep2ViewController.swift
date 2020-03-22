@@ -23,7 +23,7 @@ class JobStep2ViewController: UIViewController {
     }
     
     @IBAction func leavingNow(_ sender: Any) {
-        
+        performSegue(withIdentifier: "JobStep2_to_JobStep3", sender: nil)
     }
     
     @IBAction func leavingLater(_ sender: Any) {
@@ -32,5 +32,17 @@ class JobStep2ViewController: UIViewController {
     
     @IBAction func couldntReachAnyone(_ sender: Any) {
         
+    }
+    
+    @IBAction func callNow(_ sender: Any) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let dest = segue.destination as? JobStep3ViewController {
+            dest.job = job
+        }
     }
 }
