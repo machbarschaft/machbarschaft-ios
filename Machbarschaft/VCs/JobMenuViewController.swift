@@ -28,6 +28,11 @@ class JobMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let api = API
+        api?.loadJobs(completion: { (jobs) in
+            self.jobs = jobs
+            self.tableView.reloadData()
+        })
     }
     
     @IBAction func setSorting(_ button: UIButton) {
