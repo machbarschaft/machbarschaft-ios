@@ -10,4 +10,6 @@ target 'Machbarschaft' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
 
+  pod 'M13Checkbox'
+
 end
