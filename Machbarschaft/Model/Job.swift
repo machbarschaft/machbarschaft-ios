@@ -62,6 +62,7 @@ struct Job {
     var city: String
     var zip: String
     var location: CLLocationCoordinate2D?
+    var distanceInMeters: Int
     var street: String
     var houseNumber: String
     var description: String?
