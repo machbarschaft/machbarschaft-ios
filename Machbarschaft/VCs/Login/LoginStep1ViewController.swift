@@ -11,6 +11,7 @@ import UIKit
 class LoginStep1ViewController: SuperViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var phoneNumberErrorLabel: UILabel!
     @IBOutlet weak var areaCodeButton: UIButton!
     
     let handler: RegisterHandler = RegisterHandler()

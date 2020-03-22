@@ -13,20 +13,19 @@ import Firebase
 class LoginStep3ViewController: SuperViewController {
     
     @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var firstNameErrorLabel: UILabel!
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var lastNameErrorLabel: UILabel!
     @IBOutlet weak var identTextField: UITextField!
+    @IBOutlet weak var identErrorLabel: UILabel!
     
     @IBOutlet weak var termsCheckbox: M13Checkbox!
+    @IBOutlet weak var termsErrorLabel: UILabel!
     
     let handler:RegisterHandler = RegisterHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    @IBAction func useCurrentLocation(_ sender: Any) {
         
     }
     
