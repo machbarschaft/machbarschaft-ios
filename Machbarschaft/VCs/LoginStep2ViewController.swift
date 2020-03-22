@@ -10,8 +10,14 @@ import UIKit
 
 class LoginStep2ViewController: UIViewController {
     
+    @IBOutlet weak var codeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    @IBAction func requestNewCode(_ sender: Any) {
         
     }
     

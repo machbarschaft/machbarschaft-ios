@@ -10,6 +10,8 @@ import UIKit
 
 class LoginStep1ViewController: UIViewController {
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
