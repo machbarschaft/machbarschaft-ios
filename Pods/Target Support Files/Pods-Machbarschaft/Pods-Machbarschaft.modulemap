@@ -1,0 +1,6 @@
+framework module Pods_Machbarschaft {
+  umbrella header "Pods-Machbarschaft-umbrella.h"
+
+  export *
+  module * { export * }
+}
