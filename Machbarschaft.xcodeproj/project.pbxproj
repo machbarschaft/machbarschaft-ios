@@ -12,6 +12,7 @@
 		5387D71E095CA6CBB47918DC /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
+		88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE72427BB1300DFD022 /* SuperViewController.swift */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
@@ -40,6 +41,7 @@
 		176EAB662427B564005217CA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
+		88082CE72427BB1300DFD022 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperViewController.swift; path = Machbarschaft/VCs/SuperViewController.swift; sourceTree = SOURCE_ROOT; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				176EAB662427B564005217CA /* API.swift */,
 				176EAB642427B55B005217CA /* GeoFunctions.swift */,
+				88082CE72427BB1300DFD022 /* SuperViewController.swift */,
 				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
 				88BF97F42427A84C005D8C23 /* Libraries */,
 				88EA564C242762F50070B407 /* AppDelegate.swift */,
@@ -314,6 +317,7 @@
 			files = (
 				176EAB672427B564005217CA /* API.swift in Sources */,
 				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
+				88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */,

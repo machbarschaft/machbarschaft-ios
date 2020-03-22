@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginStep1ViewController: UIViewController {
+class LoginStep1ViewController: SuperViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     let handler:RegisterHandler = RegisterHandler()

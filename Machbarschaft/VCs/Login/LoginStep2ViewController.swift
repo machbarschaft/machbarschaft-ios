@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class LoginStep2ViewController: UIViewController {
+class LoginStep2ViewController: SuperViewController {
     
     @IBOutlet weak var codeTextField: UITextField!
     
