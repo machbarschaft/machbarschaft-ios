@@ -12,6 +12,9 @@ import FirebaseAuth
 
 public class RegisterHandler{
     
+    //Initialise Database
+    let db = Firestore.firestore()
+    
     //Function to send a request code
     public func requestCode(phoneNumber: String){
         
@@ -26,6 +29,36 @@ public class RegisterHandler{
             
         }
         
+    }
+    
+    //TODO: Function that checks if an account associated to UID exists
+    
+    //Function that creates an account
+    public func createAccount(user: User, completion: @escaping (Bool) -> Void){
+                
+        //Add Valus to Database
+        var ref: DocumentReference? = nil
+        ref = db.collection("Account").addDocument(data: [
+            "uid": user.uid,
+            "credits": user.credits,
+            "first_name": user.first_name,
+            "last_name": user.last_name,
+            "radius": user.radius,
+            "phone": user.phone
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+                completion(false)
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+                
+                //Write document ID to UserDefaults
+                UserDefaults.standard.set(ref!.documentID, forKey: "docID")
+                
+                completion(true)
+            }
+        }
+       
     }
     
 }

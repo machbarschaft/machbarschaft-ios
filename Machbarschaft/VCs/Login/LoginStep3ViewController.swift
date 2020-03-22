@@ -8,6 +8,7 @@
 
 import UIKit
 import M13Checkbox
+import Firebase
 
 class LoginStep3ViewController: SuperViewController {
     
@@ -17,6 +18,8 @@ class LoginStep3ViewController: SuperViewController {
     @IBOutlet weak var identTextField: UITextField!
     
     @IBOutlet weak var termsCheckbox: M13Checkbox!
+    
+    let handler:RegisterHandler = RegisterHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +41,31 @@ class LoginStep3ViewController: SuperViewController {
     @IBAction func signup(_ sender: Any) {
         // TODO: validations here
         
-        performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
+        //Add textfield data to user struct
+        let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
+                             credits: 0,
+                             first_name: firstNameTextField.text!,
+                             last_name: lastNameTextField.text!,
+                             radius: 0,
+                             phone: UserDefaults.standard.string(forKey: "phone")!)
+        
+        //Create account
+        //TODO: Show loading circle
+        handler.createAccount(user: userInput){ success in
+            
+            if success{
+                
+                self.performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
+                
+            }else{
+                
+                //Show error message
+                print("Error creating account")
+                
+            }
+            
+        }
+        
     }
     
     @IBAction func dismissVC(_ sender: Any) {

@@ -13,6 +13,8 @@ import FirebaseAuth
 class LoginStep2ViewController: SuperViewController {
     
     @IBOutlet weak var codeTextField: UITextField!
+    let handler:RegisterHandler = RegisterHandler()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +48,26 @@ class LoginStep2ViewController: SuperViewController {
             
             // User is signed in
             // ...
+            print("Phone number authentication successful!")
+            
+            //Get user id and save it to UserDefaults
+            let userID:String = (authResult?.user.uid)!
+            UserDefaults.standard.set(userID, forKey: "UID")
+
+            //Check if Phone number is registered
             if authResult?.additionalUserInfo!.isNewUser ?? true {
-                print("New user!")
+
+                //Go to register view 3
+                self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
+                
             }else{
                 
+                //GOTO: MapView
                 return
-                
             }
-            //Connect to Database
             
         }
         
-        performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
     }
     
     @IBAction func dismissVC(_ sender: Any) {
