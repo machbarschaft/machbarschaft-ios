@@ -9,6 +9,8 @@ target 'Machbarschaft' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   pod 'M13Checkbox'
   pod 'OverlayContainer'
