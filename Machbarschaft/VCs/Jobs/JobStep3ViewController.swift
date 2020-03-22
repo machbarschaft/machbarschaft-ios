@@ -17,9 +17,7 @@ class JobStep3ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        isModalInPresentation = true
-        
+                
         jobSummaryLabel.text = "\(job.type.title) für \(job.clientName)"
     }
     
@@ -29,5 +27,9 @@ class JobStep3ViewController: UIViewController {
     
     @IBAction func callNow(_ sender: Any) {
         
+    }
+    
+    @IBAction func completeJob(_ sender: Any) {
+        performSegue(withIdentifier: "JobStep3_to_JobCompleted", sender: nil)
     }
 }

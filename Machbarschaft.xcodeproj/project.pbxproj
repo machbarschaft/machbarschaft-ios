@@ -18,6 +18,7 @@
 		88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */; };
 		88082CF1242821D800DFD022 /* JobStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF0242821D800DFD022 /* JobStep2ViewController.swift */; };
 		88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF22428267F00DFD022 /* JobStep3ViewController.swift */; };
+		88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF4242827E500DFD022 /* JobCompletedViewController.swift */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
@@ -53,6 +54,7 @@
 		88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep1ViewController.swift; sourceTree = "<group>"; };
 		88082CF0242821D800DFD022 /* JobStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep2ViewController.swift; sourceTree = "<group>"; };
 		88082CF22428267F00DFD022 /* JobStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep3ViewController.swift; sourceTree = "<group>"; };
+		88082CF4242827E500DFD022 /* JobCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCompletedViewController.swift; sourceTree = "<group>"; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */,
 				88082CF0242821D800DFD022 /* JobStep2ViewController.swift */,
 				88082CF22428267F00DFD022 /* JobStep3ViewController.swift */,
+				88082CF4242827E500DFD022 /* JobCompletedViewController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
 				88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */,
 				88082CF1242821D800DFD022 /* JobStep2ViewController.swift in Sources */,
+				88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,

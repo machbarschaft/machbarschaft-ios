@@ -16,9 +16,7 @@ class JobStep2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        isModalInPresentation = true
-        
+                
         jobSummaryLabel.text = "\(job.type.title) für \(job.clientName)"
     }
     

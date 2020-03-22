@@ -667,7 +667,6 @@
                                 <state key="normal" title="Route berechnen"/>
                                 <connections>
                                     <action selector="getRoute:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="7OO-U3-5b9"/>
-                                    <action selector="leavingNow:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="ijd-QF-CA4"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="amR-gb-bYW">
@@ -677,7 +676,7 @@
                                 <rect key="frame" x="153" y="758" width="108" height="30"/>
                                 <state key="normal" title="Auftrag erledigt"/>
                                 <connections>
-                                    <action selector="leavingNow:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="jbK-55-DFJ"/>
+                                    <action selector="completeJob:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="jZy-0z-r8b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -713,20 +712,76 @@
                     <connections>
                         <outlet property="addressLabel" destination="FdT-p1-JWo" id="UCi-Qg-CN3"/>
                         <outlet property="jobSummaryLabel" destination="s0g-R1-5If" id="DMY-S9-2tS"/>
+                        <segue destination="hSF-Zt-HOg" kind="show" identifier="JobStep3_to_JobCompleted" id="ejS-ag-tdi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9u-md-QOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5721.739130434783" y="136.60714285714286"/>
         </scene>
+        <!--Job Completed View Controller-->
+        <scene sceneID="04N-pe-RD9">
+            <objects>
+                <viewController id="hSF-Zt-HOg" customClass="JobCompletedViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sTw-Cb-rgU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="ZGr-KA-jY9">
+                                <rect key="frame" x="87" y="217" width="240" height="240"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZGr-KA-jY9" secondAttribute="height" multiplier="1:1" id="a77-Ph-8AJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-sr-Vnx">
+                                <rect key="frame" x="94" y="497" width="226.5" height="95.5"/>
+                                <string key="text">Vielen Dank!
+Du bist toll!</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV4-Vb-D3I">
+                                <rect key="frame" x="175.5" y="692.5" width="63" height="30"/>
+                                <state key="normal" title="zur Karte">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissVC:" destination="hSF-Zt-HOg" eventType="touchUpInside" id="9fz-E7-Tqi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Green"/>
+                        <constraints>
+                            <constraint firstItem="ZGr-KA-jY9" firstAttribute="centerY" secondItem="sTw-Cb-rgU" secondAttribute="centerY" multiplier="0.8" id="RHa-TF-aPe"/>
+                            <constraint firstItem="tV4-Vb-D3I" firstAttribute="top" secondItem="2e3-sr-Vnx" secondAttribute="bottom" constant="100" id="WBP-e2-M77"/>
+                            <constraint firstItem="2e3-sr-Vnx" firstAttribute="top" secondItem="ZGr-KA-jY9" secondAttribute="bottom" constant="40" id="XXJ-Rs-ZPv"/>
+                            <constraint firstItem="2e3-sr-Vnx" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="YGl-E1-oRi"/>
+                            <constraint firstItem="tV4-Vb-D3I" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="h7a-dX-W1w"/>
+                            <constraint firstItem="ZGr-KA-jY9" firstAttribute="width" secondItem="sTw-Cb-rgU" secondAttribute="width" multiplier="0.57971" id="iyG-V2-7OX"/>
+                            <constraint firstItem="ZGr-KA-jY9" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="lbd-px-qhU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6e6-Cl-m7F"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kTE-QW-uCs"/>
+                    <connections>
+                        <outlet property="checkmarkIcon" destination="ZGr-KA-jY9" id="2PX-xo-0Y8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAP-CG-kxK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6382.608695652174" y="136.60714285714286"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.down" catalog="system" width="60" height="64"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="checkmark" width="512" height="512"/>
         <image name="flag.fill" catalog="system" width="64" height="60"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>
         <namedColor name="Green">
-            <color red="0.31099998950958252" green="0.61599999666213989" blue="0.19699999690055847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.31063044070000001" green="0.61567163469999997" blue="0.19704857470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
