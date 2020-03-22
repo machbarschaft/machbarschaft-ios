@@ -131,11 +131,8 @@ class APIClass {
             }
         return result
     }
-   
-    // Flag withStatus can be omitted, then all Statuses are called.
-    // Status e.g. "open"
-    func getAllOrders(withStatus : String? = nil) -> [Job]? {
-        var result : [Job]? = nil
+    
+    func loadJobs(withStatus : String? = nil, completion: @escaping (_ jobs: [Job]) -> Void) {
         let docRef = db.collection("Order")
         if withStatus != nil {
             docRef.whereField("status", isEqualTo: withStatus as Any)
@@ -143,21 +140,17 @@ class APIClass {
         docRef.getDocuments() { (document, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
-                result = nil
+                completion([])
             } else {
+                var jobs : [Job] = []
                 for document in document!.documents {
-                        let data = document.data()
-                        if let job = self.matchJobData(data: data) {
-                            if result == nil {
-                                result = []
-                            }
-                            result?.append(job)
-                        }
+                    let data = document.data()
+                    if let job = self.matchJobData(data: data) {
+                        jobs.append(job)
                     }
                 }
+                completion(jobs)
             }
-        return result
+        }
     }
-    
-    
 }
