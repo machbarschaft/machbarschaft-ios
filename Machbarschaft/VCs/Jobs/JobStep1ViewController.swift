@@ -10,12 +10,16 @@ import UIKit
 
 class JobStep1ViewController: UIViewController {
     
+    @IBOutlet weak var taskLabel: UILabel!
+    
     var job: Job!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         isModalInPresentation = true
+        
+        taskLabel.text = "Bitte besprich dich mit \(job.clientName)."
     }
     
     @IBAction func callNow(_ sender: Any) {
@@ -29,7 +33,7 @@ class JobStep1ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let dest = segue.destination as? JobStep1ViewController {
+        if let dest = segue.destination as? JobStep2ViewController {
             dest.job = job
         }
     }

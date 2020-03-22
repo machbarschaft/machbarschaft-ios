@@ -18,6 +18,8 @@ class JobStep2ViewController: UIViewController {
         super.viewDidLoad()
         
         isModalInPresentation = true
+        
+        jobSummaryLabel.text = "\(job.type.title) für \(job.clientName)"
     }
     
     @IBAction func leavingNow(_ sender: Any) {

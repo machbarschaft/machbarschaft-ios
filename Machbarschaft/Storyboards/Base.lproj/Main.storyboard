@@ -496,6 +496,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BCy-Pu-9Ox"/>
                     <connections>
+                        <outlet property="taskLabel" destination="25B-jv-tbg" id="eqR-eK-XZl"/>
                         <segue destination="gyZ-Az-pHO" kind="show" identifier="JobStep1_to_JobStep2" id="KxM-1E-rU0"/>
                     </connections>
                 </viewController>
