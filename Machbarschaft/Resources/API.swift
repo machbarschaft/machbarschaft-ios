@@ -31,14 +31,7 @@ class APIClass {
             case "EINKAUFEN": jobType = .groceries
             default: jobType = .misc
             }
-            switch jobType {
-            case .groceries:
-                description = "Lebensmittel"
-            case .medicine:
-                description = "Medikamente"
-            case .misc:
-                description = "Sonstiges"
-            }
+            description = jobType.title
         }
         if let urgencyX = data["urgency"] as? String {
            switch urgencyX.uppercased() {
