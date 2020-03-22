@@ -10,8 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-var userLocation : CLLocationCoordinate2D?
-
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -32,7 +30,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
-            userLocation = location.coordinate
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude - 0.006, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+            mapView.setRegion(region, animated: true)
+            mapView.showsUserLocation = true
         }
     }
     

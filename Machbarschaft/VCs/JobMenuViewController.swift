@@ -16,7 +16,7 @@ enum SortType {
 }
 
 
-class JobMenuViewController: UIViewController {
+class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var urgencyButton: UIButton!
     @IBOutlet weak var urgencyButtonIcon: UIImageView!
@@ -28,21 +28,33 @@ class JobMenuViewController: UIViewController {
     
     var sorting = SortType.urgency
     
-    var jobs = [
-        Job(jobID: 2, type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ibuprofen und Asthmaspray"),
-        Job(jobID: 1, type: .groceries, urgency: .today, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ich brauche Toastbrot, etwas Obst und Nudeln"),
-        Job(jobID: 3, type: .misc, urgency: .tomorrow, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Könnte mir jemand Sachen vom Baumarkt holen?")
-    ]
+    var jobs: [Job] = []
+    
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let api = API
-        api?.loadJobs(completion: { (jobs) in
-            self.jobs = jobs
-            self.sortJobs()
-            self.tableView.reloadData()
-        })
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            let userLocation = location.coordinate
+            
+            let api = API
+            api?.loadJobs(location: userLocation, completion: { (jobs) in
+                self.jobs = jobs
+                self.sortJobs()
+                self.tableView.reloadData()
+            })
+        }
     }
     
     @IBAction func setSorting(_ button: UIButton) {
@@ -70,8 +82,7 @@ class JobMenuViewController: UIViewController {
             jobs = jobs.sorted(by: { $0.urgency.rawValue < $1.urgency.rawValue })
         }
         else {
-            //TODO: Sort by distance as soon as we have the distance
-            jobs = jobs.sorted(by: { $0.urgency.rawValue > $1.urgency.rawValue })
+            jobs = jobs.sorted(by: { $0.distanceInMeters < $1.distanceInMeters })
         }
     }
 }
@@ -108,27 +119,23 @@ class JobMenuCell: UITableViewCell {
     
     func populate(for job: Job) {
         self.job = job
-        var distance : Int? = nil
-        if (job.location != nil) && (userLocation != nil) {
-            distance = getDistance(from: userLocation!, to: job.location!)
-        }
+        
         indexLabel.text = "\(job.jobID)"
         flagIcon.tintColor = job.urgency.color
         titleLabel.text = job.type.title
         descriptionLabel.text = job.description
-        if distance != nil {
-            switch distance! {
-            case 0...1000:
-                distanceLabel.text =  "\(distance!) m"
-            case 0...10000:
-                let kmDistance = Double(round(Double(distance!) / 100)) / 10
-                distanceLabel.text = "\(kmDistance) km"
-            default:
-                let kmDistance = Int(Double(distance!) / 1000)
-                distanceLabel.text = "\(kmDistance) km"
-            }
+        
+        var distance = job.distanceInMeters
+        switch distance {
+        case 0...1000:
+            distanceLabel.text =  "\(distance) m"
+        case 0...10000:
+            let kmDistance = Double(round(Double(distance) / 100)) / 10
+            distanceLabel.text = "\(kmDistance) km"
+        default:
+            let kmDistance = Int(Double(distance) / 1000)
+            distanceLabel.text = "\(kmDistance) km"
         }
-        else { distanceLabel.text = "" }
     }
     
 }

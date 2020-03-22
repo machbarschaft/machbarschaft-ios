@@ -13,8 +13,9 @@ import FirebaseAuth
 class LoginStep2ViewController: SuperViewController {
     
     @IBOutlet weak var codeTextField: UITextField!
-    let handler:RegisterHandler = RegisterHandler()
-
+    @IBOutlet weak var codeErrorLabel: UILabel!
+    
+    let handler: RegisterHandler = RegisterHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
