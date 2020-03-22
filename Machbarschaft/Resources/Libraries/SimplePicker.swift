@@ -18,14 +18,12 @@ struct SimplePicker {
     var data: [String] = []
     var data2D: [[String]] = []
     var presenter: UIViewController
-    
-    let storyboard = UIStoryboard(name: "Other", bundle: nil)
-    
+        
     func show(anchor: UIView, _ done: @escaping ((_ index: Int, _ value: String) -> Void) = { _, _ in }) {
         if type == .strings && data.isEmpty {
             print("WARNING: picker data for type ”strings” is empty – SimplePicker.show(), SimplePicker.swift")
         }
-        guard let picker = storyboard.instantiateViewController(withIdentifier: "SimplePicker") as? SimplePickerViewController else {
+        guard let picker = viewController(withID: "SimplePicker", from: "Other") as? SimplePickerViewController else {
             print("ERROR: cannot present picker: no view controller with identified ”SimplePicker” found in Modals.storybard – SimplePicker.show(), SimplePicker.swift")
             return
         }
@@ -42,7 +40,7 @@ struct SimplePicker {
         if type == .strings && data2D.isEmpty {
             print("WARNING: picker data for type ”strings” is empty – SimplePicker.show(), SimplePicker.swift")
         }
-        guard let picker = storyboard.instantiateViewController(withIdentifier: "SimplePicker") as? SimplePickerViewController else {
+        guard let picker = viewController(withID: "SimplePicker", from: "Other") as? SimplePickerViewController else {
             print("ERROR: cannot present picker: no view controller with identified ”SimplePicker” found in Modals.storybard – SimplePicker.show(), SimplePicker.swift")
             return
         }
