@@ -11,10 +11,20 @@ import UIKit
 class LoginStep1ViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func selectAreaCode(_ button: UIButton) {
+        guard let areaCodes = [AreaCode].parse(jsonFile: "area-codes")?.removingDuplicates() else { return }
+        var options = SimplePicker.Options()
+        options.initialItem = button.titleLabel?.text ?? "+49"
+        let picker = SimplePicker(options: options, data: areaCodes.compactMap { $0.dialCode }.sorted(), presenter: self)
+        picker.show(anchor: button) { (index, value) in
+            button.setTitle(value, for: .normal)
+        }
     }
     
     @IBAction func login(_ sender: Any) {
