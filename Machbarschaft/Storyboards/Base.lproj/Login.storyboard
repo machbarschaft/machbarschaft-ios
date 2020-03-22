@@ -37,14 +37,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
                                                 <state key="normal" title="Einlogggen"/>
                                                 <connections>
-                                                    <segue destination="xbK-Ih-dCw" kind="show" id="4ks-yA-b1y"/>
+                                                    <action selector="login:" destination="MOs-f0-hkT" eventType="touchUpInside" id="7Rg-1n-FpW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-FL-8qD">
                                                 <rect key="frame" x="157" y="0.0" width="83" height="30"/>
                                                 <state key="normal" title="Registrieren"/>
                                                 <connections>
-                                                    <segue destination="c1X-Sd-ANw" kind="show" id="9eT-jW-b2T"/>
+                                                    <action selector="register:" destination="MOs-f0-hkT" eventType="touchUpInside" id="f2D-If-Yc2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -76,7 +76,8 @@
                     <navigationItem key="navigationItem" id="XxF-Sy-XTa"/>
                     <connections>
                         <outlet property="phoneNumberTextField" destination="hcU-Mk-GKG" id="4qN-0u-edH"/>
-                        <outlet property="registerButton" destination="PUg-FL-8qD" id="n3A-tG-mE2"/>
+                        <segue destination="c1X-Sd-ANw" kind="show" identifier="LoginStep1_to_LoginStep2" id="lCF-cw-AEx"/>
+                        <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep1_to_Map" id="gSb-eg-wzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RaA-ms-uaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,7 +122,7 @@
                                 <rect key="frame" x="300" y="802" width="74" height="30"/>
                                 <state key="normal" title="Bestätigen"/>
                                 <connections>
-                                    <segue destination="gUr-og-wJQ" kind="show" id="u5c-zO-jqr"/>
+                                    <action selector="confirm:" destination="c1X-Sd-ANw" eventType="touchUpInside" id="wqo-iC-Nmo"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-dM-YeS" userLabel="back button">
@@ -176,6 +177,7 @@
                     <navigationItem key="navigationItem" id="02g-HU-va8"/>
                     <connections>
                         <outlet property="codeTextField" destination="jup-cO-LCu" id="jaa-NA-YYh"/>
+                        <segue destination="gUr-og-wJQ" kind="show" identifier="LoginStep2_to_LoginStep3" id="YA8-SE-G7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq3-K6-alm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -242,7 +244,7 @@
                                 <rect key="frame" x="305" y="802" width="69" height="30"/>
                                 <state key="normal" title="Anmelden"/>
                                 <connections>
-                                    <segue destination="xbK-Ih-dCw" kind="show" id="21E-rr-ah2"/>
+                                    <action selector="signup:" destination="gUr-og-wJQ" eventType="touchUpInside" id="bWb-ma-P0Q"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Basis-Informationen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed1-aX-cYz">
@@ -369,6 +371,7 @@
                         <outlet property="identTextField" destination="7DU-Vu-kwN" id="sdj-T0-Pqh"/>
                         <outlet property="lastNameTextField" destination="7hG-Si-VUg" id="fJL-7e-0xh"/>
                         <outlet property="termsCheckbox" destination="nRE-QG-Sm7" id="bmz-Fo-41V"/>
+                        <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep2_to_Map" id="tVP-bT-bXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mob-iu-mMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -457,6 +460,6 @@
         <image name="location" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4ks-yA-b1y"/>
+        <segue reference="gSb-eg-wzG"/>
     </inferredMetricsTieBreakers>
 </document>
