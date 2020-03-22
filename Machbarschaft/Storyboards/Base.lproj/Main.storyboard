@@ -40,20 +40,137 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Overlay View Controller-->
         <scene sceneID="NuP-ua-QEh">
             <objects>
-                <viewController id="xhK-OB-hVt" sceneMemberID="viewController">
+                <viewController id="xhK-OB-hVt" customClass="MapOverlayViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXL-CA-zIg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O8l-Tr-MXU">
+                                <rect key="frame" x="0.0" y="60" width="414" height="440"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-ER-67D">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-T6-cxt" userLabel="urgency button">
+                                        <rect key="frame" x="18" y="20" width="115" height="20"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vea-l5-JxE">
+                                                <rect key="frame" x="97" y="2" width="18" height="16"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="18" id="6Pn-4c-pGl"/>
+                                                    <constraint firstAttribute="width" secondItem="vea-l5-JxE" secondAttribute="height" multiplier="1:1" id="Rvq-Cy-VPO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pS3-lR-80A">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="20"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                                                <state key="normal" title="Dringlichkeit">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <state key="highlighted" title="Dringlichkeit">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setSorting:" destination="xhK-OB-hVt" eventType="touchUpInside" id="bpO-if-j0J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pS3-lR-80A" firstAttribute="leading" secondItem="zbd-T6-cxt" secondAttribute="leading" id="H70-OA-Rzz"/>
+                                            <constraint firstItem="pS3-lR-80A" firstAttribute="top" secondItem="zbd-T6-cxt" secondAttribute="top" id="Hr5-Y7-3DZ"/>
+                                            <constraint firstItem="pS3-lR-80A" firstAttribute="leading" secondItem="zbd-T6-cxt" secondAttribute="leading" id="Juy-zV-V26"/>
+                                            <constraint firstAttribute="bottom" secondItem="pS3-lR-80A" secondAttribute="bottom" id="QSZ-7e-ssX"/>
+                                            <constraint firstItem="vea-l5-JxE" firstAttribute="trailing" secondItem="pS3-lR-80A" secondAttribute="trailing" id="Ugx-M4-fbY"/>
+                                            <constraint firstItem="pS3-lR-80A" firstAttribute="top" secondItem="zbd-T6-cxt" secondAttribute="top" id="lrt-yY-BUU"/>
+                                            <constraint firstItem="vea-l5-JxE" firstAttribute="centerY" secondItem="pS3-lR-80A" secondAttribute="centerY" id="oFD-wM-hFs"/>
+                                            <constraint firstAttribute="trailing" secondItem="pS3-lR-80A" secondAttribute="trailing" id="sps-5t-qYa"/>
+                                            <constraint firstAttribute="bottom" secondItem="pS3-lR-80A" secondAttribute="bottom" id="vFV-UM-j0G"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-D7-k0F" userLabel="urgency button">
+                                        <rect key="frame" x="333" y="20" width="63" height="20"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-1K-HZe">
+                                                <rect key="frame" x="45" y="2" width="18" height="16"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="18" id="LKy-UB-SDJ"/>
+                                                    <constraint firstAttribute="width" secondItem="r2j-1K-HZe" secondAttribute="height" multiplier="1:1" id="fYw-a0-Pd3"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyq-al-z41">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="24" maxY="0.0"/>
+                                                <state key="normal" title="Nähe">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <state key="highlighted" title="Nähe">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="setSorting:" destination="xhK-OB-hVt" eventType="touchUpInside" id="9LZ-9V-6kv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Yyq-al-z41" firstAttribute="top" secondItem="7ev-D7-k0F" secondAttribute="top" id="6qg-QH-5QS"/>
+                                            <constraint firstItem="Yyq-al-z41" firstAttribute="top" secondItem="7ev-D7-k0F" secondAttribute="top" id="7hL-69-A9R"/>
+                                            <constraint firstItem="Yyq-al-z41" firstAttribute="leading" secondItem="7ev-D7-k0F" secondAttribute="leading" id="B6U-o2-BBA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yyq-al-z41" secondAttribute="trailing" id="MkL-lS-fER"/>
+                                            <constraint firstItem="r2j-1K-HZe" firstAttribute="centerY" secondItem="Yyq-al-z41" secondAttribute="centerY" id="QJ9-4k-bMo"/>
+                                            <constraint firstAttribute="bottom" secondItem="Yyq-al-z41" secondAttribute="bottom" id="QR3-oS-a79"/>
+                                            <constraint firstAttribute="bottom" secondItem="Yyq-al-z41" secondAttribute="bottom" id="Qu5-dS-MQ7"/>
+                                            <constraint firstItem="Yyq-al-z41" firstAttribute="leading" secondItem="7ev-D7-k0F" secondAttribute="leading" id="kjK-x0-2ZN"/>
+                                            <constraint firstItem="r2j-1K-HZe" firstAttribute="trailing" secondItem="Yyq-al-z41" secondAttribute="trailing" id="pYG-g4-e17"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zbd-T6-cxt" secondAttribute="bottom" constant="20" id="3Ls-8b-zck"/>
+                                    <constraint firstItem="7ev-D7-k0F" firstAttribute="centerY" secondItem="zbd-T6-cxt" secondAttribute="centerY" id="CIO-y2-iab"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ev-D7-k0F" secondAttribute="trailing" constant="18" id="EmV-bV-UXO"/>
+                                    <constraint firstItem="zbd-T6-cxt" firstAttribute="leading" secondItem="aC2-ER-67D" secondAttribute="leading" constant="18" id="ern-hN-WeP"/>
+                                    <constraint firstItem="zbd-T6-cxt" firstAttribute="top" secondItem="aC2-ER-67D" secondAttribute="top" constant="20" id="iZI-XK-d1l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O8l-Tr-MXU" firstAttribute="top" secondItem="aC2-ER-67D" secondAttribute="bottom" id="Mdo-xO-lLc"/>
+                            <constraint firstItem="aC2-ER-67D" firstAttribute="top" secondItem="iXL-CA-zIg" secondAttribute="top" id="OEi-fF-L56"/>
+                            <constraint firstItem="aC2-ER-67D" firstAttribute="leading" secondItem="GC3-la-SxS" secondAttribute="leading" id="OgF-B5-MV7"/>
+                            <constraint firstItem="O8l-Tr-MXU" firstAttribute="leading" secondItem="GC3-la-SxS" secondAttribute="leading" id="ryF-De-I08"/>
+                            <constraint firstItem="O8l-Tr-MXU" firstAttribute="bottom" secondItem="GC3-la-SxS" secondAttribute="bottom" id="wmk-Wc-eND"/>
+                            <constraint firstItem="aC2-ER-67D" firstAttribute="trailing" secondItem="GC3-la-SxS" secondAttribute="trailing" id="xeQ-kN-A2v"/>
+                            <constraint firstItem="O8l-Tr-MXU" firstAttribute="trailing" secondItem="GC3-la-SxS" secondAttribute="trailing" id="zOD-Qu-GhT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GC3-la-SxS"/>
                     </view>
+                    <size key="freeformSize" width="414" height="500"/>
+                    <connections>
+                        <outlet property="closenessButton" destination="Yyq-al-z41" id="iIQ-1Y-rsI"/>
+                        <outlet property="closenessButtonIcon" destination="r2j-1K-HZe" id="yML-8M-5RY"/>
+                        <outlet property="tableView" destination="O8l-Tr-MXU" id="9Yg-V6-uSt"/>
+                        <outlet property="urgencyButton" destination="pS3-lR-80A" id="JY8-sq-A1J"/>
+                        <outlet property="urgencyButtonIcon" destination="vea-l5-JxE" id="vPw-cl-dsZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE1-gN-buD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="138"/>
+            <point key="canvasLocation" x="860.86956521739137" y="270.53571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.down" catalog="system" width="60" height="64"/>
+    </resources>
 </document>
