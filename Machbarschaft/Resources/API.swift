@@ -145,10 +145,13 @@ class APIClass {
                 completion([])
             } else {
                 var jobs : [Job] = []
+                var jobIdCounter = 1
                 for document in document!.documents {
                     let data = document.data()
-                    if let job = self.matchJobData(data: data) {
+                    if var job = self.matchJobData(data: data) {
+                        job.jobID = jobIdCounter
                         jobs.append(job)
+                        jobIdCounter += 1
                     }
                 }
                 completion(jobs)
