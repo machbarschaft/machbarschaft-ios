@@ -26,7 +26,7 @@ class JobMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var sorting = SortType.distance
+    var sorting = SortType.urgency
     
     var jobs = [
         Job(jobID: 2, type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ibuprofen und Asthmaspray"),
