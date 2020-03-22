@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EAB642427B55B005217CA /* GeoFunctions.swift */; };
+		176EAB672427B564005217CA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EAB662427B564005217CA /* API.swift */; };
 		5387D71E095CA6CBB47918DC /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		0065302DC248534D5B395610 /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
+		176EAB642427B55B005217CA /* GeoFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFunctions.swift; sourceTree = "<group>"; };
+		176EAB662427B564005217CA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		88EA56652427642C0070B407 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				176EAB662427B564005217CA /* API.swift */,
+				176EAB642427B55B005217CA /* GeoFunctions.swift */,
 				88EA564C242762F50070B407 /* AppDelegate.swift */,
 				88EA564E242762F50070B407 /* SceneDelegate.swift */,
 				88EA5655242762F60070B407 /* Assets.xcassets */,
@@ -278,11 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176EAB672427B564005217CA /* API.swift in Sources */,
 				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
+				176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */,
 				E1210C5224279E5300579C67 /* Job.swift in Sources */,
 				88BF97F32427A79D005D8C23 /* MapOverlayViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
