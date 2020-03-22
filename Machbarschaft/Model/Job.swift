@@ -6,12 +6,24 @@
 //  Copyright © 2020 Linus Geffarth. All rights reserved.
 //
 
+import UIKit
 import CoreLocation
 
 enum JobType {
     case medicine
     case groceries
     case misc
+    
+    var title: String {
+        switch self {
+        case .medicine:
+            return "Medikamente"
+        case .groceries:
+            return "Einkäufe"
+        case .misc:
+            return "Anderes"
+        }
+    }
 }
 
 enum JobUrgency {
@@ -19,6 +31,19 @@ enum JobUrgency {
     case today
     case tomorrow
     case undefined
+    
+    var color: UIColor {
+        switch self {
+        case .urgent:
+            return UIColor(named: "Red")!
+        case .today:
+            return UIColor(named: "Yellow")!
+        case .tomorrow:
+            return UIColor(named: "Green")!
+        case .undefined:
+            return .gray
+        }
+    }
 }
 
 enum JobStatus {
@@ -28,6 +53,7 @@ enum JobStatus {
 }
 
 struct Job {
+    var id: Int
     var type: JobType
     var urgency: JobUrgency
     var status: JobStatus
@@ -38,4 +64,5 @@ struct Job {
     var location: CLLocationCoordinate2D?
     var street: String
     var houseNumber: String
+    var description: String?
 }
