@@ -23,12 +23,21 @@ class APIClass {
         var jobType : JobType = .misc
         var urgency : JobUrgency = .undefined
         var status : JobStatus = .open
+        var description = ""
         
         if let typeX = data["type_of_help"] as? String {
             switch typeX.uppercased() {
             case "APOTHEKE": jobType = .medicine
             case "EINKAUFEN": jobType = .groceries
             default: jobType = .misc
+            }
+            switch jobType {
+            case .groceries:
+                description = "Lebensmittel"
+            case .medicine:
+                description = "Medikamente"
+            case .misc:
+                description = "Sonstiges"
             }
         }
         if let urgencyX = data["urgency"] as? String {
@@ -62,7 +71,7 @@ class APIClass {
             location: location,
             street: (data["street"] as? String) ?? "",
             houseNumber: (data["house_number"] as? String) ?? "",
-            description: ""
+            description: description
         )
         return result
     }
