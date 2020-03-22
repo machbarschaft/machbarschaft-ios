@@ -9,6 +9,13 @@
 import UIKit
 import CoreLocation
 
+
+enum SortType {
+    case urgency
+    case distance
+}
+
+
 class JobMenuViewController: UIViewController {
     
     @IBOutlet weak var urgencyButton: UIButton!
@@ -18,6 +25,8 @@ class JobMenuViewController: UIViewController {
     @IBOutlet weak var closenessButtonIcon: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var sorting = SortType.distance
     
     var jobs = [
         Job(jobID: 2, type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ibuprofen und Asthmaspray"),
@@ -31,6 +40,7 @@ class JobMenuViewController: UIViewController {
         let api = API
         api?.loadJobs(completion: { (jobs) in
             self.jobs = jobs
+            self.sortJobs()
             self.tableView.reloadData()
         })
     }
@@ -38,16 +48,31 @@ class JobMenuViewController: UIViewController {
     @IBAction func setSorting(_ button: UIButton) {
         let isSortingByUrgency = button == urgencyButton
         
+        sorting = isSortingByUrgency ? .urgency : .distance
+        
         urgencyButton.setTitleColor(color(isHighlighted: isSortingByUrgency), for: .normal)
         urgencyButtonIcon.tintColor = color(isHighlighted: isSortingByUrgency)
         closenessButton.setTitleColor(color(isHighlighted: !isSortingByUrgency), for: .normal)
         closenessButtonIcon.tintColor = color(isHighlighted: !isSortingByUrgency)
+        
+        sortJobs()
+        tableView.reloadData()
     }
     
     func color(isHighlighted: Bool) -> UIColor {
         let highlightedColor = UIColor(named: "Link")!
         let defaultColor = UIColor(named: "Text")!
         return isHighlighted ? highlightedColor : defaultColor
+    }
+    
+    func sortJobs() {
+        if sorting == .urgency {
+            jobs = jobs.sorted(by: { $0.urgency.rawValue < $1.urgency.rawValue })
+        }
+        else {
+            //TODO: Sort by distance as soon as we have the distance
+            jobs = jobs.sorted(by: { $0.urgency.rawValue > $1.urgency.rawValue })
+        }
     }
 }
 
