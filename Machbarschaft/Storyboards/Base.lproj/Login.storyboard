@@ -82,7 +82,7 @@
         <!--Login Step1 Page View Controller-->
         <scene sceneID="cbD-TP-MZ4">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="dbx-xs-LZ2" customClass="LoginStep1PageViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="dbx-xs-LZ2" customClass="LoginStep1PageViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOX-zp-gaT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686.9565217391305" y="-269.19642857142856"/>
@@ -367,6 +367,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3to-Ve-rwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="-197.54464285714286"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="I3e-Dk-hSq">
+            <objects>
+                <viewController storyboardIdentifier="Page1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOy-Cx-mX6" customClass="PageViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6z-df-Q6D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cMa-dO-T0F"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="686"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SML-6R-RBJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-836"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="5Mt-ss-sGV">
+            <objects>
+                <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4N7-8L-ukJ" customClass="PageViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X4b-ch-Cxl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="2tM-0a-j4z"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="686"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kha-CM-fbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-836"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="6ty-Pc-nfB">
+            <objects>
+                <viewController storyboardIdentifier="Page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7SH-fW-x7n" customClass="PageViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H3p-3o-FaE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fTK-1x-7LV"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="686"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vuZ-pU-jd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352" y="-836"/>
         </scene>
     </scenes>
     <resources>
