@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginStep2ViewController: UIViewController {
+class LoginStep2ViewController: SuperViewController {
     
     @IBOutlet weak var codeTextField: UITextField!
     

@@ -9,7 +9,7 @@
 import UIKit
 import M13Checkbox
 
-class LoginStep3ViewController: UIViewController {
+class LoginStep3ViewController: SuperViewController {
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!

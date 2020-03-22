@@ -20,6 +20,31 @@ extension UIView {
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
     }
+    
+    func getConvertedFrame(fromSubview subview: UIView) -> CGRect? {
+        guard subview.isDescendant(of: self) else { return nil }
+        var frame = subview.frame
+        if subview.superview == nil {
+            return frame
+        }
+        
+        var superview = subview.superview
+        while superview != self {
+            frame = superview!.convert(frame, to: superview!.superview)
+            if superview!.superview == nil {
+                break
+            } else {
+                superview = superview!.superview
+            }
+        }
+        return superview!.convert(frame, to: self)
+    }
+    
+    var allSubviews: [UIView] {
+        var array = [self.subviews].flatMap { $0 }
+        array.forEach { array.append(contentsOf: $0.allSubviews) }
+        return array
+    }
 }
 
 extension Collection where Indices.Iterator.Element == Index {
@@ -77,5 +102,22 @@ extension CALayer {
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.mask = mask
+    }
+}
+
+extension UIResponder {
+    
+    private struct Static {
+        static weak var responder: UIResponder?
+    }
+    
+    var currentFirst: UIResponder? {
+        Static.responder = nil
+        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
+        return Static.responder
+    }
+    
+    @objc private func _trap() {
+        Static.responder = self
     }
 }
