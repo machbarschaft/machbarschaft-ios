@@ -41,6 +41,7 @@ class LoginStep3ViewController: SuperViewController {
     @IBAction func signup(_ sender: Any) {
         // TODO: validations here
         
+<<<<<<< HEAD
         //Add textfield data to user struct
         let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
                              credits: 0,
@@ -55,7 +56,7 @@ class LoginStep3ViewController: SuperViewController {
             
             if success{
                 
-                self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+                self.performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
                 
             }else{
                 
@@ -66,6 +67,9 @@ class LoginStep3ViewController: SuperViewController {
             
         }
         
+=======
+        performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+>>>>>>> 84b535e575fd8c9f0a5f123d93b3bd9315135d0b
     }
     
     @IBAction func dismissVC(_ sender: Any) {

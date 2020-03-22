@@ -62,7 +62,16 @@ class LoginStep2ViewController: SuperViewController {
                 
             }else{
                 
+                //Save documentID to user defaults
+                self.handler.getDocumentID(forUID: userID){ docID in
+                    
+                    UserDefaults.standard.set(docID, forKey: "docID")
+                    
+                }
+                
                 //GOTO: MapView
+                self.performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
+                
                 return
             }
             
