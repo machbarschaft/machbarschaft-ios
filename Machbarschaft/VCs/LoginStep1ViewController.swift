@@ -12,6 +12,8 @@ class LoginStep1ViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
