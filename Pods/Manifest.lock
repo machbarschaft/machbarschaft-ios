@@ -296,7 +296,7 @@ DEPENDENCIES:
   - OverlayContainer
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - abseil
     - BoringSSL-GRPC
     - Firebase
@@ -352,4 +352,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2b240815e2a54a0f9033cebd1a28f1d07e2c5726
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.1
