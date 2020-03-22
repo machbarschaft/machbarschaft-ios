@@ -38,7 +38,7 @@ class LoginStep3ViewController: SuperViewController {
     @IBAction func signup(_ sender: Any) {
         // TODO: validations here
         
-        performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
+        performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
     }
     
     @IBAction func dismissVC(_ sender: Any) {

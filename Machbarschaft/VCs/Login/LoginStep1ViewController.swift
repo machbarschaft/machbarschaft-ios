@@ -11,8 +11,10 @@ import UIKit
 class LoginStep1ViewController: SuperViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    let handler:RegisterHandler = RegisterHandler()
-        
+    @IBOutlet weak var areaCodeButton: UIButton!
+    
+    let handler: RegisterHandler = RegisterHandler()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
