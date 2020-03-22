@@ -32,7 +32,7 @@ class LoginStep3ViewController: UIViewController {
     }
     
     @IBAction func toggleTermsCheckbox() {
-        termsCheckbox.toggleCheckState()
+        termsCheckbox.toggleCheckState(true)
     }
     
     @IBAction func dismissVC(_ sender: Any) {
