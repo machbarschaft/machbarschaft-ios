@@ -26,6 +26,15 @@ func getEdgeCoordinates(midCoordinate: CLLocationCoordinate2D, distance: Double)
     return GeoBounds(center: midCoordinate, leftBound: left, rightBound: right, upperBound: upper, lowerBound: lower)
 }
 
+// In Metern
+func getDistance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> Int {
+    print(from, to)
+    let from = CLLocation(latitude: from.latitude, longitude: from.longitude)
+    let to = CLLocation(latitude: to.latitude, longitude: to.longitude)
+    let distance = Int(to.distance(from: from))
+    return distance
+}
+
 fileprivate func calculateCoordinations(midCoordinate: CLLocationCoordinate2D, distance: Double, heading: Double) -> CLLocationCoordinate2D {
     let earthR = 6378.14
     // Degree to Radian
