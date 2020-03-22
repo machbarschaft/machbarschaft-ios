@@ -108,11 +108,27 @@ class JobMenuCell: UITableViewCell {
     
     func populate(for job: Job) {
         self.job = job
-        
+        var distance : Int? = nil
+        if (job.location != nil) && (userLocation != nil) {
+            distance = getDistance(from: userLocation!, to: job.location!)
+        }
         indexLabel.text = "\(job.jobID)"
         flagIcon.tintColor = job.urgency.color
         titleLabel.text = job.type.title
         descriptionLabel.text = job.description
-        distanceLabel.text = "\(Int.random(in: 100...750))m"
+        if distance != nil {
+            switch distance! {
+            case 0...1000:
+                distanceLabel.text =  "\(distance!) m"
+            case 0...10000:
+                let kmDistance = Double(round(Double(distance!) / 100)) / 10
+                distanceLabel.text = "\(kmDistance) km"
+            default:
+                let kmDistance = Int(Double(distance!) / 1000)
+                distanceLabel.text = "\(kmDistance) km"
+            }
+        }
+        else { distanceLabel.text = "" }
     }
+    
 }
