@@ -13,7 +13,7 @@
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
-		88BF97EF24279D0D005D8C23 /* MapOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EE24279D0D005D8C23 /* MapOverlayViewController.swift */; };
+		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
 		88EA564D242762F50070B407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564C242762F50070B407 /* AppDelegate.swift */; };
 		88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564E242762F50070B407 /* SceneDelegate.swift */; };
@@ -22,6 +22,7 @@
 		88EA5656242762F60070B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5655242762F60070B407 /* Assets.xcassets */; };
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
+		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,6 @@
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
 		88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep3ViewController.swift; sourceTree = "<group>"; };
-		88BF97EE24279D0D005D8C23 /* MapOverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOverlayViewController.swift; sourceTree = "<group>"; };
 		88BF97F02427A578005D8C23 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		88EA5649242762F50070B407 /* Machbarschaft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machbarschaft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EA564C242762F50070B407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +44,7 @@
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3828BB57E4AB2846402C99C /* Pods-Machbarschaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.debug.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.debug.xcconfig"; sourceTree = "<group>"; };
+		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		88EA564B242762F50070B407 /* Machbarschaft */ = {
 			isa = PBXGroup;
 			children = (
+				E1210C5024279E2E00579C67 /* Model */,
 				88EA56642427641D0070B407 /* Storyboards */,
 				88EA5663242764150070B407 /* VCs */,
 				88EA56652427642C0070B407 /* Resources */,
@@ -110,7 +112,6 @@
 			children = (
 				88BF97ED24279CAF005D8C23 /* Login */,
 				88EA5650242762F50070B407 /* MapViewController.swift */,
-				88BF97EE24279D0D005D8C23 /* MapOverlayViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -137,6 +138,14 @@
 				88EA565A242762F60070B407 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1210C5024279E2E00579C67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1210C5124279E5300579C67 /* Job.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EAF080D622A3C16690DA1E00 /* Frameworks */ = {
@@ -271,8 +280,9 @@
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
+				E1210C5224279E5300579C67 /* Job.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
-				88BF97EF24279D0D005D8C23 /* MapOverlayViewController.swift in Sources */,
+				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
