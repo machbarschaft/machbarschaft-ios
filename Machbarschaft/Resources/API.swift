@@ -23,6 +23,7 @@ class APIClass {
         var jobType : JobType = .misc
         var urgency : JobUrgency = .undefined
         var status : JobStatus = .open
+        var description = ""
         
         if let typeX = data["type_of_help"] as? String {
             switch typeX.uppercased() {
@@ -30,6 +31,7 @@ class APIClass {
             case "EINKAUFEN": jobType = .groceries
             default: jobType = .misc
             }
+            description = jobType.title
         }
         if let urgencyX = data["urgency"] as? String {
            switch urgencyX.uppercased() {
@@ -62,7 +64,7 @@ class APIClass {
             location: location,
             street: (data["street"] as? String) ?? "",
             houseNumber: (data["house_number"] as? String) ?? "",
-            description: ""
+            description: description
         )
         return result
     }
@@ -143,10 +145,13 @@ class APIClass {
                 completion([])
             } else {
                 var jobs : [Job] = []
+                var jobIdCounter = 1
                 for document in document!.documents {
                     let data = document.data()
-                    if let job = self.matchJobData(data: data) {
+                    if var job = self.matchJobData(data: data) {
+                        job.jobID = jobIdCounter
                         jobs.append(job)
+                        jobIdCounter += 1
                     }
                 }
                 completion(jobs)

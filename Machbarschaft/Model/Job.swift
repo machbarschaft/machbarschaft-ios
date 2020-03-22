@@ -26,11 +26,11 @@ enum JobType {
     }
 }
 
-enum JobUrgency {
-    case urgent
-    case today
-    case tomorrow
-    case undefined
+enum JobUrgency: Int {
+    case urgent = 0
+    case today = 1
+    case tomorrow = 2
+    case undefined = 3
     
     var color: UIColor {
         switch self {
