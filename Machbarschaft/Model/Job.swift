@@ -53,7 +53,7 @@ enum JobStatus {
 }
 
 struct Job {
-    var id: Int
+    var jobID: Int
     var type: JobType
     var urgency: JobUrgency
     var status: JobStatus

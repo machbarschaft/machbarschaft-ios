@@ -20,9 +20,9 @@ class JobMenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var jobs = [
-        Job(id: 2, type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ibuprofen und Asthmaspray"),
-        Job(id: 1, type: .groceries, urgency: .today, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ich brauche Toastbrot, etwas Obst und Nudeln"),
-        Job(id: 3, type: .misc, urgency: .tomorrow, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Könnte mir jemand Sachen vom Baumarkt holen?")
+        Job(jobID: 2, type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ibuprofen und Asthmaspray"),
+        Job(jobID: 1, type: .groceries, urgency: .today, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Ich brauche Toastbrot, etwas Obst und Nudeln"),
+        Job(jobID: 3, type: .misc, urgency: .tomorrow, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "7", description: "Könnte mir jemand Sachen vom Baumarkt holen?")
     ]
     
     override func viewDidLoad() {
@@ -79,7 +79,7 @@ class JobMenuCell: UITableViewCell {
     func populate(for job: Job) {
         self.job = job
         
-        indexLabel.text = "\(job.id)"
+        indexLabel.text = "\(job.jobID)"
         flagIcon.tintColor = job.urgency.color
         titleLabel.text = job.type.title
         descriptionLabel.text = job.description

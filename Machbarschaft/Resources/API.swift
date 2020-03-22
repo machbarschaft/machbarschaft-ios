@@ -51,6 +51,7 @@ class APIClass {
             location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         }
         let result = Job(
+            jobID: 0,
             type: jobType,
             urgency: urgency,
             status: status,
@@ -60,7 +61,8 @@ class APIClass {
             zip: (data["zip"] as? String) ?? "",
             location: location,
             street: (data["street"] as? String) ?? "",
-            houseNumber: (data["house_number"] as? String) ?? ""
+            houseNumber: (data["house_number"] as? String) ?? "",
+            description: ""
         )
         return result
     }
