@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cTi-qb-Hmy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -113,6 +112,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XxF-Sy-XTa"/>
                     <connections>
+                        <outlet property="areaCodeButton" destination="1F9-ON-6DI" id="xBR-c9-s7t"/>
                         <outlet property="phoneNumberTextField" destination="hcU-Mk-GKG" id="4qN-0u-edH"/>
                         <segue destination="c1X-Sd-ANw" kind="show" identifier="LoginStep1_to_LoginStep2" id="lCF-cw-AEx"/>
                         <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep1_to_Map" id="gSb-eg-wzG"/>
@@ -216,6 +216,7 @@
                     <connections>
                         <outlet property="codeTextField" destination="jup-cO-LCu" id="jaa-NA-YYh"/>
                         <segue destination="gUr-og-wJQ" kind="show" identifier="LoginStep2_to_LoginStep3" id="YA8-SE-G7U"/>
+                        <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep2_to_Map" id="JLy-Zu-hye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq3-K6-alm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -409,17 +410,17 @@
                         <outlet property="identTextField" destination="7DU-Vu-kwN" id="sdj-T0-Pqh"/>
                         <outlet property="lastNameTextField" destination="7hG-Si-VUg" id="fJL-7e-0xh"/>
                         <outlet property="termsCheckbox" destination="nRE-QG-Sm7" id="bmz-Fo-41V"/>
-                        <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep2_to_Map" id="tVP-bT-bXQ"/>
+                        <segue destination="xbK-Ih-dCw" kind="show" identifier="LoginStep3_to_Map" id="tVP-bT-bXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mob-iu-mMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3215.9420289855075" y="-198.21428571428569"/>
         </scene>
-        <!--MapVC-->
+        <!--MainViewController-->
         <scene sceneID="VcK-nO-QA4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MapVC" id="xbK-Ih-dCw" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewController" id="xbK-Ih-dCw" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aQq-bJ-ZSJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77Z-fk-nm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -450,7 +451,20 @@
                     <view key="view" contentMode="scaleToFill" id="h6z-df-Q6D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-Black-RGB-neg-RZ" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-nx-daB">
+                                <rect key="frame" x="0.0" y="268.5" width="414" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xaR-nx-daB" secondAttribute="height" multiplier="421:192" id="yg0-CT-dmn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81685894729999997" green="0.44291168450000001" blue="0.58521968130000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="xaR-nx-daB" firstAttribute="centerX" secondItem="h6z-df-Q6D" secondAttribute="centerX" id="2Bw-uB-mWa"/>
+                            <constraint firstItem="xaR-nx-daB" firstAttribute="width" secondItem="h6z-df-Q6D" secondAttribute="width" id="6XB-bk-fsN"/>
+                            <constraint firstItem="xaR-nx-daB" firstAttribute="centerY" secondItem="h6z-df-Q6D" secondAttribute="centerY" constant="20" id="qdW-zb-Lkd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cMa-dO-T0F"/>
                     </view>
                     <size key="freeformSize" width="414" height="686"/>
@@ -493,12 +507,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo-Black-RGB-neg-RZ" width="842" height="384"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="arrow.up.and.down" catalog="system" width="52" height="64"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="location" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gSb-eg-wzG"/>
+        <segue reference="tVP-bT-bXQ"/>
     </inferredMetricsTieBreakers>
 </document>

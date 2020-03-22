@@ -11,8 +11,10 @@ import UIKit
 class LoginStep1ViewController: SuperViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    let handler:RegisterHandler = RegisterHandler()
-        
+    @IBOutlet weak var areaCodeButton: UIButton!
+    
+    let handler: RegisterHandler = RegisterHandler()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,16 +52,12 @@ class LoginStep1ViewController: SuperViewController {
 class LoginStep1PageViewController: UIPageViewController {
     fileprivate lazy var pages: [UIViewController] = {
         return [
-            self.getViewController(withIdentifier: "Page1"),
-            self.getViewController(withIdentifier: "Page2"),
-            self.getViewController(withIdentifier: "Page3")
+            viewController(withID: "Page1", from: "Login"),
+            viewController(withID: "Page2", from: "Login"),
+            viewController(withID: "Page3", from: "Login")
         ]
     }()
-    
-    fileprivate func getViewController(withIdentifier identifier: String) -> UIViewController {
-        return UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: identifier)
-    }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
