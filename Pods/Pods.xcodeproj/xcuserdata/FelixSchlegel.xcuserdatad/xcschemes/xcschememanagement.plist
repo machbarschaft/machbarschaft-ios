@@ -102,6 +102,16 @@
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
+		<key>M13Checkbox.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>OverlayContainer.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>Pods-Machbarschaft.xcscheme</key>
 		<dict>
 			<key>isShown</key>

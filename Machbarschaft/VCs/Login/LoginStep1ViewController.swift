@@ -11,6 +11,7 @@ import UIKit
 class LoginStep1ViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    let handler:RegisterHandler = RegisterHandler()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,12 @@ class LoginStep1ViewController: UIViewController {
     
     @IBAction func register(_ sender: Any) {
         // TODO: validations here
+        
+        let phone:String = phoneNumberTextField.text!
+        handler.requestCode(phoneNumber: phone)
+        
+        //Save phone number to user defaults
+        UserDefaults.standard.set(phone, forKey: "phone")
         
         performSegue(withIdentifier: "LoginStep1_to_LoginStep2", sender: nil)
     }
