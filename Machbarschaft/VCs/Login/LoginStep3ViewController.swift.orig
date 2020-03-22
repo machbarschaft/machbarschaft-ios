@@ -13,19 +13,20 @@ import Firebase
 class LoginStep3ViewController: SuperViewController {
     
     @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var firstNameErrorLabel: UILabel!
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var lastNameErrorLabel: UILabel!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var identTextField: UITextField!
-    @IBOutlet weak var identErrorLabel: UILabel!
     
     @IBOutlet weak var termsCheckbox: M13Checkbox!
-    @IBOutlet weak var termsErrorLabel: UILabel!
     
     let handler:RegisterHandler = RegisterHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    @IBAction func useCurrentLocation(_ sender: Any) {
         
     }
     
@@ -40,6 +41,7 @@ class LoginStep3ViewController: SuperViewController {
     @IBAction func signup(_ sender: Any) {
         // TODO: validations here
         
+<<<<<<< HEAD
         //Add textfield data to user struct
         let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
                              credits: 0,
@@ -54,7 +56,7 @@ class LoginStep3ViewController: SuperViewController {
             
             if success{
                 
-                self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+                self.performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
                 
             }else{
                 
@@ -65,6 +67,9 @@ class LoginStep3ViewController: SuperViewController {
             
         }
         
+=======
+        performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+>>>>>>> 84b535e575fd8c9f0a5f123d93b3bd9315135d0b
     }
     
     @IBAction func dismissVC(_ sender: Any) {

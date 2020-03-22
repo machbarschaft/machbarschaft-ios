@@ -61,4 +61,23 @@ public class RegisterHandler {
        
     }
     
+    //Function that gets the document ID relating to UID
+    public func getDocumentID(forUID: String, completion: @escaping (String) -> Void) {
+        
+        let query = db.collection("Account").whereField("uid", isEqualTo: forUID)
+        
+        //Execute query
+        query.getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    
+                    let document = querySnapshot!.documents.first
+                    completion(document!.documentID)
+                    
+                }
+        }
+        
+    }
+    
 }
