@@ -35,4 +35,12 @@ class JobSummaryViewController: UIViewController {
     @IBAction func dismissVC(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let dest = segue.destination as? JobStep1ViewController {
+            dest.job = job
+        }
+    }
 }

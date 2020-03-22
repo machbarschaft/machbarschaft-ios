@@ -466,15 +466,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte besprich dich mit Frau Leutheusser-Schnarrenberger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25B-jv-tbg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte besprich dich mit Frau Leutheusser-Schnarrenberger." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25B-jv-tbg">
                                 <rect key="frame" x="83" y="336" width="248" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqW-Zm-jS8">
-                                <rect key="frame" x="162" y="480" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqW-Zm-jS8">
+                                <rect key="frame" x="161.5" y="480" width="91" height="30"/>
                                 <state key="normal" title="Jetzt anrufen"/>
                                 <connections>
                                     <action selector="callNow:" destination="bog-sU-Rnq" eventType="touchUpInside" id="yxh-Fn-dxI"/>
@@ -483,6 +482,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="KqW-Zm-jS8" firstAttribute="centerX" secondItem="ryK-ak-I0d" secondAttribute="centerX" id="3ig-4b-hkp"/>
+                            <constraint firstItem="KqW-Zm-jS8" firstAttribute="top" secondItem="25B-jv-tbg" secondAttribute="bottom" constant="58" id="52E-Mh-6MX"/>
                             <constraint firstItem="XdN-do-AIt" firstAttribute="centerX" secondItem="ryK-ak-I0d" secondAttribute="centerX" id="Act-71-FsK"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="centerY" secondItem="ryK-ak-I0d" secondAttribute="centerY" multiplier="0.9" id="Nmr-Ea-rgW"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="top" secondItem="XdN-do-AIt" secondAttribute="bottom" constant="80" id="RAW-Ws-d3G"/>
@@ -494,6 +495,9 @@
                         <viewLayoutGuide key="safeArea" id="VFU-Y6-q2B"/>
                     </view>
                     <navigationItem key="navigationItem" id="BCy-Pu-9Ox"/>
+                    <connections>
+                        <segue destination="gyZ-Az-pHO" kind="show" identifier="JobStep1_to_JobStep2" id="KxM-1E-rU0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0e-yK-Ckl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +520,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XG-w8-aND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2757.971014492754" y="136.60714285714286"/>
+        </scene>
+        <!--Job Step2 View Controller-->
+        <scene sceneID="EIk-c3-XWt">
+            <objects>
+                <viewController id="gyZ-Az-pHO" customClass="JobStep2ViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JIo-P7-7L1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-0n-X3t">
+                                <rect key="frame" x="154" y="227" width="106" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sag uns Bescheid, wenn du unterwegs bist." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyl-gT-GzG">
+                                <rect key="frame" x="83" y="336" width="248" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuo-HS-9G5">
+                                <rect key="frame" x="148.5" y="480" width="117" height="30"/>
+                                <state key="normal" title="Ich gehe jetzt los"/>
+                                <connections>
+                                    <action selector="leavingNow:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="UCk-2g-dls"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnG-1l-XJT">
+                                <rect key="frame" x="97" y="610" width="220" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-kA-OhG">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                                        <state key="normal" title="Ich gehe später los"/>
+                                        <connections>
+                                            <action selector="leavingLater:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="hZg-qO-1po"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAj-09-5W4">
+                                        <rect key="frame" x="0.0" y="38" width="220" height="30"/>
+                                        <state key="normal" title="Ich konnte niemanden erreichen"/>
+                                        <connections>
+                                            <action selector="couldntReachAnyone:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="tQ4-Bn-e2s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-xX-HU8">
+                                <rect key="frame" x="303" y="20" width="91" height="30"/>
+                                <state key="normal" title="Jetzt anrufen"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Frau Leutheusser-Schnarrenberger" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJc-Hm-wgS">
+                                <rect key="frame" x="20" y="20" width="136" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cTR-xX-HU8" firstAttribute="top" secondItem="1Es-FN-Gue" secondAttribute="top" constant="20" id="0EV-tq-rkT"/>
+                            <constraint firstItem="tuo-HS-9G5" firstAttribute="top" secondItem="Eyl-gT-GzG" secondAttribute="bottom" constant="58" id="Khh-tj-Otk"/>
+                            <constraint firstItem="Eyl-gT-GzG" firstAttribute="top" secondItem="vjL-0n-X3t" secondAttribute="bottom" constant="80" id="LMO-d7-S0w"/>
+                            <constraint firstItem="Eyl-gT-GzG" firstAttribute="centerY" secondItem="JIo-P7-7L1" secondAttribute="centerY" multiplier="0.9" id="Res-9v-qyc"/>
+                            <constraint firstItem="cTR-xX-HU8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FJc-Hm-wgS" secondAttribute="trailing" constant="40" id="S68-kA-SoY"/>
+                            <constraint firstItem="1Es-FN-Gue" firstAttribute="trailing" secondItem="cTR-xX-HU8" secondAttribute="trailing" constant="20" id="Sdt-BO-i6N"/>
+                            <constraint firstItem="LnG-1l-XJT" firstAttribute="top" secondItem="tuo-HS-9G5" secondAttribute="bottom" constant="100" id="Xcy-2l-Gw7"/>
+                            <constraint firstItem="Eyl-gT-GzG" firstAttribute="width" secondItem="JIo-P7-7L1" secondAttribute="width" multiplier="0.6" id="YjJ-4a-D1x"/>
+                            <constraint firstItem="FJc-Hm-wgS" firstAttribute="leading" secondItem="1Es-FN-Gue" secondAttribute="leading" constant="20" id="awV-G8-j6X"/>
+                            <constraint firstItem="Eyl-gT-GzG" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="dM4-Ks-qJF"/>
+                            <constraint firstItem="vjL-0n-X3t" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="o6s-cD-l1a"/>
+                            <constraint firstItem="FJc-Hm-wgS" firstAttribute="top" secondItem="1Es-FN-Gue" secondAttribute="top" constant="20" id="rnh-Q0-njK"/>
+                            <constraint firstItem="LnG-1l-XJT" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="s0R-lR-8ZK"/>
+                            <constraint firstItem="tuo-HS-9G5" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="xcf-iZ-cl9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Es-FN-Gue"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ln7-kj-vKn"/>
+                    <connections>
+                        <outlet property="jobSummaryLabel" destination="FJc-Hm-wgS" id="tar-vv-PjH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lg5-jj-xiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5054" y="137"/>
         </scene>
     </scenes>
     <resources>
