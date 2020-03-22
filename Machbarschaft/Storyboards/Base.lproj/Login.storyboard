@@ -457,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="3215.9420289855075" y="-198.21428571428569"/>
         </scene>
-        <!--MainViewControllerNav-->
+        <!--MainViewController-->
         <scene sceneID="VcK-nO-QA4">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewControllerNav" id="xbK-Ih-dCw" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainViewController" id="xbK-Ih-dCw" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aQq-bJ-ZSJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77Z-fk-nm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -553,6 +553,6 @@
         <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JLy-Zu-hye"/>
+        <segue reference="gSb-eg-wzG"/>
     </inferredMetricsTieBreakers>
 </document>
