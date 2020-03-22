@@ -13,13 +13,14 @@
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
 		88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE72427BB1300DFD022 /* SuperViewController.swift */; };
+		88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE92427C70E00DFD022 /* MainViewController.swift */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
 		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
-		88BF97F32427A79D005D8C23 /* MapOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */; };
+		88BF97F32427A79D005D8C23 /* JobMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
 		88BF97F92427A89A005D8C23 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F72427A89A005D8C23 /* Other.storyboard */; };
 		88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97FA2427AAFE005D8C23 /* Extensions.swift */; };
@@ -42,12 +43,13 @@
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
 		88082CE72427BB1300DFD022 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperViewController.swift; path = Machbarschaft/VCs/SuperViewController.swift; sourceTree = SOURCE_ROOT; };
+		88082CE92427C70E00DFD022 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
 		88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep3ViewController.swift; sourceTree = "<group>"; };
 		88BF97F02427A578005D8C23 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverlayViewController.swift; sourceTree = "<group>"; };
+		88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobMenuViewController.swift; sourceTree = "<group>"; };
 		88BF97F52427A875005D8C23 /* SimplePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePicker.swift; sourceTree = "<group>"; };
 		88BF97F82427A89A005D8C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Other.storyboard; sourceTree = "<group>"; };
 		88BF97FA2427AAFE005D8C23 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -138,9 +140,10 @@
 		88EA5663242764150070B407 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */,
 				88BF97ED24279CAF005D8C23 /* Login */,
+				88082CE92427C70E00DFD022 /* MainViewController.swift */,
 				88EA5650242762F50070B407 /* MapViewController.swift */,
-				88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -325,8 +328,9 @@
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
 				176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */,
 				88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */,
+				88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */,
 				E1210C5224279E5300579C67 /* Job.swift in Sources */,
-				88BF97F32427A79D005D8C23 /* MapOverlayViewController.swift in Sources */,
+				88BF97F32427A79D005D8C23 /* JobMenuViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
