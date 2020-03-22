@@ -62,6 +62,7 @@ class APIClass {
             city: (data["city"] as? String) ?? "",
             zip: (data["zip"] as? String) ?? "",
             location: location,
+            distanceInMeters: 0,
             street: (data["street"] as? String) ?? "",
             houseNumber: (data["house_number"] as? String) ?? "",
             description: description
@@ -134,7 +135,9 @@ class APIClass {
         return result
     }
     
-    func loadJobs(withStatus : String? = nil, completion: @escaping (_ jobs: [Job]) -> Void) {
+    func loadJobs(withStatus : String? = nil, location: CLLocationCoordinate2D, completion: @escaping (_ jobs: [Job]) -> Void) {
+        //TODO: Use the given location to load only relevant jobs!
+        
         let docRef = db.collection("Order")
         if withStatus != nil {
             docRef.whereField("status", isEqualTo: withStatus as Any)
@@ -150,6 +153,9 @@ class APIClass {
                     let data = document.data()
                     if var job = self.matchJobData(data: data) {
                         job.jobID = jobIdCounter
+                        if let jobLocation = job.location {
+                            job.distanceInMeters = getDistance(from: location, to: jobLocation)
+                        }
                         jobs.append(job)
                         jobIdCounter += 1
                     }
