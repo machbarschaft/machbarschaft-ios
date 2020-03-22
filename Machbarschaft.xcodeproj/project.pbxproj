@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		5387D71E095CA6CBB47918DC /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
+		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
+		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
+		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
+		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
 		88EA564D242762F50070B407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564C242762F50070B407 /* AppDelegate.swift */; };
 		88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564E242762F50070B407 /* SceneDelegate.swift */; };
-		88EA5651242762F50070B407 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA5650242762F50070B407 /* ViewController.swift */; };
+		88EA5651242762F50070B407 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA5650242762F50070B407 /* MapViewController.swift */; };
 		88EA5654242762F50070B407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5652242762F50070B407 /* Main.storyboard */; };
 		88EA5656242762F60070B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5655242762F60070B407 /* Assets.xcassets */; };
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
@@ -21,10 +25,14 @@
 /* Begin PBXFileReference section */
 		0065302DC248534D5B395610 /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
+		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
+		88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep3ViewController.swift; sourceTree = "<group>"; };
 		88EA5649242762F50070B407 /* Machbarschaft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machbarschaft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EA564C242762F50070B407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EA564E242762F50070B407 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88EA5650242762F50070B407 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88EA5650242762F50070B407 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		88EA5653242762F50070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88EA5655242762F60070B407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88EA5658242762F60070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +94,10 @@
 		88EA5663242764150070B407 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				88EA5650242762F50070B407 /* ViewController.swift */,
+				88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */,
+				88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */,
+				88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */,
+				88EA5650242762F50070B407 /* MapViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 				88EA564C242762F50070B407 /* AppDelegate.swift */,
 				88EA564E242762F50070B407 /* SceneDelegate.swift */,
 				88EA5655242762F60070B407 /* Assets.xcassets */,
+				88BF97E724278B16005D8C23 /* Icons.xcassets */,
 				616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */,
 				88EA5657242762F60070B407 /* LaunchScreen.storyboard */,
 				88EA565A242762F60070B407 /* Info.plist */,
@@ -185,6 +197,7 @@
 				88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */,
 				616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */,
 				88EA5656242762F60070B407 /* Assets.xcassets in Resources */,
+				88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */,
 				88EA5654242762F50070B407 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,8 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88EA5651242762F50070B407 /* ViewController.swift in Sources */,
+				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
+				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
+				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
+				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,14 +430,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WM7LJTQW32;
 				INFOPLIST_FILE = "$(SRCROOT)/Machbarschaft/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.ogli.Machbarschaft;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.machbarschaft-ios.Machbarschaft";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
