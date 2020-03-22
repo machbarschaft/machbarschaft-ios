@@ -15,6 +15,7 @@
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
 		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
+		88BF97F32427A79D005D8C23 /* MapOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */; };
 		88EA564D242762F50070B407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564C242762F50070B407 /* AppDelegate.swift */; };
 		88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA564E242762F50070B407 /* SceneDelegate.swift */; };
 		88EA5651242762F50070B407 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EA5650242762F50070B407 /* MapViewController.swift */; };
@@ -33,6 +34,7 @@
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
 		88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep3ViewController.swift; sourceTree = "<group>"; };
 		88BF97F02427A578005D8C23 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverlayViewController.swift; sourceTree = "<group>"; };
 		88EA5649242762F50070B407 /* Machbarschaft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machbarschaft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88EA564C242762F50070B407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88EA564E242762F50070B407 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				88BF97ED24279CAF005D8C23 /* Login */,
 				88EA5650242762F50070B407 /* MapViewController.swift */,
+				88BF97F22427A79D005D8C23 /* MapOverlayViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
 				E1210C5224279E5300579C67 /* Job.swift in Sources */,
+				88BF97F32427A79D005D8C23 /* MapOverlayViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);

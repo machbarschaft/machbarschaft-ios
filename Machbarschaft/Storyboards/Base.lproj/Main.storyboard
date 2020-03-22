@@ -43,7 +43,7 @@
         <!--Map Overlay View Controller-->
         <scene sceneID="NuP-ua-QEh">
             <objects>
-                <viewController id="xhK-OB-hVt" customClass="MapOverlayViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapOverlayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xhK-OB-hVt" customClass="MapOverlayViewController" customModule="Machbarschaft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXL-CA-zIg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
