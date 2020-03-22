@@ -14,6 +14,8 @@
 		616BE9FC2427E32600F59B41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9FB2427E32600F59B41 /* User.swift */; };
 		88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE72427BB1300DFD022 /* SuperViewController.swift */; };
 		88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE92427C70E00DFD022 /* MainViewController.swift */; };
+		88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */; };
+		88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
@@ -45,6 +47,8 @@
 		616BE9FB2427E32600F59B41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88082CE72427BB1300DFD022 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperViewController.swift; path = Machbarschaft/VCs/SuperViewController.swift; sourceTree = SOURCE_ROOT; };
 		88082CE92427C70E00DFD022 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSummaryViewController.swift; sourceTree = "<group>"; };
+		88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 				0065302DC248534D5B395610 /* Pods-Machbarschaft.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		88082CED24281BE500DFD022 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */,
+				88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */,
+			);
+			path = Jobs;
 			sourceTree = "<group>";
 		};
 		88BF97ED24279CAF005D8C23 /* Login */ = {
@@ -145,6 +158,7 @@
 				88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */,
 				88BF97ED24279CAF005D8C23 /* Login */,
 				88082CE92427C70E00DFD022 /* MainViewController.swift */,
+				88082CED24281BE500DFD022 /* Jobs */,
 				88EA5650242762F50070B407 /* MapViewController.swift */,
 			);
 			path = VCs;
@@ -326,6 +340,7 @@
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */,
+				88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				616BE9FC2427E32600F59B41 /* User.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
@@ -334,6 +349,7 @@
 				88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */,
 				E1210C5224279E5300579C67 /* Job.swift in Sources */,
 				88BF97F32427A79D005D8C23 /* JobMenuViewController.swift in Sources */,
+				88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
