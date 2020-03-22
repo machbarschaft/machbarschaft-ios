@@ -76,6 +76,7 @@
                     <navigationItem key="navigationItem" id="XxF-Sy-XTa"/>
                     <connections>
                         <outlet property="phoneNumberTextField" destination="hcU-Mk-GKG" id="4qN-0u-edH"/>
+                        <outlet property="registerButton" destination="PUg-FL-8qD" id="n3A-tG-mE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RaA-ms-uaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
