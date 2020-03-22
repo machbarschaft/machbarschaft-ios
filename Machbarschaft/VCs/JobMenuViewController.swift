@@ -20,8 +20,8 @@ class JobMenuViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var jobs = [
-        Job(type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), address: "Brandenburger Str. 7"),
-        Job(type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), address: "Brandenburger Str. 7")
+        Job(type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "3"),
+        Job(type: .medicine, urgency: .urgent, status: .open, clientName: "Frau Pohl", clientPhone: "017912345678", city: "Halle", zip: "06114", location: CLLocationCoordinate2D(latitude: 51.495696, longitude: 11.968022), street: "Brandenburger Str.", houseNumber: "8")
     ]
     
     override func viewDidLoad() {

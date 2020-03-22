@@ -18,6 +18,7 @@ enum JobUrgency {
     case urgent
     case today
     case tomorrow
+    case undefined
 }
 
 enum JobStatus {
@@ -34,6 +35,7 @@ struct Job {
     var clientPhone: String
     var city: String
     var zip: String
-    var location: CLLocationCoordinate2D
-    var address: String
+    var location: CLLocationCoordinate2D?
+    var street: String
+    var houseNumber: String
 }

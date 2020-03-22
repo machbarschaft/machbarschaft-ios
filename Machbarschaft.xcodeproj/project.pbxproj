@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EAB642427B55B005217CA /* GeoFunctions.swift */; };
-		176EAB672427B564005217CA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EAB662427B564005217CA /* API.swift */; };
 		5387D71E095CA6CBB47918DC /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
@@ -34,12 +33,12 @@
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
 		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
+		E1B567002427D7DE008658D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0065302DC248534D5B395610 /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
 		176EAB642427B55B005217CA /* GeoFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFunctions.swift; sourceTree = "<group>"; };
-		176EAB662427B564005217CA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
 		88082CE72427BB1300DFD022 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperViewController.swift; path = Machbarschaft/VCs/SuperViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -67,6 +66,7 @@
 		8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3828BB57E4AB2846402C99C /* Pods-Machbarschaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.debug.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.debug.xcconfig"; sourceTree = "<group>"; };
 		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		E1B566FF2427D7DE008658D9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 		88EA56652427642C0070B407 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				176EAB662427B564005217CA /* API.swift */,
+				E1B566FF2427D7DE008658D9 /* API.swift */,
 				176EAB642427B55B005217CA /* GeoFunctions.swift */,
 				88082CE72427BB1300DFD022 /* SuperViewController.swift */,
 				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
@@ -318,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176EAB672427B564005217CA /* API.swift in Sources */,
 				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
 				88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
@@ -334,6 +333,7 @@
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
+				E1B567002427D7DE008658D9 /* API.swift in Sources */,
 				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
