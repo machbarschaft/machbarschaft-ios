@@ -25,6 +25,18 @@ class MainViewController: UIViewController {
         if mapViewController != nil {
             addChild(mapViewController!, in: overlayContainerView)
         }
+        
+        menuVC.shouldSegueToJobSummary = { job in
+            self.performSegue(withIdentifier: "MainVC_to_JobSummary", sender: job)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let dest = segue.destination as? JobSummaryViewController, let job = sender as? Job {
+            dest.job = job
+        }
     }
 }
 

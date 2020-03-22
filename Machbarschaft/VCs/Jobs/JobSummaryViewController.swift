@@ -17,13 +17,19 @@ class JobSummaryViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    var job: Job!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        nameLabel.text = job.clientName
+        jobDescriptionLabel.text = job.description
+        urgencyLabel.text = job.urgency.title
+        addressLabel.text = job.clientAddress
     }
     
     @IBAction func acceptJob(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "JobSummary_to_JobStep1", sender: nil)
     }
     
     @IBAction func dismissVC(_ sender: UIButton) {

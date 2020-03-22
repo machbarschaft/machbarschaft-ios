@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="xNe-JJ-9N7"/>
                     <connections>
                         <outlet property="overlayContainerView" destination="bB3-Pm-vnw" id="cTf-dZ-JfM"/>
-                        <segue destination="p20-tG-Hf1" kind="presentation" id="OoM-Ho-uQY"/>
+                        <segue destination="p20-tG-Hf1" kind="presentation" identifier="Main_to_JobSummary" id="OoM-Ho-uQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwp-JL-Sks" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -413,7 +413,7 @@
                         <outlet property="mapView" destination="oK0-Zj-HxW" id="MsV-Yz-wpk"/>
                         <outlet property="nameLabel" destination="HeV-T0-4Vt" id="XXm-DS-rkH"/>
                         <outlet property="urgencyLabel" destination="jPp-M3-jHY" id="2V7-bq-h1s"/>
-                        <segue destination="bog-sU-Rnq" kind="show" id="WTD-9H-iqP"/>
+                        <segue destination="bog-sU-Rnq" kind="show" identifier="JobSummary_to_JobStep1" id="WTD-9H-iqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psg-uk-nFX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

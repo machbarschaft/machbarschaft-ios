@@ -32,6 +32,8 @@ class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager!
     
+    var shouldSegueToJobSummary: (_ job: Job) -> Void = { _ in }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,6 +106,8 @@ extension JobMenuViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.setSelected(false, animated: true)
+        guard let job = (cell as? JobMenuCell)?.job else { return }
+        shouldSegueToJobSummary(job)
     }
 }
 
@@ -125,7 +129,7 @@ class JobMenuCell: UITableViewCell {
         titleLabel.text = job.type.title
         descriptionLabel.text = job.description
         
-        var distance = job.distanceInMeters
+        let distance = job.distanceInMeters
         switch distance {
         case 0...1000:
             distanceLabel.text =  "\(distance) m"

@@ -44,6 +44,19 @@ enum JobUrgency: Int {
             return .gray
         }
     }
+    
+    var title: String {
+        switch self {
+        case .urgent:
+            return "dringend"
+        case .today:
+            return "noch heute"
+        case .tomorrow:
+            return "morgen"
+        default:
+            return "nicht dringend"
+        }
+    }
 }
 
 enum JobStatus {
@@ -66,4 +79,8 @@ struct Job {
     var street: String
     var houseNumber: String
     var description: String?
+    
+    var clientAddress: String {
+        "\(street) \(houseNumber), \(zip) \(city)"
+    }
 }

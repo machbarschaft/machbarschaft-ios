@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-public class RegisterHandler{
+public class RegisterHandler {
     
     //Initialise Database
     let db = Firestore.firestore()
