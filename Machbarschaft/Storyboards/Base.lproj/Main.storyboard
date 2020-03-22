@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="60" width="414" height="440"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Y69-f0-QEW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Y69-f0-QEW" customClass="JobMenuCell" customModule="Machbarschaft" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="72.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y69-f0-QEW" id="cTA-f8-cNa">
@@ -140,8 +140,19 @@
                                                 <constraint firstItem="UpQ-Ic-EXm" firstAttribute="leading" secondItem="cTA-f8-cNa" secondAttribute="leading" constant="12" id="vwq-N3-PUW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="NKG-ku-PXv" id="hG8-dX-vK7"/>
+                                            <outlet property="distanceLabel" destination="EmL-IC-4jr" id="C9n-UL-S2R"/>
+                                            <outlet property="flagIcon" destination="UpQ-Ic-EXm" id="cDR-6y-fYI"/>
+                                            <outlet property="indexLabel" destination="oai-3p-5ae" id="Z3U-xr-GVU"/>
+                                            <outlet property="titleLabel" destination="olC-Zb-LBu" id="ZWu-rF-jXR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xhK-OB-hVt" id="5ID-ul-9b0"/>
+                                    <outlet property="delegate" destination="xhK-OB-hVt" id="AlG-Xt-e4y"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC2-ER-67D">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -253,7 +264,7 @@
         <image name="arrow.down" catalog="system" width="60" height="64"/>
         <image name="flag.fill" catalog="system" width="64" height="60"/>
         <namedColor name="Green">
-            <color red="0.31063044070000001" green="0.61567163469999997" blue="0.19704857470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.31099998950958252" green="0.61599999666213989" blue="0.19699999690055847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

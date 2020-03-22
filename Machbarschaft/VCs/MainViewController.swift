@@ -30,17 +30,15 @@ class MainViewController: UIViewController {
 
 extension MainViewController: OverlayContainerViewControllerDelegate {
     enum OverlayNotch: Int, CaseIterable {
-        case minimum, medium, maximum
+        case minimum, maximum
     }
     
     func overlayContainerViewController(_ containerViewController: OverlayContainerViewController, heightForNotchAt index: Int, availableSpace: CGFloat) -> CGFloat {
         switch OverlayNotch.allCases[index] {
         case .maximum:
-            return availableSpace * 3 / 4
-        case .medium:
-            return availableSpace / 2
+            return availableSpace * 0.75
         case .minimum:
-            return availableSpace * 1 / 4
+            return availableSpace * 0.4
         }
     }
     
