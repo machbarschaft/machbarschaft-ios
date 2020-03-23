@@ -16,18 +16,28 @@ class LoginStep1ViewController: SuperViewController {
     
     let handler: RegisterHandler = RegisterHandler()
     
+    var selectedPrefix:String = "+49"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     @IBAction func selectAreaCode(_ button: UIButton) {
+        
+        //Initilize prefix picker
         guard let areaCodes = [AreaCode].parse(jsonFile: "area-codes")?.removingDuplicates() else { return }
         var options = SimplePicker.Options()
         options.initialItem = button.titleLabel?.text ?? "+49"
         let picker = SimplePicker(options: options, data: areaCodes.compactMap { $0.dialCode }.sorted(), presenter: self)
+            
+        //Show picker
         picker.show(anchor: button) { (index, value) in
             button.setTitle(value, for: .normal)
+            
+            //Update selected prefix variable
+            self.selectedPrefix = value
+            
         }
     }
     
@@ -40,7 +50,17 @@ class LoginStep1ViewController: SuperViewController {
     @IBAction func register(_ sender: Any) {
         // TODO: validations here
         
-        let phone:String = phoneNumberTextField.text!
+        var phone:String = phoneNumberTextField.text!
+        
+        //Remove 0 prefix of phone number if necessary
+        if phone[0] == "0"{
+            
+            phone = String(phone.dropFirst())
+            
+        }
+        
+        phone = selectedPrefix + phone
+        print(phone)
         handler.requestCode(phoneNumber: phone)
         
         //Save phone number to user defaults
