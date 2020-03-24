@@ -53,7 +53,7 @@ extension MainViewController: OverlayContainerViewControllerDelegate {
         case .maximum:
             return availableSpace * 0.75
         case .minimum:
-            return availableSpace * 0.4
+            return availableSpace * 0.3
         }
     }
     
