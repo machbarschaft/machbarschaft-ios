@@ -3,7 +3,7 @@
 
 ![Machbarschaft Logo](logo.jpeg)
 
-![WirVsVirus Hackathon Logo](images/wirvsvirus_logo.jpg)
+![WirVsVirus Hackathon Logo](wirvsvirus_logo.jpg)
 
 Project Machbarschaft was created in the context of [WirVsVirus Hackathon](https://wirvsvirushackathon.org/) hosted by the German Government. Our pitch video can be found [on youtube](https://www.youtube.com/watch?v=8YJ0I0dMmWg). We also have a [Devpost profile](https://devpost.com/software/einanrufhilft) and a website [machbarschaft.jetzt](https://machbarschaft.jetzt/).
 
