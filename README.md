@@ -33,3 +33,8 @@ This is what we plan to do next:
 - Implement Passbase to verify users
 - Add more account actions such as edit account, delete account etc.
 - Gamification of order fulfillment process to reward users 
+
+### Get in touch
+Do not hesitate to get in touch with us. Drop us some nice words, suggestion, ideas or support by <a href="mailto:hallo@machbarschaft.jetzt?subject=hi">mail</a>. 
+
+made with ❤ by us (machbarschaft).
