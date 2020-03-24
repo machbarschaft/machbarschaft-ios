@@ -11,7 +11,7 @@ This repository contains the Android Application which is meant for the helper, 
 
 ## Demo
 We have recorded a short video to demonstrate the current state of the app:
-[Youtube-Video](https://youtu.be/x2fj2f51naE)
+[Youtube-Video](https://www.youtube.com/watch?v=5zJS8sDLepU)
 
 ## How the app works
 1. Install the MACHBARSCHAFT app to your iOS device.
