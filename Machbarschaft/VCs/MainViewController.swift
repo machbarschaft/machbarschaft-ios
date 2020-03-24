@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var overlayContainerView: UIView!
     let overlayController = OverlayContainerViewController(style: .flexibleHeight)
     let mapViewController = viewController(withID: "MapViewController") as? MapViewController
-    let jobTableViewController = viewController(withID: "JobMenuViewController") as? JobMenuViewController
+    let jobTableViewController = viewController(withID: "JobMenuViewController") as? JobsTableViewController
     
     var locationManager: CLLocationManager!
     
