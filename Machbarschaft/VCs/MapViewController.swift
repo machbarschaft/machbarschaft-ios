@@ -8,27 +8,16 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager: CLLocationManager!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-        }
     }
     
     func update(userLocation: CLLocationCoordinate2D, jobs: [Job]) {
@@ -87,16 +76,5 @@ extension MapViewController: MKMapViewDelegate {
         }
 
         return annotationView
-    }
-}
-
-
-extension MapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        if let location = locations.last {
-            update(userLocation: location.coordinate, jobs: [])
-        }
     }
 }

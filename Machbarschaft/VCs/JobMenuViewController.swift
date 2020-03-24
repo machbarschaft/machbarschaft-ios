@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 
 enum SortType {
@@ -16,7 +15,7 @@ enum SortType {
 }
 
 
-class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
+class JobMenuViewController: UIViewController {
     
     @IBOutlet weak var urgencyButton: UIButton!
     @IBOutlet weak var urgencyButtonIcon: UIImageView!
@@ -28,35 +27,15 @@ class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
     
     var sorting = SortType.urgency
     
-    var jobs: [Job] = []
-    
-    var locationManager: CLLocationManager!
+    private var jobs: [Job] = []
     
     var shouldSegueToJobSummary: (_ job: Job) -> Void = { _ in }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-        }
-    }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            let userLocation = location.coordinate
-            
-            let api = API
-            api?.loadJobs(location: userLocation, completion: { (jobs) in
-                self.jobs = jobs
-                self.sortJobs()
-                self.tableView.reloadData()
-            })
-        }
+    func update(jobs: [Job]) {
+        self.jobs = jobs
+        self.sortJobs()
+        self.tableView.reloadData()
     }
     
     @IBAction func setSorting(_ button: UIButton) {
