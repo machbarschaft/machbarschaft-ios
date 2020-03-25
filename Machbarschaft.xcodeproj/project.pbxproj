@@ -26,7 +26,7 @@
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
 		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
-		88BF97F32427A79D005D8C23 /* JobMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */; };
+		88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
 		88BF97F92427A89A005D8C23 /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F72427A89A005D8C23 /* Other.storyboard */; };
 		88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97FA2427AAFE005D8C23 /* Extensions.swift */; };
@@ -62,7 +62,7 @@
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
 		88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep3ViewController.swift; sourceTree = "<group>"; };
 		88BF97F02427A578005D8C23 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobMenuViewController.swift; sourceTree = "<group>"; };
+		88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		88BF97F52427A875005D8C23 /* SimplePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePicker.swift; sourceTree = "<group>"; };
 		88BF97F82427A89A005D8C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Other.storyboard; sourceTree = "<group>"; };
 		88BF97FA2427AAFE005D8C23 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -166,11 +166,11 @@
 		88EA5663242764150070B407 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				88BF97F22427A79D005D8C23 /* JobMenuViewController.swift */,
-				88BF97ED24279CAF005D8C23 /* Login */,
 				88082CE92427C70E00DFD022 /* MainViewController.swift */,
-				88082CED24281BE500DFD022 /* Jobs */,
 				88EA5650242762F50070B407 /* MapViewController.swift */,
+				88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */,
+				88082CED24281BE500DFD022 /* Jobs */,
+				88BF97ED24279CAF005D8C23 /* Login */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -364,7 +364,7 @@
 				88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */,
 				88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */,
 				E1210C5224279E5300579C67 /* Job.swift in Sources */,
-				88BF97F32427A79D005D8C23 /* JobMenuViewController.swift in Sources */,
+				88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */,
 				88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,

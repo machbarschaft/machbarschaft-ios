@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 
 enum SortType {
@@ -16,7 +15,7 @@ enum SortType {
 }
 
 
-class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
+class JobsTableViewController: UIViewController {
     
     @IBOutlet weak var urgencyButton: UIButton!
     @IBOutlet weak var urgencyButtonIcon: UIImageView!
@@ -28,56 +27,21 @@ class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
     
     var sorting = SortType.urgency
     
-    var jobs: [Job] = []
-    
-    var locationManager: CLLocationManager!
+    private var jobs: [Job] = []
     
     var shouldSegueToJobSummary: (_ job: Job) -> Void = { _ in }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-        }
+    
+    // MARK: Updating
+    
+    func update(jobs: [Job]) {
+        self.jobs = jobs
+        self.sortJobs()
+        self.tableView.reloadData()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
-            let userLocation = location.coordinate
-            
-            let api = API
-            api?.loadJobs(location: userLocation, completion: { (jobs) in
-                self.jobs = jobs
-                self.sortJobs()
-                self.tableView.reloadData()
-            })
-        }
-    }
     
-    @IBAction func setSorting(_ button: UIButton) {
-        let isSortingByUrgency = button == urgencyButton
-        
-        sorting = isSortingByUrgency ? .urgency : .distance
-        
-        urgencyButton.setTitleColor(color(isHighlighted: isSortingByUrgency), for: .normal)
-        urgencyButtonIcon.tintColor = color(isHighlighted: isSortingByUrgency)
-        closenessButton.setTitleColor(color(isHighlighted: !isSortingByUrgency), for: .normal)
-        closenessButtonIcon.tintColor = color(isHighlighted: !isSortingByUrgency)
-        
-        sortJobs()
-        tableView.reloadData()
-    }
-    
-    func color(isHighlighted: Bool) -> UIColor {
-        let highlightedColor = UIColor(named: "Link")!
-        let defaultColor = UIColor(named: "Text")!
-        return isHighlighted ? highlightedColor : defaultColor
-    }
+    // MARK: Sorting
     
     func sortJobs() {
         if sorting == .urgency {
@@ -87,9 +51,28 @@ class JobMenuViewController: UIViewController, CLLocationManagerDelegate {
             jobs = jobs.sorted(by: { $0.distanceInMeters < $1.distanceInMeters })
         }
     }
+    
+    @IBAction func setSorting(_ button: UIButton) {
+        let isSortingByUrgency = button == urgencyButton
+        
+        sorting = isSortingByUrgency ? .urgency : .distance
+        
+        let activeColor = UIColor(named: "Link")!
+        let inactiveColor = UIColor(named: "Text")!
+        urgencyButton.setTitleColor(isSortingByUrgency ? activeColor : inactiveColor, for: .normal)
+        urgencyButtonIcon.tintColor = isSortingByUrgency ? activeColor : inactiveColor
+        closenessButton.setTitleColor(isSortingByUrgency ? inactiveColor : activeColor, for: .normal)
+        closenessButtonIcon.tintColor = isSortingByUrgency ? inactiveColor : activeColor
+        
+        sortJobs()
+        tableView.reloadData()
+    }
 }
 
-extension JobMenuViewController: UITableViewDataSource, UITableViewDelegate {
+
+// MARK: - Table View
+
+extension JobsTableViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         jobs.count
     }
