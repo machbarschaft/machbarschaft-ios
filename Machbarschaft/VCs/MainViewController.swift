@@ -8,26 +8,37 @@
 
 import UIKit
 import OverlayContainer
+import CoreLocation
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var overlayContainerView: UIView!
     let overlayController = OverlayContainerViewController(style: .flexibleHeight)
     let mapViewController = viewController(withID: "MapViewController") as? MapViewController
+    let jobTableViewController = viewController(withID: "JobMenuViewController") as? JobsTableViewController
+    
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let menuVC = viewController(withID: "JobMenuViewController") as? JobMenuViewController else { return }
         overlayController.delegate = self
-        overlayController.viewControllers = [menuVC]
+        overlayController.viewControllers = [jobTableViewController!]
         addChild(overlayController, in: view)
         if mapViewController != nil {
             addChild(mapViewController!, in: overlayContainerView)
         }
         
-        menuVC.shouldSegueToJobSummary = { job in
+        jobTableViewController!.shouldSegueToJobSummary = { job in
             self.performSegue(withIdentifier: "Main_to_JobSummary", sender: job)
+        }
+        
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
         }
     }
     
@@ -53,11 +64,26 @@ extension MainViewController: OverlayContainerViewControllerDelegate {
         case .maximum:
             return availableSpace * 0.75
         case .minimum:
-            return availableSpace * 0.4
+            return availableSpace * 0.3
         }
     }
     
     func numberOfNotches(in containerViewController: OverlayContainerViewController) -> Int {
         OverlayNotch.allCases.count
+    }
+}
+
+
+extension MainViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.last {
+            let api = API
+            api?.loadJobs(location: location.coordinate, completion: { (jobs) in
+                self.mapViewController?.update(userLocation: location.coordinate, jobs: jobs)
+                self.jobTableViewController?.update(jobs: jobs)
+            })
+        }
     }
 }
