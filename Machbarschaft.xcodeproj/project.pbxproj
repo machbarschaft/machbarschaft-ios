@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EAB642427B55B005217CA /* GeoFunctions.swift */; };
 		5387D71E095CA6CBB47918DC /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3887BC37D270C2B76AB61C /* Pods_Machbarschaft.framework */; };
+		6153C60D242B7E020082CE9B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6153C60C242B7E020082CE9B /* Errors.swift */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
 		616BE9FC2427E32600F59B41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9FB2427E32600F59B41 /* User.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0065302DC248534D5B395610 /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
 		176EAB642427B55B005217CA /* GeoFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoFunctions.swift; sourceTree = "<group>"; };
+		6153C60C242B7E020082CE9B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
 		616BE9FB2427E32600F59B41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				88BF97FE2427AECA005D8C23 /* AreaCode.swift */,
 				E1210C5124279E5300579C67 /* Job.swift */,
 				616BE9FB2427E32600F59B41 /* User.swift */,
+				6153C60C242B7E020082CE9B /* Errors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */,
 				88082CF1242821D800DFD022 /* JobStep2ViewController.swift in Sources */,
 				88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */,
+				6153C60D242B7E020082CE9B /* Errors.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,

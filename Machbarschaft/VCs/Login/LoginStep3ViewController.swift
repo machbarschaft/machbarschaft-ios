@@ -38,28 +38,45 @@ class LoginStep3ViewController: SuperViewController {
     }
     
     @IBAction func signup(_ sender: Any) {
-        // TODO: validations here
         
-        //Add textfield data to user struct
-        let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
-                             credits: 0,
-                             first_name: firstNameTextField.text!,
-                             last_name: lastNameTextField.text!,
-                             radius: 0,
-                             phone: UserDefaults.standard.string(forKey: "phone")!)
+        //Validation messages
+        if firstNameTextField.text!.isEmpty{
+            firstNameErrorLabel.text = "Bitte gebe deinen Vornamen ein"
+        }else{
+            firstNameErrorLabel.text = ""
+        }
         
-        //Create account
-        //TODO: Show loading circle
-        handler.createAccount(user: userInput){ success in
+        if lastNameTextField.text!.isEmpty{
+            lastNameErrorLabel.text = "Bitte gebe deinen Nachnamen ein"
+        }else{
+            lastNameErrorLabel.text = ""
+        }
+        
+        //Validation
+        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty{
             
-            if success{
+            //Add textfield data to user struct
+            let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
+                                 credits: 0,
+                                 first_name: firstNameTextField.text!,
+                                 last_name: lastNameTextField.text!,
+                                 radius: 0,
+                                 phone: UserDefaults.standard.string(forKey: "phone")!)
+            
+            //Create account
+            //TODO: Show loading circle
+            handler.createAccount(user: userInput){ success in
                 
-                self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
-                
-            }else{
-                
-                //Show error message
-                print("Error creating account")
+                if success{
+                    
+                    self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+                    
+                }else{
+                    
+                    //TODO: Create an own label
+                    self.termsErrorLabel.text = "Beim erstellen deines Accounts ist ein Fehler aufgetreten. Bitte versuche es erneut."
+                    
+                }
                 
             }
             

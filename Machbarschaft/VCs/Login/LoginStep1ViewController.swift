@@ -40,20 +40,35 @@ class LoginStep1ViewController: SuperViewController {
     }
     
     @IBAction func register(_ sender: Any) {
-        var phone = phoneNumberTextField.text!
         
+        var phone = phoneNumberTextField.text!
         // Remove 0 prefix of phone number if necessary
         if phone.hasPrefix("0") {
             phone = String(phone.dropFirst())
         }
-        
         phone = (areaCodeButton.titleLabel?.text?.nonEmpty ?? "+49") + phone
-        handler.requestCode(phoneNumber: phone)
         
-        //Save phone number to user defaults
-        UserDefaults.standard.set(phone, forKey: "phone")
+        //Phone number validation
+        if handler.validatePhone(phone: phone){
+            
+            //Request verification code
+            handler.requestCode(phoneNumber: phone)
+            
+            //Remove any error messages from error label
+            phoneNumberErrorLabel.text = ""
+            
+            //Save phone number to user defaults
+            UserDefaults.standard.set(phone, forKey: "phone")
+            
+            performSegue(withIdentifier: "LoginStep1_to_LoginStep2", sender: nil)
+            
+        }else{
+            
+            //Show error message
+            phoneNumberErrorLabel.text = "Ups! Bitte überprüfe deine Telefonnummer"
+            
+        }
         
-        performSegue(withIdentifier: "LoginStep1_to_LoginStep2", sender: nil)
     }
 }
 

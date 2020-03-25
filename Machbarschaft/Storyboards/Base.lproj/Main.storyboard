@@ -781,7 +781,7 @@ Du bist toll!</string>
         <image name="flag.fill" catalog="system" width="64" height="60"/>
         <image name="location.circle" catalog="system" width="64" height="60"/>
         <namedColor name="Green">
-            <color red="0.31063044070000001" green="0.61567163469999997" blue="0.19704857470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.31099998950958252" green="0.61599999666213989" blue="0.19699999690055847" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

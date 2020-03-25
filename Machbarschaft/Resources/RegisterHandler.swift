@@ -15,6 +15,17 @@ public class RegisterHandler {
     //Initialise Database
     let db = Firestore.firestore()
     
+    //Function that validates the phone number
+    public func validatePhone(phone: String) -> Bool{
+        
+        let PHONE_REGEX = "^((\\+)|(00))[0-9]{6,14}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluate(with: phone)
+        
+        return result
+        
+    }
+    
     //Function to send a request code
     public func requestCode(phoneNumber: String){
         
@@ -30,9 +41,7 @@ public class RegisterHandler {
         }
         
     }
-    
-    //TODO: Function that checks if an account associated to UID exists
-    
+        
     //Function that creates an account
     public func createAccount(user: User, completion: @escaping (Bool) -> Void){
                 
@@ -62,7 +71,7 @@ public class RegisterHandler {
     }
     
     //Function that gets the document ID relating to UID
-    public func getDocumentID(forUID: String, completion: @escaping (String) -> Void) {
+    public func getDocumentID(forUID: String, completion: @escaping (Result<String,DatabaseError>) -> Void) {
         
         let query = db.collection("Account").whereField("uid", isEqualTo: forUID)
         
@@ -72,8 +81,17 @@ public class RegisterHandler {
                     print("Error getting documents: \(err)")
                 } else {
                     
-                    let document = querySnapshot!.documents.first
-                    completion(document!.documentID)
+                    //Document exists
+                    if let document = querySnapshot!.documents.first {
+                        
+                        completion(.success(document.documentID))
+                        
+                    }else{
+                        
+                        //Raise error
+                        completion(.failure(.entryNotFound))
+                        
+                    }
                     
                 }
         }

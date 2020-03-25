@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+//Database (Firestore) errors
+public enum DatabaseError: Error{
+    
+    case entryNotFound
+    
+    //Error descriptions
+    public var errorDescription: String? {
+            switch self {
+            case .entryNotFound:
+                return NSLocalizedString(
+                    "Couldn't find any matching database entries.",
+                    comment: ""
+                )
+            }
+        }
+}
