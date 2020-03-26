@@ -41,6 +41,14 @@ class JobsTableViewController: UIViewController {
     }
     
     
+    // MARK: Misc
+    func highlightJob(_ job: Job) {
+        let index = jobs.firstIndex(where: { $0.jobID == job.jobID })
+        guard index != nil else {return}
+        tableView.selectRow(at: IndexPath(row: index!, section: 0), animated: true, scrollPosition: .middle)
+    }
+    
+    
     // MARK: Sorting
     
     func sortJobs() {

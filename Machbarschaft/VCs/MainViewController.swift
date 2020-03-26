@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         overlayController.viewControllers = [jobTableViewController!]
         addChild(overlayController, in: view)
         if mapViewController != nil {
+            mapViewController?.delegate = self
             addChild(mapViewController!, in: overlayContainerView)
         }
         
@@ -70,6 +71,13 @@ extension MainViewController: OverlayContainerViewControllerDelegate {
     
     func numberOfNotches(in containerViewController: OverlayContainerViewController) -> Int {
         OverlayNotch.allCases.count
+    }
+}
+
+
+extension MainViewController: MapViewControllerDelegate {
+    func didSelectJob(_ job: Job) {
+        jobTableViewController?.highlightJob(job)
     }
 }
 
