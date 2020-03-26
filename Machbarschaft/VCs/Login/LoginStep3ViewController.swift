@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Passbase
 import M13Checkbox
 import Firebase
 
-class LoginStep3ViewController: SuperViewController {
+class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var firstNameErrorLabel: UILabel!
@@ -22,15 +23,39 @@ class LoginStep3ViewController: SuperViewController {
     @IBOutlet weak var termsCheckbox: M13Checkbox!
     @IBOutlet weak var termsErrorLabel: UILabel!
     
+    //Passbase variable
+    var passbaseCompleted:Bool = false
+    
     let handler:RegisterHandler = RegisterHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set the delegate object to self
+        Passbase.delegate = self
+        
     }
     
     @IBAction func showIdentInfo(_ sender: Any) {
         
+    }
+    
+    //Passbase stubs
+    func didCompletePassbaseVerification(authenticationKey: String) {
+        
+        //Change passbase variable
+        passbaseCompleted = true
+        
+        //Write authentication Key to userdefaults
+        UserDefaults.standard.set(authenticationKey, forKey: "passbaseKey")
+        
+    }
+    
+    func didCancelPassbaseVerification() {
+        
+        //Change passbase variable
+        passbaseCompleted = false
+
     }
     
     @IBAction func toggleTermsCheckbox() {
@@ -52,11 +77,18 @@ class LoginStep3ViewController: SuperViewController {
             lastNameErrorLabel.text = ""
         }
         
+        if passbaseCompleted{
+            identErrorLabel.text = ""
+        }else{
+            identErrorLabel.text = "Bitte vervollständige deine Identitätsverifizierung"
+        }
+        
         //Validation
-        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty{
+        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty && passbaseCompleted{
             
             //Add textfield data to user struct
             let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
+                                 passbaseKey: UserDefaults.standard.string(forKey: "passbaseKey")!,
                                  credits: 0,
                                  first_name: firstNameTextField.text!,
                                  last_name: lastNameTextField.text!,

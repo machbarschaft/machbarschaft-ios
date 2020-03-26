@@ -318,27 +318,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-VV-9Pz">
-                                <rect key="frame" x="50" y="406.5" width="314" height="34"/>
+                                <rect key="frame" x="50" y="406.5" width="314" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IDENT-Verfahren tbd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7DU-Vu-kwN">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUc-e2-iDp">
-                                        <rect key="frame" x="280" y="0.0" width="34" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="FUc-e2-iDp" secondAttribute="height" multiplier="1:1" id="aTG-Cb-Aql"/>
-                                        </constraints>
-                                        <state key="normal" image="info.circle" catalog="system"/>
-                                        <connections>
-                                            <action selector="showIdentInfo:" destination="gUr-og-wJQ" eventType="touchUpInside" id="3eo-wh-Cit"/>
-                                        </connections>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aha-nm-AKG" customClass="PassbaseButton" customModule="Passbase">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <state key="normal" title="Identität verifizieren"/>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="FUc-e2-iDp" firstAttribute="height" secondItem="7DU-Vu-kwN" secondAttribute="height" id="MNN-0s-BjU"/>
-                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tf5-LK-dpE" userLabel="back button">
                                 <rect key="frame" x="32" y="56" width="77" height="20"/>
@@ -373,7 +359,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-QG-Sm7" customClass="M13Checkbox" customModule="M13Checkbox">
-                                <rect key="frame" x="50" y="501" width="24" height="24"/>
+                                <rect key="frame" x="50" y="497" width="24" height="24"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nRE-QG-Sm7" secondAttribute="height" multiplier="1:1" id="Hlc-79-Gnt"/>
@@ -387,7 +373,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvf-UV-IHy">
-                                <rect key="frame" x="94" y="496" width="160" height="34"/>
+                                <rect key="frame" x="94" y="492" width="160" height="34"/>
                                 <state key="normal" title="AGB &amp; Datenschutz">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -396,7 +382,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjI-Kh-BBP">
-                                <rect key="frame" x="364" y="444.5" width="0.0" height="14.5"/>
+                                <rect key="frame" x="364" y="440.5" width="0.0" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14.5" id="lto-8I-wan"/>
                                 </constraints>
@@ -405,7 +391,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-KM-xFx">
-                                <rect key="frame" x="94" y="534" width="0.0" height="0.0"/>
+                                <rect key="frame" x="94" y="530" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -445,7 +431,6 @@
                         <outlet property="firstNameErrorLabel" destination="x41-LH-rMY" id="gu5-Jb-Y6p"/>
                         <outlet property="firstNameTextField" destination="tYd-QA-8v7" id="0MX-fx-Ym8"/>
                         <outlet property="identErrorLabel" destination="SjI-Kh-BBP" id="k0i-d4-ZYT"/>
-                        <outlet property="identTextField" destination="7DU-Vu-kwN" id="sdj-T0-Pqh"/>
                         <outlet property="lastNameErrorLabel" destination="9oT-f6-f3s" id="vwN-iP-xG6"/>
                         <outlet property="lastNameTextField" destination="7hG-Si-VUg" id="fJL-7e-0xh"/>
                         <outlet property="termsCheckbox" destination="nRE-QG-Sm7" id="bmz-Fo-41V"/>
@@ -550,9 +535,8 @@
         <image name="Logo-Black-RGB-neg-RZ" width="842" height="384"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="arrow.up.and.down" catalog="system" width="52" height="64"/>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gSb-eg-wzG"/>
+        <segue reference="tVP-bT-bXQ"/>
     </inferredMetricsTieBreakers>
 </document>
