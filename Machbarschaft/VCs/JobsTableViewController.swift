@@ -27,7 +27,7 @@ class JobsTableViewController: UIViewController {
     
     var sorting = SortType.urgency
     
-    private var jobs: [Job] = [Job(jobID: 1, type: .groceries, urgency: .today, status: .open, clientName: "Linus Geffarth", clientPhone: "01792654018", city: "Halle (Saale)", zip: "06114", location: nil, distanceInMeters: 127, street: "Reilstr.", houseNumber: "128", description: "description here")]
+    private var jobs: [Job] = []
     
     var shouldSegueToJobSummary: (_ job: Job) -> Void = { _ in }
     
@@ -35,7 +35,7 @@ class JobsTableViewController: UIViewController {
     // MARK: Updating
     
     func update(jobs: [Job]) {
-//        self.jobs = jobs
+        self.jobs = jobs
         self.sortJobs()
         self.tableView.reloadData()
     }

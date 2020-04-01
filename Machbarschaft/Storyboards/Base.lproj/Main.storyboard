@@ -374,11 +374,14 @@
                                 </constraints>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oK0-Zj-HxW">
-                                <rect key="frame" x="0.0" y="300" width="414" height="404"/>
+                                <rect key="frame" x="36" y="300" width="342" height="342"/>
                                 <color key="tintColor" name="Rose Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oK0-Zj-HxW" secondAttribute="height" multiplier="1:1" id="fzh-L2-KOi"/>
+                                </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etj-w2-rGc" customClass="PrimaryButton" customModule="Machbarschaft" customModuleProvider="target">
-                                <rect key="frame" x="32" y="744" width="350" height="30"/>
+                                <rect key="frame" x="32" y="722" width="350" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Auftrag annehmen"/>
                                 <connections>
@@ -392,17 +395,16 @@
                             <constraint firstItem="etj-w2-rGc" firstAttribute="centerX" secondItem="pev-Xx-d5R" secondAttribute="centerX" id="G70-gG-kxa"/>
                             <constraint firstItem="oK0-Zj-HxW" firstAttribute="top" secondItem="bAG-OS-5GM" secondAttribute="bottom" constant="30" id="HhS-K6-y2T"/>
                             <constraint firstItem="TSu-8T-gZV" firstAttribute="top" secondItem="gZM-PI-MQi" secondAttribute="top" constant="80" id="KEy-1o-QGN"/>
-                            <constraint firstItem="oK0-Zj-HxW" firstAttribute="leading" secondItem="gZM-PI-MQi" secondAttribute="leading" id="MCz-IP-hIY"/>
                             <constraint firstItem="etj-w2-rGc" firstAttribute="leading" secondItem="gZM-PI-MQi" secondAttribute="leading" constant="32" id="OzD-YS-aJB"/>
                             <constraint firstItem="bAG-OS-5GM" firstAttribute="top" secondItem="HeV-T0-4Vt" secondAttribute="bottom" constant="37.5" id="QDY-m1-wJv"/>
                             <constraint firstItem="bVY-on-EXP" firstAttribute="leading" secondItem="gZM-PI-MQi" secondAttribute="leading" constant="32" id="RHi-0W-8hs"/>
-                            <constraint firstItem="etj-w2-rGc" firstAttribute="top" secondItem="oK0-Zj-HxW" secondAttribute="bottom" constant="40" id="Vfo-Ae-QKx"/>
+                            <constraint firstItem="etj-w2-rGc" firstAttribute="top" secondItem="oK0-Zj-HxW" secondAttribute="bottom" constant="80" id="Vfo-Ae-QKx"/>
                             <constraint firstItem="TSu-8T-gZV" firstAttribute="leading" secondItem="gZM-PI-MQi" secondAttribute="leading" constant="40" id="YVS-gs-xml"/>
                             <constraint firstItem="bAG-OS-5GM" firstAttribute="centerX" secondItem="pev-Xx-d5R" secondAttribute="centerX" id="ZEM-xG-4qd"/>
                             <constraint firstItem="bVY-on-EXP" firstAttribute="top" secondItem="gZM-PI-MQi" secondAttribute="top" constant="20" id="dh9-4r-gwe"/>
-                            <constraint firstItem="gZM-PI-MQi" firstAttribute="trailing" secondItem="oK0-Zj-HxW" secondAttribute="trailing" id="rmg-7d-e5Q"/>
                             <constraint firstItem="bAG-OS-5GM" firstAttribute="leading" secondItem="HeV-T0-4Vt" secondAttribute="leading" id="rxY-AX-yK3"/>
                             <constraint firstItem="HeV-T0-4Vt" firstAttribute="top" secondItem="TSu-8T-gZV" secondAttribute="bottom" constant="37" id="vdV-61-M6K"/>
+                            <constraint firstItem="oK0-Zj-HxW" firstAttribute="centerX" secondItem="pev-Xx-d5R" secondAttribute="centerX" id="zII-2R-dMA"/>
                             <constraint firstItem="HeV-T0-4Vt" firstAttribute="leading" secondItem="TSu-8T-gZV" secondAttribute="leading" id="zor-2n-uQR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gZM-PI-MQi"/>
