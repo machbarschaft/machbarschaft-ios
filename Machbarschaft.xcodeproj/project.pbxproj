@@ -20,11 +20,14 @@
 		88082CF1242821D800DFD022 /* JobStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF0242821D800DFD022 /* JobStep2ViewController.swift */; };
 		88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF22428267F00DFD022 /* JobStep3ViewController.swift */; };
 		88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CF4242827E500DFD022 /* JobCompletedViewController.swift */; };
+		88A50D1A24353A5300048732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A50D1924353A5300048732 /* Images.xcassets */; };
+		88A50D1D24353DBA00048732 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A50D1B24353DBA00048732 /* PrimaryButton.swift */; };
+		88A50D1E24353DBA00048732 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A50D1C24353DBA00048732 /* Button.swift */; };
 		88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */; };
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
-		88BF97EF24279D0D005D8C23 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
 		88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
@@ -58,6 +61,9 @@
 		88082CF0242821D800DFD022 /* JobStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep2ViewController.swift; sourceTree = "<group>"; };
 		88082CF22428267F00DFD022 /* JobStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep3ViewController.swift; sourceTree = "<group>"; };
 		88082CF4242827E500DFD022 /* JobCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCompletedViewController.swift; sourceTree = "<group>"; };
+		88A50D1924353A5300048732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88A50D1B24353DBA00048732 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		88A50D1C24353DBA00048732 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep1ViewController.swift; sourceTree = "<group>"; };
 		88BF97E724278B16005D8C23 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep2ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				88BF97F52427A875005D8C23 /* SimplePicker.swift */,
+				88A50D1C24353DBA00048732 /* Button.swift */,
+				88A50D1B24353DBA00048732 /* PrimaryButton.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				88EA5655242762F60070B407 /* Assets.xcassets */,
 				88BF97F02427A578005D8C23 /* Colors.xcassets */,
 				88BF97E724278B16005D8C23 /* Icons.xcassets */,
+				88A50D1924353A5300048732 /* Images.xcassets */,
 				616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */,
 				88EA5657242762F60070B407 /* LaunchScreen.storyboard */,
 				88EA565A242762F60070B407 /* Info.plist */,
@@ -287,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88EA56622427640B0070B407 /* Login.storyboard in Resources */,
+				88A50D1A24353A5300048732 /* Images.xcassets in Resources */,
 				88BF97F92427A89A005D8C23 /* Other.storyboard in Resources */,
 				88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */,
 				88BF97FD2427AE40005D8C23 /* area-codes.json in Resources */,
@@ -358,7 +368,9 @@
 				616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */,
 				88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
+				88A50D1E24353DBA00048732 /* Button.swift in Sources */,
 				616BE9FC2427E32600F59B41 /* User.swift in Sources */,
+				88A50D1D24353DBA00048732 /* PrimaryButton.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
 				176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */,
 				88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */,
@@ -370,7 +382,7 @@
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
 				E1B567002427D7DE008658D9 /* API.swift in Sources */,
-				88BF97EF24279D0D005D8C23 /* BuildFile in Sources */,
+				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WM7LJTQW32;
+				DEVELOPMENT_TEAM = 578YR5HPG3;
 				INFOPLIST_FILE = "$(SRCROOT)/Machbarschaft/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -552,7 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WM7LJTQW32;
+				DEVELOPMENT_TEAM = 578YR5HPG3;
 				INFOPLIST_FILE = "$(SRCROOT)/Machbarschaft/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

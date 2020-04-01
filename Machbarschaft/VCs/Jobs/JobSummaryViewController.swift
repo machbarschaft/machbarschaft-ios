@@ -26,6 +26,8 @@ class JobSummaryViewController: UIViewController {
         jobDescriptionLabel.text = job.description
         urgencyLabel.text = job.urgency.title
         addressLabel.text = job.clientAddress
+        
+        mapView.layer.cornerRadius = mapView.frame.height/2
     }
     
     @IBAction func acceptJob(_ sender: UIButton) {

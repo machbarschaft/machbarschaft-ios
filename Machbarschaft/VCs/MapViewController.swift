@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var hasSetRegion: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,33 +31,31 @@ class MapViewController: UIViewController {
             }
         }
         
-        let mapEdgePadding = UIEdgeInsets(top: 70, left: 70, bottom: 250, right: 70)
-        var zoomRect = extendRectWithPoint(rect: .null, point: MKMapPoint(userLocation))
-        for annotation in annotations {
-            zoomRect = extendRectWithPoint(rect: zoomRect, point: MKMapPoint(annotation.coordinate))
+        if !hasSetRegion {
+            let mapEdgePadding = UIEdgeInsets(top: 70, left: 70, bottom: 250, right: 70)
+            var zoomRect = extendRectWithPoint(rect: .null, point: MKMapPoint(userLocation))
+            for annotation in annotations {
+                zoomRect = extendRectWithPoint(rect: zoomRect, point: MKMapPoint(annotation.coordinate))
+            }
+            mapView.setVisibleMapRect(zoomRect, edgePadding: mapEdgePadding, animated: true)
+            
+            hasSetRegion = true
         }
-        mapView.setVisibleMapRect(zoomRect, edgePadding: mapEdgePadding, animated: true)
-        
+            
         mapView.addAnnotations(annotations)
     }
     
     func annotationForJob(_ job: Job) -> MKPointAnnotation? {
-        guard job.location != nil else {
-            return nil
-        }
+        guard let location = job.location else { return nil }
         let annotation = MKPointAnnotation()
         annotation.title = job.type.title
-        annotation.coordinate = job.location!
+        annotation.coordinate = location
         return annotation
     }
     
     func extendRectWithPoint(rect: MKMapRect, point: MKMapPoint) -> MKMapRect {
         let pointRect = MKMapRect(x: point.x, y: point.y, width: 0.1, height: 0.1)
-        if rect.isNull {
-            return pointRect
-        } else {
-            return rect.union(pointRect)
-        }
+        return rect.isNull ? pointRect : rect.union(pointRect)
     }
 }
 

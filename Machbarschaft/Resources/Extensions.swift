@@ -190,3 +190,13 @@ extension String {
         self == "" ? nil : self
     }
 }
+
+extension UIButton {
+    func set(title: String?) {
+        setTitle(title, for: .normal)
+    }
+    
+    func set(titleColor: UIColor?) {
+        setTitleColor(titleColor, for: .normal)
+    }
+}
