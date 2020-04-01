@@ -49,7 +49,7 @@ public class RegisterHandler {
         var ref: DocumentReference? = nil
         ref = db.collection("Account").addDocument(data: [
             "uid": user.uid,
-            "passbaseKey": user.passbaseKey,
+            //"passbaseKey": user.passbaseKey,
             "credits": user.credits,
             "first_name": user.first_name,
             "last_name": user.last_name,

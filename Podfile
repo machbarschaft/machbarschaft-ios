@@ -1,7 +1,7 @@
 #Sources for Passbase
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/passbase/zoom-cocoapods-specs.git'
-source 'https://github.com/passbase/cocoapods-specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/passbase/zoom-cocoapods-specs.git'
+#source 'https://github.com/passbase/cocoapods-specs.git'
 
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
@@ -20,6 +20,6 @@ target 'Machbarschaft' do
   pod 'M13Checkbox'
   pod 'OverlayContainer'
 
-  pod 'Passbase', '~> 1.6.11'
+  #pod 'Passbase', '~> 1.6.11'
 
 end

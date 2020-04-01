@@ -284,14 +284,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - OverlayContainer (3.3.1)
-  - Passbase (1.6.11):
-    - Sentry (~> 4.3.1)
-    - ZoomAuthenticationHybrid (~> 7.0.18)
   - PromisesObjC (1.2.8)
-  - Sentry (4.3.4):
-    - Sentry/Core (= 4.3.4)
-  - Sentry/Core (4.3.4)
-  - ZoomAuthenticationHybrid (7.0.18)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -301,7 +294,6 @@ DEPENDENCIES:
   - FirebaseFirestoreSwift
   - M13Checkbox
   - OverlayContainer
-  - Passbase (~> 1.6.11)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -330,11 +322,6 @@ SPEC REPOS:
     - nanopb
     - OverlayContainer
     - PromisesObjC
-    - Sentry
-  https://github.com/passbase/cocoapods-specs.git:
-    - Passbase
-  https://github.com/passbase/zoom-cocoapods-specs.git:
-    - ZoomAuthenticationHybrid
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -361,11 +348,8 @@ SPEC CHECKSUMS:
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   OverlayContainer: a4033b1fe603341ebafb38d6acac28af3a8fe7a7
-  Passbase: 80f43575dc6dd06112d4ddc174d1882ecd5023a9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  Sentry: 26f0e6492b103e87434d1a5eea2d241a36f2c2a2
-  ZoomAuthenticationHybrid: 74e0409c2c7fe707a3edd236adb1efe37565545e
 
-PODFILE CHECKSUM: d62ff267b46076b201aa956bd2a37bd741acd220
+PODFILE CHECKSUM: e54ac66d2cb9509091462dadee50ca3194c5b9b5
 
 COCOAPODS: 1.9.1

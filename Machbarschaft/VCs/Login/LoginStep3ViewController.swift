@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Passbase
+//import Passbase
 import M13Checkbox
 import Firebase
 
-class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
+class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var firstNameErrorLabel: UILabel!
@@ -24,7 +24,7 @@ class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
     @IBOutlet weak var termsErrorLabel: UILabel!
     
     //Passbase variable
-    var passbaseCompleted:Bool = false
+    //var passbaseCompleted:Bool = false
     
     let handler:RegisterHandler = RegisterHandler()
     
@@ -32,7 +32,7 @@ class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
         super.viewDidLoad()
         
         //Set the delegate object to self
-        Passbase.delegate = self
+        //Passbase.delegate = self
         
     }
     
@@ -40,7 +40,7 @@ class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
         
     }
     
-    //Passbase stubs
+    /*Passbase stubs
     func didCompletePassbaseVerification(authenticationKey: String) {
         
         //Change passbase variable
@@ -56,7 +56,7 @@ class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
         //Change passbase variable
         passbaseCompleted = false
 
-    }
+    }*/
     
     @IBAction func toggleTermsCheckbox() {
         termsCheckbox.toggleCheckState(true)
@@ -77,18 +77,18 @@ class LoginStep3ViewController: SuperViewController, PassbaseDelegate {
             lastNameErrorLabel.text = ""
         }
         
-        if passbaseCompleted{
+        /*if passbaseCompleted{
             identErrorLabel.text = ""
         }else{
             identErrorLabel.text = "Bitte vervollständige deine Identitätsverifizierung"
-        }
+        }*/
         
         //Validation
-        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty && passbaseCompleted{
+        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty/* && passbaseCompleted*/{
             
             //Add textfield data to user struct
             let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
-                                 passbaseKey: UserDefaults.standard.string(forKey: "passbaseKey")!,
+                                 //passbaseKey: UserDefaults.standard.string(forKey: "passbaseKey")!,
                                  credits: 0,
                                  first_name: firstNameTextField.text!,
                                  last_name: lastNameTextField.text!,
