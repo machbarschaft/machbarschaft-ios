@@ -9,9 +9,21 @@
 import UIKit
 import MapKit
 
+class JobAnnotation: MKPointAnnotation {
+    var job: Job
+    init(job: Job) {
+        self.job = job
+    }
+}
+
+protocol MapViewControllerDelegate {
+    func didSelectJob(_ job: Job)
+}
+
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var delegate: MapViewControllerDelegate?
     
     var hasSetRegion: Bool = false
     
@@ -24,7 +36,7 @@ class MapViewController: UIViewController {
     
     func update(userLocation: CLLocationCoordinate2D, jobs: [Job]) {
         
-        var annotations: [MKPointAnnotation] = []
+        var annotations: [JobAnnotation] = []
         for job in jobs {
             if let annotation = annotationForJob(job) {
                 annotations.append(annotation)
@@ -45,11 +57,13 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(annotations)
     }
     
-    func annotationForJob(_ job: Job) -> MKPointAnnotation? {
-        guard let location = job.location else { return nil }
-        let annotation = MKPointAnnotation()
+    func annotationForJob(_ job: Job) -> JobAnnotation? {
+        guard job.location != nil else {
+            return nil
+        }
+        let annotation = JobAnnotation(job: job)
         annotation.title = job.type.title
-        annotation.coordinate = location
+        annotation.coordinate = job.location!
         return annotation
     }
     
@@ -63,7 +77,7 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is MKPointAnnotation else { return nil }
+        guard annotation is JobAnnotation else { return nil }
 
         let identifier = "Annotation"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
@@ -76,5 +90,10 @@ extension MapViewController: MKMapViewDelegate {
         }
 
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let annotation: JobAnnotation = view.annotation as! JobAnnotation
+        delegate?.didSelectJob(annotation.job)
     }
 }
