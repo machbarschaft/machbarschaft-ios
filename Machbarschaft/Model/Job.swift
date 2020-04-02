@@ -65,7 +65,7 @@ enum JobStatus {
     case done
 }
 
-struct Job {
+struct JobBla {
     var jobID: Int
     var type: JobType
     var urgency: JobUrgency
