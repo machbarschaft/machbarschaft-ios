@@ -13,7 +13,6 @@
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
 		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
 		616BE9FC2427E32600F59B41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9FB2427E32600F59B41 /* User.swift */; };
-		88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE72427BB1300DFD022 /* SuperViewController.swift */; };
 		88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE92427C70E00DFD022 /* MainViewController.swift */; };
 		88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */; };
 		88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */; };
@@ -44,6 +43,7 @@
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
 		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
 		E1B567002427D7DE008658D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* API.swift */; };
+		E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +54,6 @@
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
 		616BE9FB2427E32600F59B41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		88082CE72427BB1300DFD022 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuperViewController.swift; path = Machbarschaft/VCs/SuperViewController.swift; sourceTree = SOURCE_ROOT; };
 		88082CE92427C70E00DFD022 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSummaryViewController.swift; sourceTree = "<group>"; };
 		88082CEE24281BF800DFD022 /* JobStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobStep1ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		AEBD2F4F5E45280C0046E91C /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
 		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		E1B566FF2427D7DE008658D9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		88082CED24281BE500DFD022 /* Jobs */ = {
+		88082CED24281BE500DFD022 /* Job Details */ = {
 			isa = PBXGroup;
 			children = (
 				88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */,
@@ -127,27 +127,18 @@
 				88082CF22428267F00DFD022 /* JobStep3ViewController.swift */,
 				88082CF4242827E500DFD022 /* JobCompletedViewController.swift */,
 			);
-			path = Jobs;
+			path = "Job Details";
 			sourceTree = "<group>";
 		};
 		88BF97ED24279CAF005D8C23 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */,
 				88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */,
 				88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */,
 				88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		88BF97F42427A84C005D8C23 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				88BF97F52427A875005D8C23 /* SimplePicker.swift */,
-				88A50D1C24353DBA00048732 /* Button.swift */,
-				88A50D1B24353DBA00048732 /* PrimaryButton.swift */,
-			);
-			path = Libraries;
 			sourceTree = "<group>";
 		};
 		88EA5640242762F50070B407 = {
@@ -171,29 +162,32 @@
 		88EA564B242762F50070B407 /* Machbarschaft */ = {
 			isa = PBXGroup;
 			children = (
-				E1210C5024279E2E00579C67 /* Model */,
+				88EA564C242762F50070B407 /* AppDelegate.swift */,
+				88EA564E242762F50070B407 /* SceneDelegate.swift */,
 				88EA56642427641D0070B407 /* Storyboards */,
-				88EA5663242764150070B407 /* VCs */,
+				88EA5663242764150070B407 /* View Controllers */,
+				E18DF0432437C14500336409 /* Views */,
+				E1210C5024279E2E00579C67 /* Model */,
+				E18DF0442437C26500336409 /* Utilities */,
 				88EA56652427642C0070B407 /* Resources */,
 			);
 			path = Machbarschaft;
 			sourceTree = "<group>";
 		};
-		88EA5663242764150070B407 /* VCs */ = {
+		88EA5663242764150070B407 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				88082CE92427C70E00DFD022 /* MainViewController.swift */,
-				88EA5650242762F50070B407 /* MapViewController.swift */,
-				88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */,
-				88082CED24281BE500DFD022 /* Jobs */,
 				88BF97ED24279CAF005D8C23 /* Login */,
+				E1D8831E2437C57C00AC3AD5 /* Job Selection */,
+				88082CED24281BE500DFD022 /* Job Details */,
 			);
-			path = VCs;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		88EA56642427641D0070B407 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				88EA5657242762F60070B407 /* LaunchScreen.storyboard */,
 				88EA5652242762F50070B407 /* Main.storyboard */,
 				88EA56602427640B0070B407 /* Login.storyboard */,
 				88BF97F72427A89A005D8C23 /* Other.storyboard */,
@@ -204,22 +198,13 @@
 		88EA56652427642C0070B407 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E1B566FF2427D7DE008658D9 /* API.swift */,
-				176EAB642427B55B005217CA /* GeoFunctions.swift */,
-				88082CE72427BB1300DFD022 /* SuperViewController.swift */,
-				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
-				88BF97F42427A84C005D8C23 /* Libraries */,
-				88EA564C242762F50070B407 /* AppDelegate.swift */,
-				88EA564E242762F50070B407 /* SceneDelegate.swift */,
-				88BF97FC2427AE40005D8C23 /* area-codes.json */,
 				88EA5655242762F60070B407 /* Assets.xcassets */,
 				88BF97F02427A578005D8C23 /* Colors.xcassets */,
 				88BF97E724278B16005D8C23 /* Icons.xcassets */,
 				88A50D1924353A5300048732 /* Images.xcassets */,
-				616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */,
-				88EA5657242762F60070B407 /* LaunchScreen.storyboard */,
 				88EA565A242762F60070B407 /* Info.plist */,
-				616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */,
+				616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */,
+				88BF97FC2427AE40005D8C23 /* area-codes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -227,12 +212,51 @@
 		E1210C5024279E2E00579C67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88BF97FE2427AECA005D8C23 /* AreaCode.swift */,
+				E18DF0412437BFDD00336409 /* Services */,
 				E1210C5124279E5300579C67 /* Job.swift */,
 				616BE9FB2427E32600F59B41 /* User.swift */,
+				88BF97FE2427AECA005D8C23 /* AreaCode.swift */,
 				6153C60C242B7E020082CE9B /* Errors.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E18DF0412437BFDD00336409 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1B566FF2427D7DE008658D9 /* API.swift */,
+				616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E18DF0432437C14500336409 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88A50D1C24353DBA00048732 /* Button.swift */,
+				88A50D1B24353DBA00048732 /* PrimaryButton.swift */,
+				88BF97F52427A875005D8C23 /* SimplePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E18DF0442437C26500336409 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
+				176EAB642427B55B005217CA /* GeoFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E1D8831E2437C57C00AC3AD5 /* Job Selection */ = {
+			isa = PBXGroup;
+			children = (
+				88082CE92427C70E00DFD022 /* MainViewController.swift */,
+				88EA5650242762F50070B407 /* MapViewController.swift */,
+				88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */,
+			);
+			path = "Job Selection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */,
-				88082CE82427BB1300DFD022 /* SuperViewController.swift in Sources */,
 				88082CF1242821D800DFD022 /* JobStep2ViewController.swift in Sources */,
 				88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */,
 				6153C60D242B7E020082CE9B /* Errors.swift in Sources */,
@@ -372,6 +395,7 @@
 				616BE9FC2427E32600F59B41 /* User.swift in Sources */,
 				88A50D1D24353DBA00048732 /* PrimaryButton.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
+				E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */,
 				176EAB652427B55B005217CA /* GeoFunctions.swift in Sources */,
 				88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */,
 				88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */,
