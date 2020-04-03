@@ -216,7 +216,6 @@
 				E1210C5124279E5300579C67 /* Job.swift */,
 				616BE9FB2427E32600F59B41 /* User.swift */,
 				88BF97FE2427AECA005D8C23 /* AreaCode.swift */,
-				6153C60C242B7E020082CE9B /* Errors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +244,7 @@
 			children = (
 				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
 				176EAB642427B55B005217CA /* GeoFunctions.swift */,
+				6153C60C242B7E020082CE9B /* Errors.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
