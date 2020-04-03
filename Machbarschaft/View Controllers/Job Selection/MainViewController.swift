@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     let mapViewController = viewController(withID: "MapViewController") as? MapViewController
     let jobTableViewController = viewController(withID: "JobMenuViewController") as? JobsTableViewController
     
+    let jobService = JobService()
     var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
@@ -87,8 +88,7 @@ extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.last {
-            let api = API
-            api?.loadJobs(location: location.coordinate, completion: { (jobs) in
+            jobService.loadJobs(location: location.coordinate, completion: { (jobs) in
                 self.mapViewController?.update(userLocation: location.coordinate, jobs: jobs)
                 self.jobTableViewController?.update(jobs: jobs)
             })
