@@ -10,7 +10,7 @@ import UIKit
 //import Passbase
 import Firebase
 
-var API : APIClass!
+var API : JobService!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase initialization
         FirebaseApp.configure()
         
-        API = APIClass()
+        API = JobService()
         
         return true
     }

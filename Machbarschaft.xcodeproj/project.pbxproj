@@ -11,7 +11,7 @@
 		20D428B65FC3D66D12014E5D /* Pods_Machbarschaft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8188880F30630FBC83B1A6 /* Pods_Machbarschaft.framework */; };
 		6153C60D242B7E020082CE9B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6153C60C242B7E020082CE9B /* Errors.swift */; };
 		616BE9E5242771AD00F59B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */; };
-		616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */; };
+		616BE9FA2427B7CB00F59B41 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9F92427B7CB00F59B41 /* AccountService.swift */; };
 		616BE9FC2427E32600F59B41 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616BE9FB2427E32600F59B41 /* User.swift */; };
 		88082CEA2427C70E00DFD022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CE92427C70E00DFD022 /* MainViewController.swift */; };
 		88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */; };
@@ -42,7 +42,7 @@
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
 		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
-		E1B567002427D7DE008658D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* API.swift */; };
+		E1B567002427D7DE008658D9 /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* JobService.swift */; };
 		E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,7 @@
 		598C6C268D995093FAD4DD62 /* Pods-Machbarschaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.debug.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.debug.xcconfig"; sourceTree = "<group>"; };
 		6153C60C242B7E020082CE9B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		616BE9E4242771AD00F59B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHandler.swift; sourceTree = "<group>"; };
+		616BE9F92427B7CB00F59B41 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		616BE9FB2427E32600F59B41 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88082CE92427C70E00DFD022 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88082CEB24281B9300DFD022 /* JobSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSummaryViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		AEBD2F4F5E45280C0046E91C /* Pods-Machbarschaft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.release.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.release.xcconfig"; sourceTree = "<group>"; };
 		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		E1B566FF2427D7DE008658D9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E1B566FF2427D7DE008658D9 /* JobService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
 		E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,8 +224,8 @@
 		E18DF0412437BFDD00336409 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E1B566FF2427D7DE008658D9 /* API.swift */,
-				616BE9F92427B7CB00F59B41 /* RegisterHandler.swift */,
+				E1B566FF2427D7DE008658D9 /* JobService.swift */,
+				616BE9F92427B7CB00F59B41 /* AccountService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
 				88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
-				616BE9FA2427B7CB00F59B41 /* RegisterHandler.swift in Sources */,
+				616BE9FA2427B7CB00F59B41 /* AccountService.swift in Sources */,
 				88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88A50D1E24353DBA00048732 /* Button.swift in Sources */,
@@ -405,7 +405,7 @@
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
-				E1B567002427D7DE008658D9 /* API.swift in Sources */,
+				E1B567002427D7DE008658D9 /* JobService.swift in Sources */,
 				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

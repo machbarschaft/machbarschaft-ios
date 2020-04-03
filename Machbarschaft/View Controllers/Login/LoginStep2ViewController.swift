@@ -15,7 +15,7 @@ class LoginStep2ViewController: SuperViewController {
     @IBOutlet weak var codeTextField: UITextField!
     @IBOutlet weak var codeErrorLabel: UILabel!
     
-    let handler: RegisterHandler = RegisterHandler()
+    let accountService = AccountService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +73,7 @@ class LoginStep2ViewController: SuperViewController {
                 }else{
                     
                     //Save documentID to user defaults
-                    self.handler.getDocumentID(forUID: userID){ result in
+                    self.accountService.getDocumentID(forUID: userID){ result in
                         
                         //TODO: If getDocumentID
                         switch result{

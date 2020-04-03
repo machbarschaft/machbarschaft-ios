@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import CoreLocation
 
-class APIClass {
+class JobService {
     
     var db: Firestore!
 

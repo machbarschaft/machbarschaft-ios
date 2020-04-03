@@ -14,7 +14,7 @@ class LoginStep1ViewController: SuperViewController {
     @IBOutlet weak var phoneNumberErrorLabel: UILabel!
     @IBOutlet weak var areaCodeButton: UIButton!
     
-    let handler: RegisterHandler = RegisterHandler()
+    let accountService = AccountService()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +49,10 @@ class LoginStep1ViewController: SuperViewController {
         phone = (areaCodeButton.titleLabel?.text?.nonEmpty ?? "+49") + phone
         
         //Phone number validation
-        if handler.validatePhone(phone: phone){
+        if accountService.validatePhone(phone: phone){
             
             //Request verification code
-            handler.requestCode(phoneNumber: phone)
+            accountService.requestCode(phoneNumber: phone)
             
             //Remove any error messages from error label
             phoneNumberErrorLabel.text = ""
