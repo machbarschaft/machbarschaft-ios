@@ -26,7 +26,7 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
     //Passbase variable
     //var passbaseCompleted:Bool = false
     
-    let handler:RegisterHandler = RegisterHandler()
+    let accountService = AccountService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +97,7 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
             
             //Create account
             //TODO: Show loading circle
-            handler.createAccount(user: userInput){ success in
+            accountService.createAccount(user: userInput){ success in
                 
                 if success{
                     

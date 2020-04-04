@@ -1,5 +1,5 @@
 //
-//  RegisterHandler.swift
+//  AccountService.swift
 //  Machbarschaft
 //
 //  Created by Felix Schlegel on 22.03.20.
@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 
-public class RegisterHandler {
+public class AccountService {
     
     //Initialise Database
     let db = Firestore.firestore()

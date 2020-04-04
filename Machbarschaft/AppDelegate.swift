@@ -10,7 +10,6 @@ import UIKit
 //import Passbase
 import Firebase
 
-var API : APIClass!
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Firebase initialization
         FirebaseApp.configure()
-        
-        API = APIClass()
         
         return true
     }

@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import CoreLocation
 
-class APIClass {
+class JobService {
     
     var db: Firestore!
 
@@ -104,7 +104,6 @@ class APIClass {
         return result
     }
     
-    // API.getOrdersInArea(location: CLLocationCoordinate2D(latitude: 50, longitude: 8.263), range: 10)
     func getOrdersInArea(location: CLLocationCoordinate2D, range: Double) -> [Job]? {
         var result : [Job]? = nil
         let locationBounds = getEdgeCoordinates(midCoordinate: location, distance: range)
