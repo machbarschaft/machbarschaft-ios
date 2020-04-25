@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cTi-qb-Hmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cTi-qb-Hmy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,17 +68,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="sUV-Du-Cmr">
-                                        <rect key="frame" x="87" y="106" width="240" height="30"/>
+                                        <rect key="frame" x="91.5" y="106" width="231" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWH-ru-fmK">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Einloggen"/>
                                                 <connections>
                                                     <action selector="login:" destination="MOs-f0-hkT" eventType="touchUpInside" id="7Rg-1n-FpW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-FL-8qD">
-                                                <rect key="frame" x="157" y="0.0" width="83" height="30"/>
+                                                <rect key="frame" x="148" y="0.0" width="83" height="30"/>
                                                 <state key="normal" title="Registrieren"/>
                                                 <connections>
                                                     <action selector="register:" destination="MOs-f0-hkT" eventType="touchUpInside" id="f2D-If-Yc2"/>
@@ -210,6 +210,12 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wir haben eine SMS an +49 xxxxxxxxxx gesendet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-L8-fj6">
+                                <rect key="frame" x="60" y="145" width="242" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -223,7 +229,9 @@
                             <constraint firstItem="LOL-eW-ZAw" firstAttribute="leading" secondItem="jup-cO-LCu" secondAttribute="leading" id="ZB5-sk-n8a"/>
                             <constraint firstItem="jup-cO-LCu" firstAttribute="centerX" secondItem="h24-lV-Uw0" secondAttribute="centerX" id="da4-C6-tJH"/>
                             <constraint firstItem="rii-Bw-mZP" firstAttribute="bottom" secondItem="B4c-EV-rTL" secondAttribute="bottom" constant="30" id="hG7-Ie-r0U"/>
+                            <constraint firstItem="Hdc-L8-fj6" firstAttribute="leading" secondItem="i6w-g8-4ay" secondAttribute="leading" id="jdM-PJ-Dr3"/>
                             <constraint firstItem="dU7-dM-YeS" firstAttribute="top" secondItem="rii-Bw-mZP" secondAttribute="top" constant="12" id="lf1-yQ-iQk"/>
+                            <constraint firstItem="Hdc-L8-fj6" firstAttribute="top" secondItem="i6w-g8-4ay" secondAttribute="bottom" constant="12" id="xdZ-xi-yaS"/>
                             <constraint firstItem="i6w-g8-4ay" firstAttribute="top" secondItem="rii-Bw-mZP" secondAttribute="top" constant="60" id="xss-ct-ulr"/>
                             <constraint firstItem="LOL-eW-ZAw" firstAttribute="top" secondItem="jup-cO-LCu" secondAttribute="bottom" constant="13.5" id="xxi-SV-24B"/>
                         </constraints>
@@ -531,12 +539,12 @@
             <point key="canvasLocation" x="2352" y="-836"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JLy-Zu-hye"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo-Black-RGB-neg-RZ" width="842" height="384"/>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
-        <image name="arrow.up.and.down" catalog="system" width="52" height="64"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.up.and.down" catalog="system" width="107" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tVP-bT-bXQ"/>
-    </inferredMetricsTieBreakers>
 </document>
