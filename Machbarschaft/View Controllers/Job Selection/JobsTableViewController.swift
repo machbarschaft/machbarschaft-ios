@@ -65,8 +65,8 @@ class JobsTableViewController: UIViewController {
         
         sorting = isSortingByUrgency ? .urgency : .distance
         
-        let activeColor = UIColor(named: "Link")!
-        let inactiveColor = UIColor(named: "Text")!
+        let activeColor = UIColor.white
+        let inactiveColor = UIColor.black
         urgencyButton.setTitleColor(isSortingByUrgency ? activeColor : inactiveColor, for: .normal)
         urgencyButtonIcon.tintColor = isSortingByUrgency ? activeColor : inactiveColor
         closenessButton.setTitleColor(isSortingByUrgency ? inactiveColor : activeColor, for: .normal)
