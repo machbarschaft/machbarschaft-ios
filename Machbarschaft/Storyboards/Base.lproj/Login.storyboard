@@ -98,7 +98,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="cXa-bo-3RF"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.83921568629999999" green="0.85098039219999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Einloggen"/>
+                                                <state key="normal" title="Einloggen">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="5"/>
@@ -114,7 +116,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="LaO-lu-wP0"/>
                                                 </constraints>
-                                                <state key="normal" title="Registrieren"/>
+                                                <color key="tintColor" red="0.18431372549019609" green="0.27843137254901962" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Registrieren">
+                                                    <color key="titleColor" red="0.18431372549019609" green="0.27843137254901962" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="5"/>
