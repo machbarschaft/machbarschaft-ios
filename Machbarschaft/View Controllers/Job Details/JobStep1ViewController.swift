@@ -19,7 +19,7 @@ class JobStep1ViewController: UIViewController {
         
         isModalInPresentation = true
         
-        taskLabel.text = "Bitte besprich dich mit \(job.clientName)."
+        taskLabel.text = NSLocalizedString("TaskLabel", comment: "") + " \(job.clientName)."
     }
     
     @IBAction func callNow(_ sender: Any) {

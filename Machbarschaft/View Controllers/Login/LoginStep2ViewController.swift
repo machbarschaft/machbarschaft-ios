@@ -48,7 +48,7 @@ class LoginStep2ViewController: SuperViewController {
                     print(error)
                     
                     //Show error message
-                    self.codeErrorLabel.text = "Ups! Dein eingegebener Code ist falsch"
+                    self.codeErrorLabel.text = NSLocalizedString("CodeError", comment: "")
                     
                     return
                 }
@@ -113,7 +113,7 @@ class LoginStep2ViewController: SuperViewController {
         }else{
             
             //Show error message
-            codeErrorLabel.text = "Der Code muss 6-stellig sein"
+            codeErrorLabel.text = NSLocalizedString("CodeLengthError", comment: "")
             
         }
         

@@ -66,13 +66,13 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
         
         //Validation messages
         if firstNameTextField.text!.isEmpty{
-            firstNameErrorLabel.text = "Bitte gebe deinen Vornamen ein"
+            firstNameErrorLabel.text = NSLocalizedString("FirstNameError", comment: "")
         }else{
             firstNameErrorLabel.text = ""
         }
         
         if lastNameTextField.text!.isEmpty{
-            lastNameErrorLabel.text = "Bitte gebe deinen Nachnamen ein"
+            lastNameErrorLabel.text = NSLocalizedString("LastNameError", comment: "")
         }else{
             lastNameErrorLabel.text = ""
         }
@@ -106,7 +106,7 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
                 }else{
                     
                     //TODO: Create an own label
-                    self.termsErrorLabel.text = "Beim erstellen deines Accounts ist ein Fehler aufgetreten. Bitte versuche es erneut."
+                    self.termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
                     
                 }
                 

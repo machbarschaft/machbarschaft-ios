@@ -65,7 +65,7 @@ class LoginStep1ViewController: SuperViewController {
         }else{
             
             //Show error message
-            phoneNumberErrorLabel.text = "Ups! Bitte überprüfe deine Telefonnummer"
+            phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")
             
         }
         
