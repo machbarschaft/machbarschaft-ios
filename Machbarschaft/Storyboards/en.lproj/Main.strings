@@ -3,109 +3,109 @@
 "1fB-5M-CYq.text" = "Chausseestraße 38, 10115 Berlin";
 
 /* Class = "UILabel"; text = "Bitte besprich dich mit Frau Leutheusser-Schnarrenberger."; ObjectID = "25B-jv-tbg"; */
-"25B-jv-tbg.text" = "Bitte besprich dich mit Frau Leutheusser-Schnarrenberger.";
+"25B-jv-tbg.text" = "Please speak with Mrs. Leutheusser-Schnarrenberger.";
 
 /* Class = "UILabel"; text = "Vielen Dank!\nDu bist toll!"; ObjectID = "2e3-sr-Vnx"; */
-"2e3-sr-Vnx.text" = "Vielen Dank!\nDu bist toll!";
+"2e3-sr-Vnx.text" = "Thanks a lot!\nYou're awesome!";
 
 /* Class = "UILabel"; text = "Ziel-Adresse"; ObjectID = "5Ol-wm-M2n"; */
-"5Ol-wm-M2n.text" = "Ziel-Adresse";
+"5Ol-wm-M2n.text" = "Destination address";
 
 /* Class = "UIButton"; normalTitle = "Route berechnen"; ObjectID = "6Xu-A1-jWR"; */
-"6Xu-A1-jWR.normalTitle" = "Route berechnen";
+"6Xu-A1-jWR.normalTitle" = "Calculate route";
 
 /* Class = "UILabel"; text = "250m"; ObjectID = "EmL-IC-4jr"; */
 "EmL-IC-4jr.text" = "250m";
 
 /* Class = "UILabel"; text = "Sag uns Bescheid, wenn du unterwegs bist."; ObjectID = "Eyl-gT-GzG"; */
-"Eyl-gT-GzG.text" = "Sag uns Bescheid, wenn du unterwegs bist.";
+"Eyl-gT-GzG.text" = "Let us know when you're on the road.";
 
 /* Class = "UILabel"; text = "Frau Leutheusser-Schnarrenberger"; ObjectID = "FJc-Hm-wgS"; */
-"FJc-Hm-wgS.text" = "Frau Leutheusser-Schnarrenberger";
+"FJc-Hm-wgS.text" = "Mrs. Leutheusser-Schnarrenberger";
 
 /* Class = "UILabel"; text = "Chausseestraße 38, 10115 Berlin"; ObjectID = "FdT-p1-JWo"; */
 "FdT-p1-JWo.text" = "Chausseestraße 38, 10115 Berlin";
 
 /* Class = "UILabel"; text = "Frau Leutheusser-Schnarrenberger"; ObjectID = "HeV-T0-4Vt"; */
-"HeV-T0-4Vt.text" = "Frau Leutheusser-Schnarrenberger";
+"HeV-T0-4Vt.text" = "Mrs. Leutheusser-Schnarrenberger";
 
 /* Class = "UIButton"; normalTitle = "Jetzt anrufen"; ObjectID = "KqW-Zm-jS8"; */
-"KqW-Zm-jS8.normalTitle" = "Jetzt anrufen";
+"KqW-Zm-jS8.normalTitle" = "Call now";
 
 /* Class = "UILabel"; text = "Ibuprofen und Asthmaspray"; ObjectID = "NKG-ku-PXv"; */
-"NKG-ku-PXv.text" = "Ibuprofen und Asthmaspray";
+"NKG-ku-PXv.text" = "ibuprofen and asthma inhaler";
 
 /* Class = "UIButton"; normalTitle = "Ich konnte niemanden erreichen"; ObjectID = "OAj-09-5W4"; */
-"OAj-09-5W4.normalTitle" = "Ich konnte niemanden erreichen";
+"OAj-09-5W4.normalTitle" = "I couldn't reach anyone";
 
 /* Class = "UILabel"; text = "Adresse:"; ObjectID = "PVz-yV-TiN"; */
-"PVz-yV-TiN.text" = "Adresse:";
+"PVz-yV-TiN.text" = "Address:";
 
 /* Class = "UILabel"; text = "benötigt:"; ObjectID = "RYc-1S-gMN"; */
-"RYc-1S-gMN.text" = "benötigt:";
+"RYc-1S-gMN.text" = "Need:";
 
 /* Class = "UIButton"; normalTitle = "zurück"; ObjectID = "SQQ-7c-rKa"; */
-"SQQ-7c-rKa.normalTitle" = "zurück";
+"SQQ-7c-rKa.normalTitle" = "back";
 
 /* Class = "UILabel"; text = "Der Auftrag"; ObjectID = "TSu-8T-gZV"; */
-"TSu-8T-gZV.text" = "Der Auftrag";
+"TSu-8T-gZV.text" = "Request";
 
 /* Class = "UILabel"; text = "Schritt #1"; ObjectID = "XdN-do-AIt"; */
-"XdN-do-AIt.text" = "Schritt #1";
+"XdN-do-AIt.text" = "Step #1";
 
 /* Class = "UILabel"; text = "Erledigung:"; ObjectID = "aX4-3t-HJO"; */
-"aX4-3t-HJO.text" = "Erledigung:";
+"aX4-3t-HJO.text" = "Done by:";
 
 /* Class = "UILabel"; text = "Schritt #3"; ObjectID = "bi2-vt-QRS"; */
-"bi2-vt-QRS.text" = "Schritt #3";
+"bi2-vt-QRS.text" = "Step #3";
 
 /* Class = "UIButton"; normalTitle = "Jetzt anrufen"; ObjectID = "cTR-xX-HU8"; */
-"cTR-xX-HU8.normalTitle" = "Jetzt anrufen";
+"cTR-xX-HU8.normalTitle" = "Call now";
 
 /* Class = "UIButton"; normalTitle = "zurück"; ObjectID = "ek8-bo-x0s"; */
-"ek8-bo-x0s.normalTitle" = "zurück";
+"ek8-bo-x0s.normalTitle" = "back";
 
 /* Class = "UIButton"; normalTitle = "Auftrag annehmen"; ObjectID = "etj-w2-rGc"; */
-"etj-w2-rGc.normalTitle" = "Auftrag annehmen";
+"etj-w2-rGc.normalTitle" = "Accept the request";
 
 /* Class = "UIButton"; normalTitle = "Jetzt anrufen"; ObjectID = "ftD-o7-ouM"; */
-"ftD-o7-ouM.normalTitle" = "Jetzt anrufen";
+"ftD-o7-ouM.normalTitle" = "Call now";
 
 /* Class = "UILabel"; text = "so schnell wie möglich"; ObjectID = "jPp-M3-jHY"; */
-"jPp-M3-jHY.text" = "so schnell wie möglich";
+"jPp-M3-jHY.text" = "as soon as possible";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "oai-3p-5ae"; */
 "oai-3p-5ae.text" = "1";
 
 /* Class = "UILabel"; text = "Medikamente"; ObjectID = "olC-Zb-LBu"; */
-"olC-Zb-LBu.text" = "Medikamente";
+"olC-Zb-LBu.text" = "Medications";
 
 /* Class = "UIButton"; normalTitle = "Dringlichkeit"; ObjectID = "pS3-lR-80A"; */
-"pS3-lR-80A.normalTitle" = "Dringlichkeit";
+"pS3-lR-80A.normalTitle" = "Urgency";
 
 /* Class = "UILabel"; text = "rezeptpflichtige Medikamente"; ObjectID = "q34-EP-hUE"; */
-"q34-EP-hUE.text" = "rezeptpflichtige Medikamente";
+"q34-EP-hUE.text" = "prescription medications";
 
 /* Class = "UIButton"; normalTitle = "Nähe"; ObjectID = "rML-Kt-d89"; */
-"rML-Kt-d89.normalTitle" = "Nähe";
+"rML-Kt-d89.normalTitle" = "Distance";
 
 /* Class = "UILabel"; text = "Frau Leutheusser-Schnarrenberger"; ObjectID = "s0g-R1-5If"; */
-"s0g-R1-5If.text" = "Frau Leutheusser-Schnarrenberger";
+"s0g-R1-5If.text" = "Mrs. Leutheusser-Schnarrenberger";
 
 /* Class = "UIButton"; normalTitle = "zum Homescreen"; ObjectID = "tV4-Vb-D3I"; */
-"tV4-Vb-D3I.normalTitle" = "zum Homescreen";
+"tV4-Vb-D3I.normalTitle" = "Go to the Home screen";
 
 /* Class = "UIButton"; normalTitle = "Ich gehe jetzt los"; ObjectID = "tuo-HS-9G5"; */
-"tuo-HS-9G5.normalTitle" = "Ich gehe jetzt los";
+"tuo-HS-9G5.normalTitle" = "I'll go now";
 
 /* Class = "UILabel"; text = "Schritt #2"; ObjectID = "vjL-0n-X3t"; */
-"vjL-0n-X3t.text" = "Schritt #2";
+"vjL-0n-X3t.text" = "Step #2";
 
 /* Class = "UILabel"; text = "Auftrag erledigen"; ObjectID = "xqe-hG-fac"; */
-"xqe-hG-fac.text" = "Auftrag erledigen";
+"xqe-hG-fac.text" = "Perform the request";
 
 /* Class = "UIButton"; normalTitle = "Ich gehe später los"; ObjectID = "yJX-kA-OhG"; */
-"yJX-kA-OhG.normalTitle" = "Ich gehe später los";
+"yJX-kA-OhG.normalTitle" = "I'll go later";
 
 /* Class = "UIButton"; normalTitle = "Auftrag erledigt"; ObjectID = "ztE-UU-HRS"; */
-"ztE-UU-HRS.normalTitle" = "Auftrag erledigt";
+"ztE-UU-HRS.normalTitle" = "Job complete";
