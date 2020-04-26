@@ -315,13 +315,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Der Auftrag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSu-8T-gZV">
                                 <rect key="frame" x="40" y="80" width="126.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frau Leutheusser-Schnarrenberger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeV-T0-4Vt">
                                 <rect key="frame" x="40" y="146" width="262" height="19.5"/>
+                                <color key="tintColor" red="0.32941176470588235" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bAG-OS-5GM">
@@ -333,13 +334,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="benötigt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYc-1S-gMN">
                                                 <rect key="frame" x="0.0" y="0.0" width="115.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="rezeptpflichtige Medikamente" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q34-EP-hUE">
                                                 <rect key="frame" x="123.5" y="0.0" width="210.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -350,13 +351,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erledigung:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX4-3t-HJO">
                                                 <rect key="frame" x="0.0" y="0.0" width="115.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="so schnell wie möglich" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPp-M3-jHY">
                                                 <rect key="frame" x="123.5" y="0.0" width="210.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -367,13 +368,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-yV-TiN">
                                                 <rect key="frame" x="0.0" y="0.0" width="115.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Chausseestraße 38, 10115 Berlin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-5M-CYq">
                                                 <rect key="frame" x="123.5" y="0.0" width="210.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -385,16 +386,21 @@
                                 </constraints>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oK0-Zj-HxW">
-                                <rect key="frame" x="36" y="300" width="342" height="342"/>
+                                <rect key="frame" x="30" y="300" width="354" height="354"/>
                                 <color key="tintColor" name="Rose Background"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oK0-Zj-HxW" secondAttribute="height" multiplier="1:1" id="fzh-L2-KOi"/>
                                 </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etj-w2-rGc" customClass="PrimaryButton" customModule="Machbarschaft" customModuleProvider="target">
-                                <rect key="frame" x="32" y="722" width="350" height="52"/>
+                                <rect key="frame" x="32" y="734" width="350" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Auftrag annehmen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WQR-3Z-83K"/>
+                                </constraints>
+                                <state key="normal" title="Auftrag annehmen">
+                                    <color key="titleColor" red="0.49411764705882355" green="0.6470588235294118" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="acceptJob:" destination="Ykx-QC-vnX" eventType="touchUpInside" id="rix-Fk-ORE"/>
                                 </connections>
@@ -475,20 +481,31 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt #1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdN-do-AIt">
-                                <rect key="frame" x="154.5" y="227" width="105.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="131" y="214" width="152.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte besprich dich mit Frau Leutheusser-Schnarrenberger." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25B-jv-tbg">
                                 <rect key="frame" x="83" y="336" width="248" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.3294117647" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqW-Zm-jS8">
-                                <rect key="frame" x="161.5" y="480" width="91" height="30"/>
-                                <state key="normal" title="Jetzt anrufen"/>
+                                <rect key="frame" x="20" y="480" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.78431372549019607" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Njb-G9-fgl"/>
+                                </constraints>
+                                <state key="normal" title="Jetzt anrufen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="callNow:" destination="bog-sU-Rnq" eventType="touchUpInside" id="yxh-Fn-dxI"/>
                                 </connections>
@@ -501,6 +518,8 @@
                             <constraint firstItem="XdN-do-AIt" firstAttribute="centerX" secondItem="ryK-ak-I0d" secondAttribute="centerX" id="Act-71-FsK"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="centerY" secondItem="ryK-ak-I0d" secondAttribute="centerY" multiplier="0.9" id="Nmr-Ea-rgW"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="top" secondItem="XdN-do-AIt" secondAttribute="bottom" constant="80" id="RAW-Ws-d3G"/>
+                            <constraint firstItem="KqW-Zm-jS8" firstAttribute="leading" secondItem="VFU-Y6-q2B" secondAttribute="leading" constant="20" id="WS9-OD-kfJ"/>
+                            <constraint firstItem="VFU-Y6-q2B" firstAttribute="trailing" secondItem="KqW-Zm-jS8" secondAttribute="trailing" constant="20" id="aiP-aP-J50"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="width" secondItem="ryK-ak-I0d" secondAttribute="width" multiplier="0.6" id="h5M-Q3-yoK"/>
                             <constraint firstItem="Z4x-eU-XFr" firstAttribute="leading" secondItem="VFU-Y6-q2B" secondAttribute="leading" constant="32" id="hCQ-vc-2cK"/>
                             <constraint firstItem="25B-jv-tbg" firstAttribute="centerX" secondItem="ryK-ak-I0d" secondAttribute="centerX" id="igp-vj-f70"/>
@@ -545,37 +564,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt #2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-0n-X3t">
-                                <rect key="frame" x="153" y="227" width="108.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="128.5" y="214" width="157" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sag uns Bescheid, wenn du unterwegs bist." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyl-gT-GzG">
                                 <rect key="frame" x="83" y="336" width="248" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuo-HS-9G5">
-                                <rect key="frame" x="148.5" y="480" width="117" height="30"/>
-                                <state key="normal" title="Ich gehe jetzt los"/>
-                                <connections>
-                                    <action selector="leavingNow:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="UCk-2g-dls"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnG-1l-XJT">
-                                <rect key="frame" x="97" y="610" width="220" height="68"/>
+                                <rect key="frame" x="94.5" y="740" width="225" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJX-kA-OhG">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
-                                        <state key="normal" title="Ich gehe später los"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Ich gehe später los">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="leavingLater:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="hZg-qO-1po"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAj-09-5W4">
-                                        <rect key="frame" x="0.0" y="38" width="220" height="30"/>
-                                        <state key="normal" title="Ich konnte niemanden erreichen"/>
+                                        <rect key="frame" x="0.0" y="38" width="225" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Ich konnte niemanden erreichen">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="couldntReachAnyone:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="tQ4-Bn-e2s"/>
                                         </connections>
@@ -584,7 +602,9 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTR-xX-HU8">
                                 <rect key="frame" x="303" y="20" width="91" height="30"/>
-                                <state key="normal" title="Jetzt anrufen"/>
+                                <state key="normal" title="Jetzt anrufen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="callNow:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="gQ0-FI-DoM"/>
                                 </connections>
@@ -595,23 +615,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuo-HS-9G5">
+                                <rect key="frame" x="20" y="692" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.7843137255" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BdW-sm-pvg"/>
+                                </constraints>
+                                <state key="normal" title="Ich gehe jetzt los">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leavingNow:" destination="gyZ-Az-pHO" eventType="touchUpInside" id="UCk-2g-dls"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.27843137254901962" green="0.3529411764705882" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cTR-xX-HU8" firstAttribute="top" secondItem="1Es-FN-Gue" secondAttribute="top" constant="20" id="0EV-tq-rkT"/>
-                            <constraint firstItem="tuo-HS-9G5" firstAttribute="top" secondItem="Eyl-gT-GzG" secondAttribute="bottom" constant="58" id="Khh-tj-Otk"/>
                             <constraint firstItem="Eyl-gT-GzG" firstAttribute="top" secondItem="vjL-0n-X3t" secondAttribute="bottom" constant="80" id="LMO-d7-S0w"/>
                             <constraint firstItem="Eyl-gT-GzG" firstAttribute="centerY" secondItem="JIo-P7-7L1" secondAttribute="centerY" multiplier="0.9" id="Res-9v-qyc"/>
                             <constraint firstItem="cTR-xX-HU8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FJc-Hm-wgS" secondAttribute="trailing" constant="40" id="S68-kA-SoY"/>
                             <constraint firstItem="1Es-FN-Gue" firstAttribute="trailing" secondItem="cTR-xX-HU8" secondAttribute="trailing" constant="20" id="Sdt-BO-i6N"/>
-                            <constraint firstItem="LnG-1l-XJT" firstAttribute="top" secondItem="tuo-HS-9G5" secondAttribute="bottom" constant="100" id="Xcy-2l-Gw7"/>
+                            <constraint firstItem="tuo-HS-9G5" firstAttribute="leading" secondItem="1Es-FN-Gue" secondAttribute="leading" constant="20" id="Y8C-35-fNk"/>
                             <constraint firstItem="Eyl-gT-GzG" firstAttribute="width" secondItem="JIo-P7-7L1" secondAttribute="width" multiplier="0.6" id="YjJ-4a-D1x"/>
                             <constraint firstItem="FJc-Hm-wgS" firstAttribute="leading" secondItem="1Es-FN-Gue" secondAttribute="leading" constant="20" id="awV-G8-j6X"/>
                             <constraint firstItem="Eyl-gT-GzG" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="dM4-Ks-qJF"/>
+                            <constraint firstItem="LnG-1l-XJT" firstAttribute="bottom" secondItem="1Es-FN-Gue" secondAttribute="bottom" id="j9F-ag-iaD"/>
                             <constraint firstItem="vjL-0n-X3t" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="o6s-cD-l1a"/>
+                            <constraint firstItem="LnG-1l-XJT" firstAttribute="top" secondItem="tuo-HS-9G5" secondAttribute="bottom" constant="8" id="rnS-8n-Zmq"/>
                             <constraint firstItem="FJc-Hm-wgS" firstAttribute="top" secondItem="1Es-FN-Gue" secondAttribute="top" constant="20" id="rnh-Q0-njK"/>
                             <constraint firstItem="LnG-1l-XJT" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="s0R-lR-8ZK"/>
                             <constraint firstItem="tuo-HS-9G5" firstAttribute="centerX" secondItem="JIo-P7-7L1" secondAttribute="centerX" id="xcf-iZ-cl9"/>
+                            <constraint firstItem="1Es-FN-Gue" firstAttribute="trailing" secondItem="tuo-HS-9G5" secondAttribute="trailing" constant="20" id="z7e-SD-NjI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Es-FN-Gue"/>
                     </view>
@@ -623,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg5-jj-xiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5054" y="137"/>
+            <point key="canvasLocation" x="5053.6231884057979" y="136.60714285714286"/>
         </scene>
         <!--Job Step3 View Controller-->
         <scene sceneID="CUR-ac-tf3">
@@ -634,20 +674,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt #3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi2-vt-QRS">
-                                <rect key="frame" x="40" y="196" width="110" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="40" y="189.5" width="158" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auftrag erledigen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-hG-fac">
-                                <rect key="frame" x="40" y="233" width="178.5" height="29"/>
+                                <rect key="frame" x="40" y="239.5" width="178.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-o7-ouM">
                                 <rect key="frame" x="303" y="20" width="91" height="30"/>
-                                <state key="normal" title="Jetzt anrufen"/>
+                                <state key="normal" title="Jetzt anrufen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="callNow:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="10H-FH-qH5"/>
                                 </connections>
@@ -659,26 +701,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ziel-Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ol-wm-M2n">
-                                <rect key="frame" x="40" y="300.5" width="86" height="17"/>
+                                <rect key="frame" x="40" y="307" width="86" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Chausseestraße 38, 10115 Berlin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdT-p1-JWo">
-                                <rect key="frame" x="40" y="321.5" width="211" height="17"/>
+                                <rect key="frame" x="40" y="328" width="211" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-Zv-4D8">
-                                <rect key="frame" x="40" y="363" width="18" height="17"/>
+                                <rect key="frame" x="40" y="369.5" width="18" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dYW-Zv-4D8" secondAttribute="height" multiplier="1:1" id="oTY-SC-bvb"/>
                                     <constraint firstAttribute="width" constant="18" id="tgp-zz-5Th"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xu-A1-jWR">
-                                <rect key="frame" x="40" y="362.5" width="144" height="18"/>
+                                <rect key="frame" x="40" y="369" width="144" height="18"/>
                                 <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Route berechnen"/>
                                 <connections>
@@ -686,25 +728,39 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="amR-gb-bYW">
-                                <rect key="frame" x="0.0" y="404.5" width="414" height="313.5"/>
+                                <rect key="frame" x="0.0" y="411" width="414" height="297"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztE-UU-HRS">
-                                <rect key="frame" x="153" y="758" width="108" height="30"/>
-                                <state key="normal" title="Auftrag erledigt"/>
+                                <rect key="frame" x="20" y="748" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.7843137255" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="V2k-JC-PZ3"/>
+                                    <constraint firstAttribute="height" constant="40" id="vug-pw-K8g"/>
+                                </constraints>
+                                <state key="normal" title="Auftrag erledigt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="completeJob:" destination="8Ap-07-r1Y" eventType="touchUpInside" id="jZy-0z-r8b"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.27843137254901962" green="0.3529411764705882" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dqu-xN-sKq" firstAttribute="trailing" secondItem="ftD-o7-ouM" secondAttribute="trailing" constant="20" id="1jW-0c-vot"/>
                             <constraint firstItem="amR-gb-bYW" firstAttribute="top" secondItem="6Xu-A1-jWR" secondAttribute="bottom" constant="24" id="2bb-vd-hlG"/>
+                            <constraint firstItem="ztE-UU-HRS" firstAttribute="leading" secondItem="dqu-xN-sKq" secondAttribute="leading" constant="20" id="52G-Kc-v2d"/>
                             <constraint firstItem="xqe-hG-fac" firstAttribute="leading" secondItem="bi2-vt-QRS" secondAttribute="leading" id="DBK-cZ-ONC"/>
                             <constraint firstItem="6Xu-A1-jWR" firstAttribute="leading" secondItem="FdT-p1-JWo" secondAttribute="leading" id="EgY-VE-HLq"/>
                             <constraint firstItem="dYW-Zv-4D8" firstAttribute="centerY" secondItem="6Xu-A1-jWR" secondAttribute="centerY" id="GMW-jH-KNn"/>
                             <constraint firstItem="dYW-Zv-4D8" firstAttribute="leading" secondItem="6Xu-A1-jWR" secondAttribute="leading" id="KJb-rF-IPv"/>
                             <constraint firstItem="ztE-UU-HRS" firstAttribute="centerX" secondItem="t3z-mH-U5V" secondAttribute="centerX" id="MG1-rB-lXM"/>
+                            <constraint firstItem="dqu-xN-sKq" firstAttribute="trailing" secondItem="ztE-UU-HRS" secondAttribute="trailing" constant="20" id="QNc-0X-nHF"/>
                             <constraint firstItem="ztE-UU-HRS" firstAttribute="top" secondItem="amR-gb-bYW" secondAttribute="bottom" constant="40" id="Tlo-wZ-LH0"/>
                             <constraint firstItem="amR-gb-bYW" firstAttribute="leading" secondItem="dqu-xN-sKq" secondAttribute="leading" id="Ue1-4K-N0X"/>
                             <constraint firstItem="s0g-R1-5If" firstAttribute="top" secondItem="dqu-xN-sKq" secondAttribute="top" constant="20" id="Usf-4Y-kzw"/>
@@ -751,7 +807,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-sr-Vnx">
-                                <rect key="frame" x="94" y="497" width="226.5" height="95.5"/>
+                                <rect key="frame" x="94" y="497" width="226.5" height="151"/>
                                 <string key="text">Vielen Dank!
 Du bist toll!</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
@@ -759,24 +815,36 @@ Du bist toll!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV4-Vb-D3I">
-                                <rect key="frame" x="175.5" y="692.5" width="63" height="30"/>
-                                <state key="normal" title="zur Karte">
+                                <rect key="frame" x="20" y="748" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.28235294117647058" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5KG-2j-a2c"/>
+                                </constraints>
+                                <state key="normal" title="zum Homescreen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="dismissVC:" destination="hSF-Zt-HOg" eventType="touchUpInside" id="9fz-E7-Tqi"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="Green"/>
+                        <color key="backgroundColor" red="0.53333333329999999" green="0.7843137255" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZGr-KA-jY9" firstAttribute="centerY" secondItem="sTw-Cb-rgU" secondAttribute="centerY" multiplier="0.8" id="RHa-TF-aPe"/>
                             <constraint firstItem="tV4-Vb-D3I" firstAttribute="top" secondItem="2e3-sr-Vnx" secondAttribute="bottom" constant="100" id="WBP-e2-M77"/>
                             <constraint firstItem="2e3-sr-Vnx" firstAttribute="top" secondItem="ZGr-KA-jY9" secondAttribute="bottom" constant="40" id="XXJ-Rs-ZPv"/>
                             <constraint firstItem="2e3-sr-Vnx" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="YGl-E1-oRi"/>
+                            <constraint firstItem="tV4-Vb-D3I" firstAttribute="leading" secondItem="6e6-Cl-m7F" secondAttribute="leading" constant="20" id="f9d-bP-QNW"/>
                             <constraint firstItem="tV4-Vb-D3I" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="h7a-dX-W1w"/>
                             <constraint firstItem="ZGr-KA-jY9" firstAttribute="width" secondItem="sTw-Cb-rgU" secondAttribute="width" multiplier="0.57971" id="iyG-V2-7OX"/>
                             <constraint firstItem="ZGr-KA-jY9" firstAttribute="centerX" secondItem="sTw-Cb-rgU" secondAttribute="centerX" id="lbd-px-qhU"/>
+                            <constraint firstItem="6e6-Cl-m7F" firstAttribute="trailing" secondItem="tV4-Vb-D3I" secondAttribute="trailing" constant="20" id="wkO-VV-Q6G"/>
+                            <constraint firstItem="6e6-Cl-m7F" firstAttribute="bottom" secondItem="tV4-Vb-D3I" secondAttribute="bottom" constant="20" id="yht-4M-Fs8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6e6-Cl-m7F"/>
                     </view>
