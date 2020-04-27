@@ -758,6 +758,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RhH-dw-BfY"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="26" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Route berechnen">
                                     <color key="titleColor" red="0.18823529410000001" green="0.28235294119999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -840,6 +841,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="FdT-p1-JWo" id="UCi-Qg-CN3"/>
                         <outlet property="jobSummaryLabel" destination="s0g-R1-5If" id="DMY-S9-2tS"/>
+                        <outlet property="mapView" destination="amR-gb-bYW" id="bVh-jY-p3O"/>
                         <segue destination="hSF-Zt-HOg" kind="show" identifier="JobStep3_to_JobCompleted" id="ejS-ag-tdi"/>
                     </connections>
                 </viewController>
