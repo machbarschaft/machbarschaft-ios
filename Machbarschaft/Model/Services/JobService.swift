@@ -55,10 +55,11 @@ class JobService {
         }
         if let locData = data["location"] as? [String: Any]{
             if let coords = locData["gps"] {
-                let point = coords as! GeoPoint
-                let lat = point.latitude
-                let lon = point.longitude
-                location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                if let point = coords as? GeoPoint {
+                    let lat = point.latitude
+                    let lon = point.longitude
+                    location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                }
             }
         }
         if let addressData = data["address"] as? [String: Any] {
