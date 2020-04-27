@@ -53,8 +53,13 @@ class JobService {
             default: status = .open
             }
         }
-        if let lat = data["lat"] as? Double, let lng = data["lng"] as? Double {
-            location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+        if let locData = data["location"] as? [String: Any]{
+            if let coords = locData["gps"] {
+                let point = coords as! GeoPoint
+                let lat = point.latitude
+                let lon = point.longitude
+                location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            }
         }
         if let addressData = data["address"] as? [String: Any] {
             city = addressData["city"] as? String ?? ""
