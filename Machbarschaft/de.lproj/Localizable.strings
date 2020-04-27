@@ -13,3 +13,10 @@
 "LastNameError" = "Bitte gebe deinen Nachnamen ein";
 "TermsError" = "Beim erstellen deines Accounts ist ein Fehler aufgetreten. Bitte versuche es erneut.";
 "TaskLabel" = "Bitte besprich dich mit";
+"Medicine" = "Medikamente";
+"Groceries" = "Einkäufe";
+"Misc" = "Anderes";
+"Urgent" = "dringend";
+"Today" = "noch heute";
+"Tomorrow" = "morgen";
+"NotUrgent" = "nicht dringend";
