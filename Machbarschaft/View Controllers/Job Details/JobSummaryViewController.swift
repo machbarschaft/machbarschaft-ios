@@ -33,6 +33,10 @@ class JobSummaryViewController: UIViewController {
 
         mapView.layer.cornerRadius = mapView.frame.size.height/2
         mapView.clipsToBounds = true
+        
+        if let location = job.location {
+            mapView.centerToLocation(location)
+        }
     }
     
     @IBAction func acceptJob(_ sender: UIButton) {
@@ -50,4 +54,18 @@ class JobSummaryViewController: UIViewController {
             dest.job = job
         }
     }
+    
+}
+
+private extension MKMapView {
+  func centerToLocation(
+    _ location: CLLocationCoordinate2D,
+    regionRadius: CLLocationDistance = 10000
+  ) {
+    let coordinateRegion = MKCoordinateRegion(
+      center: location,
+      latitudinalMeters: regionRadius,
+      longitudinalMeters: regionRadius)
+    setRegion(coordinateRegion, animated: true)
+  }
 }
