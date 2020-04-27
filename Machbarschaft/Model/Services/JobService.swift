@@ -13,7 +13,7 @@ import CoreLocation
 class JobService {
     
     var db: Firestore!
-
+    
     init() {
         db = Firestore.firestore()
     }
@@ -24,6 +24,10 @@ class JobService {
         var urgency : JobUrgency = .undefined
         var status : JobStatus = .open
         var description = ""
+        var city = ""
+        var zip = ""
+        var houseNumber = ""
+        var street = ""
         
         if let typeX = data["type_of_help"] as? String {
             switch typeX.uppercased() {
@@ -34,13 +38,13 @@ class JobService {
             description = jobType.title
         }
         if let urgencyX = data["urgency"] as? String {
-           switch urgencyX.uppercased() {
-           case "TODAY": urgency = .today
-           case "TOMORROW": urgency = .tomorrow
-           case "ASAP": urgency = .urgent
-           default: urgency = .undefined
-           }
-       }
+            switch urgencyX.uppercased() {
+            case "TODAY": urgency = .today
+            case "TOMORROW": urgency = .tomorrow
+            case "ASAP": urgency = .urgent
+            default: urgency = .undefined
+            }
+        }
         if let statusX = data["status"] as? String {
             switch statusX.uppercased() {
             case "OPEN": status = .open
@@ -52,6 +56,12 @@ class JobService {
         if let lat = data["lat"] as? Double, let lng = data["lng"] as? Double {
             location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         }
+        if let addressData = data["address"] as? [String: Any] {
+            city = addressData["city"] as? String ?? ""
+            street = addressData["street"] as? String ?? ""
+            zip = addressData["zip"] as? String ?? ""
+            houseNumber = addressData["houseNumber"] as? String ?? ""
+        }
         let result = Job(
             jobID: 0,
             type: jobType,
@@ -59,12 +69,12 @@ class JobService {
             status: status,
             clientName: (data["name"] as? String) ?? "",
             clientPhone: (data["phone_number"] as? String) ?? "",
-            city: (data["city"] as? String) ?? "",
-            zip: (data["zip"] as? String) ?? "",
+            city: city,
+            zip: zip,
             location: location,
             distanceInMeters: 0,
-            street: (data["street"] as? String) ?? "",
-            houseNumber: (data["house_number"] as? String) ?? "",
+            street: street,
+            houseNumber: houseNumber,
             description: description
         )
         return result
