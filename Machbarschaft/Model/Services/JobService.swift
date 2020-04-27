@@ -29,10 +29,10 @@ class JobService {
         var houseNumber = ""
         var street = ""
         
-        if let typeX = data["type_of_help"] as? String {
+        if let typeX = data["type"] as? String {
             switch typeX.uppercased() {
-            case "APOTHEKE": jobType = .medicine
-            case "EINKAUFEN": jobType = .groceries
+            case "MEDICINE": jobType = .medicine
+            case "GROCERIES": jobType = .groceries
             default: jobType = .misc
             }
             description = jobType.title
