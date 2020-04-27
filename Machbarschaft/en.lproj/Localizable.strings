@@ -13,3 +13,10 @@
 "LastNameError" = "Please enter your last name.";
 "TermsError" = "An error occurred while creating your account. Please try again.";
 "TaskLabel" = "Please talk to";
+"Medicine" = "Medicine";
+"Groceries" = "Groceries";
+"Misc" = "Misc";
+"Urgent" = "urgent";
+"Today" = "today";
+"Tomorrow" = "tomorrow";
+"NotUrgent" = "not urgent";

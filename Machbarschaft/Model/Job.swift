@@ -17,11 +17,11 @@ enum JobType {
     var title: String {
         switch self {
         case .medicine:
-            return "Medikamente"
+            return NSLocalizedString("Medicine", comment: "")
         case .groceries:
-            return "Einkäufe"
+            return NSLocalizedString("Groceries", comment: "")
         case .misc:
-            return "Anderes"
+            return NSLocalizedString("Misc", comment: "")
         }
     }
 }
@@ -48,13 +48,13 @@ enum JobUrgency: Int {
     var title: String {
         switch self {
         case .urgent:
-            return "dringend"
+            return NSLocalizedString("Urgent", comment: "")
         case .today:
-            return "noch heute"
+            return NSLocalizedString("Today", comment: "")
         case .tomorrow:
-            return "morgen"
+            return NSLocalizedString("Tomorrow", comment: "")
         default:
-            return "nicht dringend"
+            return NSLocalizedString("NotUrgent", comment: "")
         }
     }
 }
@@ -83,11 +83,4 @@ struct Job {
     var clientAddress: String {
         "\(street) \(houseNumber), \(zip) \(city)"
     }
-}
-
-struct Address {
-    var street: String
-    var houseNumber: String
-    var city: String
-    var zip: String
 }
