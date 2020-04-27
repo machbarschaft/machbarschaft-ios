@@ -84,3 +84,10 @@ struct Job {
         "\(street) \(houseNumber), \(zip) \(city)"
     }
 }
+
+struct Address {
+    var street: String
+    var houseNumber: String
+    var city: String
+    var zip: String
+}
