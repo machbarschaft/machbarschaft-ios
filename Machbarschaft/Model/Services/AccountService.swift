@@ -45,30 +45,23 @@ public class AccountService {
     //Function that creates an account
     public func createAccount(user: User, completion: @escaping (Bool) -> Void){
                 
-        //Add Valus to Database
-        var ref: DocumentReference? = nil
-        ref = db.collection("account").addDocument(data: [
-            "uid": user.uid,
-            //"passbaseKey": user.passbaseKey,
-            "credits": user.credits,
-            "first_name": user.first_name,
-            "last_name": user.last_name,
-            "radius": user.radius,
-            "phone": user.phone
-        ]) { err in
+        // create account document
+        db.collection("account").document(user.uid).setData([
+            "settings": [
+                "notify_nearby_orders": "false"
+            ]
+        ]){ err in
             if let err = err {
-                print("Error adding document: \(err)")
+                print("Error creating account document: \(err)")
                 completion(false)
             } else {
-                print("Document added with ID: \(ref!.documentID)")
-                
-                //Write document ID to UserDefaults
-                UserDefaults.standard.set(ref!.documentID, forKey: "docID")
-                
+                print("Account document created")
                 completion(true)
             }
+            
+            
         }
-       
+        
     }
     
     //Function that gets the account document
