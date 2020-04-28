@@ -47,7 +47,7 @@ public class AccountService {
                 
         //Add Valus to Database
         var ref: DocumentReference? = nil
-        ref = db.collection("Account").addDocument(data: [
+        ref = db.collection("account").addDocument(data: [
             "uid": user.uid,
             //"passbaseKey": user.passbaseKey,
             "credits": user.credits,
@@ -71,29 +71,28 @@ public class AccountService {
        
     }
     
-    //Function that gets the document ID relating to UID
+    //Function that gets the account document
     public func getDocumentID(forUID: String, completion: @escaping (Result<String,DatabaseError>) -> Void) {
         
-        let query = db.collection("Account").whereField("uid", isEqualTo: forUID)
-        
+        let query = db.collection("account").document(forUID)
+
         //Execute query
-        query.getDocuments() { (querySnapshot, err) in
+        query.getDocument() { (document, err) in
                 if let err = err {
-                    print("Error getting documents: \(err)")
+                    print("Error getting document: \(err)")
                 } else {
-                    
+
                     //Document exists
-                    if let document = querySnapshot!.documents.first {
-                        
+                    if let document = document, document.exists {
                         completion(.success(document.documentID))
-                        
+
                     }else{
-                        
+
                         //Raise error
                         completion(.failure(.entryNotFound))
-                        
+
                     }
-                    
+
                 }
         }
         
