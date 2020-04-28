@@ -23,7 +23,7 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     @IBAction func requestNewCode(_ sender: Any) {
-        
+
     }
     
     @IBAction func confirm(_ sender: Any) {
