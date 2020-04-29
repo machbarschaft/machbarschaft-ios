@@ -16,7 +16,7 @@ class JobStep2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         jobSummaryLabel.text = "\(job.type.title) für \(job.clientName)"
     }
     
@@ -33,7 +33,8 @@ class JobStep2ViewController: UIViewController {
     }
     
     @IBAction func callNow(_ sender: Any) {
-        
+        guard let number = URL(string: "tel://" + job.clientPhone) else { return }
+        UIApplication.shared.open(number)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
