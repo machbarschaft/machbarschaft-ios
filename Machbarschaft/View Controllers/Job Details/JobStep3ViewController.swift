@@ -34,7 +34,8 @@ class JobStep3ViewController: UIViewController {
     }
     
     @IBAction func callNow(_ sender: Any) {
-        
+        guard let number = URL(string: "tel://" + job.clientPhone) else { return }
+        UIApplication.shared.open(number)
     }
     
     @IBAction func completeJob(_ sender: Any) {
