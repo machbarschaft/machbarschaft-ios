@@ -21,5 +21,7 @@ target 'Machbarschaft' do
   pod 'OverlayContainer'
 
   #pod 'Passbase', '~> 1.6.11'
+  
+  pod 'SwiftLint', '0.39.2'
 
 end

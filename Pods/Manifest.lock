@@ -285,6 +285,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - OverlayContainer (3.3.1)
   - PromisesObjC (1.2.8)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -294,6 +295,7 @@ DEPENDENCIES:
   - FirebaseFirestoreSwift
   - M13Checkbox
   - OverlayContainer
+  - SwiftLint (= 0.39.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -322,6 +324,8 @@ SPEC REPOS:
     - nanopb
     - OverlayContainer
     - PromisesObjC
+  trunk:
+    - SwiftLint
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -349,7 +353,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   OverlayContainer: a4033b1fe603341ebafb38d6acac28af3a8fe7a7
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: e54ac66d2cb9509091462dadee50ca3194c5b9b5
+PODFILE CHECKSUM: 9e3c01fb343ceac96ec6fa6a6a5c463afd35613a
 
 COCOAPODS: 1.9.1
