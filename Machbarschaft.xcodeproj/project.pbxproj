@@ -27,7 +27,7 @@
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
-		88BF97EF24279D0D005D8C23 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
 		88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
@@ -435,7 +435,7 @@
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
 				E1B567002427D7DE008658D9 /* JobService.swift in Sources */,
-				88BF97EF24279D0D005D8C23 /* BuildFile in Sources */,
+				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -596,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
