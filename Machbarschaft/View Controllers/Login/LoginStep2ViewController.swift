@@ -23,7 +23,9 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     @IBAction func requestNewCode(_ sender: Any) {
-
+        if let phone = UserDefaults.standard.string(forKey: "phone"){
+            accountService.requestCode(phoneNumber: phone)
+        }
     }
     
     @IBAction func confirm(_ sender: Any) {
