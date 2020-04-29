@@ -42,10 +42,10 @@ public class AccountService {
         
     }
         
-    //Function that creates an account
+    //Function that creates a new account
     public func createAccount(user: User, completion: @escaping (Bool) -> Void){
                 
-        // create account document
+        // create account document in database
         db.collection("account").document(user.uid).setData([
             "settings": [
                 "notify_nearby_orders": "false"
@@ -56,9 +56,21 @@ public class AccountService {
                 completion(false)
             } else {
                 print("Account document created")
-                completion(true)
+                
+                // add name to firebase auth
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = "\(user.first_name) \(user.last_name)"
+                changeRequest?.commitChanges { err in
+                    if let err = err {
+                        print("Error updating user information: \(err)")
+                        completion(false)
+                    } else {
+                        print("User information updated.")
+                        print("User's name: " + Auth.auth().currentUser!.displayName!)
+                        completion(true)
+                    }
+                }
             }
-            
             
         }
         
