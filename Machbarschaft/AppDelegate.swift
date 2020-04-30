@@ -10,7 +10,6 @@ import UIKit
 //import Passbase
 import Firebase
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Passbase initilaization
         //Passbase.initialize(publishableApiKey: "3e27309be36f707c9fea64ef81f22d011ed52942952b9e96cb5e5eff7db2c13e")
         
+        ConnectionHandler.shared.startMonitoring()
+
         //Firebase initialization
         FirebaseApp.configure()
         
@@ -41,7 +42,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-

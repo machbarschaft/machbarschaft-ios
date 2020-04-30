@@ -42,6 +42,8 @@
 		88EA5656242762F60070B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5655242762F60070B407 /* Assets.xcassets */; };
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
+		D5B9D570245A958E005A00CE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */; };
+		D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D571245AA07A005A00CE /* NoConnectionView.swift */; };
 		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
 		E1B567002427D7DE008658D9 /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* JobService.swift */; };
 		E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */; };
@@ -90,6 +92,8 @@
 		88EA565A242762F60070B407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8A35D0A378E669E70D2447EA /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
+		D5B9D571245AA07A005A00CE /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		E17D8A47BBA44B4F9D4BB153 /* Pods-Machbarschaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.debug.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B566FF2427D7DE008658D9 /* JobService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				88A50D1C24353DBA00048732 /* Button.swift */,
 				88A50D1B24353DBA00048732 /* PrimaryButton.swift */,
 				88BF97F52427A875005D8C23 /* SimplePicker.swift */,
+				D5B9D571245AA07A005A00CE /* NoConnectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				88BF97FA2427AAFE005D8C23 /* Extensions.swift */,
 				176EAB642427B55B005217CA /* GeoFunctions.swift */,
 				6153C60C242B7E020082CE9B /* Errors.swift */,
+				D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -419,10 +425,12 @@
 				88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				616BE9FA2427B7CB00F59B41 /* AccountService.swift in Sources */,
+				D5B9D570245A958E005A00CE /* ConnectionHandler.swift in Sources */,
 				88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88A50D1E24353DBA00048732 /* Button.swift in Sources */,
 				616BE9FC2427E32600F59B41 /* User.swift in Sources */,
+				D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */,
 				88A50D1D24353DBA00048732 /* PrimaryButton.swift in Sources */,
 				88BF97E62427896C005D8C23 /* LoginStep1ViewController.swift in Sources */,
 				E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */,

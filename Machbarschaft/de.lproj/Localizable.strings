@@ -6,11 +6,12 @@
   Copyright © 2020 Linus Geffarth. All rights reserved.
 */
 
-"PhoneNumberError" = "Ups! Bitte überprüfe deine Telefonnummer";
-"CodeError" = "Ups! Dein eingegebener Code ist falsch";
-"CodeLengthError" = "Der Code muss 6-stellig sein";
-"FirstNameError" = "Bitte gebe deinen Vornamen ein";
-"LastNameError" = "Bitte gebe deinen Nachnamen ein";
+"NoConnectionError" = "Ups! Bitte überprüfe deine Internetverbindung.";
+"PhoneNumberError" = "Ups! Bitte überprüfe deine Telefonnummer.";
+"CodeError" = "Ups! Dein eingegebener Code ist falsch.";
+"CodeLengthError" = "Der Code muss 6-stellig sein.";
+"FirstNameError" = "Bitte gebe deinen Vornamen ein.";
+"LastNameError" = "Bitte gebe deinen Nachnamen ein.";
 "TermsError" = "Beim erstellen deines Accounts ist ein Fehler aufgetreten. Bitte versuche es erneut.";
 "TaskLabel" = "Bitte besprich dich mit";
 "Medicine" = "Medikamente";
