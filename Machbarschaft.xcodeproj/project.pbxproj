@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,7 @@
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
-		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		88BF97EF24279D0D005D8C23 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
 		88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
@@ -118,6 +118,7 @@
 				E17D8A47BBA44B4F9D4BB153 /* Pods-Machbarschaft.debug.xcconfig */,
 				59FD68C167CB7CA1E349B433 /* Pods-Machbarschaft.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -443,7 +444,7 @@
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
 				E1B567002427D7DE008658D9 /* JobService.swift in Sources */,
-				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
+				88BF97EF24279D0D005D8C23 /* BuildFile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
