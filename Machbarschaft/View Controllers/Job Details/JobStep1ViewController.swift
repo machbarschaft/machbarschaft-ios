@@ -23,6 +23,8 @@ class JobStep1ViewController: UIViewController {
     }
     
     @IBAction func callNow(_ sender: Any) {
+        guard let number = URL(string: "tel://" + job.clientPhone) else { return }
+        UIApplication.shared.open(number)
         performSegue(withIdentifier: "JobStep1_to_JobStep2", sender: nil)
     }
     
