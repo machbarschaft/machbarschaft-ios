@@ -93,7 +93,11 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let annotation: JobAnnotation = view.annotation as! JobAnnotation
-        delegate?.didSelectJob(annotation.job)
+        // TODO: - I removed the force cast.
+        // Old code:
+        // let annotation: JobAnnotation = view.annotation as! JobAnnotation
+        if let annotation: JobAnnotation = view.annotation as? JobAnnotation {
+            delegate?.didSelectJob(annotation.job)
+        }
     }
 }
