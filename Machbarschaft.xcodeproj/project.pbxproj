@@ -95,6 +95,7 @@
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8A35D0A378E669E70D2447EA /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep1PageViewController.swift; sourceTree = "<group>"; };
+		D559ED01245EC0ED00BE1F5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Login.strings; sourceTree = "<group>"; };
 		D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		D5B9D571245AA07A005A00CE /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberUtils.swift; sourceTree = "<group>"; };
@@ -499,6 +500,7 @@
 			children = (
 				88EA56612427640B0070B407 /* Base */,
 				77DF8F2724564ED10092E127 /* en */,
+				D559ED01245EC0ED00BE1F5D /* de */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";

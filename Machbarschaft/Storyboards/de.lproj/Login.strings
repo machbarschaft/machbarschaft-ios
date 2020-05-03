@@ -3,46 +3,46 @@
 "1F9-ON-6DI.normalTitle" = "+49";
 
 /* Class = "UITextField"; placeholder = "Nachname"; ObjectID = "7hG-Si-VUg"; */
-"7hG-Si-VUg.placeholder" = "Last name";
+"7hG-Si-VUg.placeholder" = "Nachname";
 
 /* Class = "UIButton"; normalTitle = "Bestätigen"; ObjectID = "B4c-EV-rTL"; */
-"B4c-EV-rTL.normalTitle" = "Confirm";
+"B4c-EV-rTL.normalTitle" = "Bestätigen";
 
 /* Class = "UILabel"; text = "1. Basis-Informationen"; ObjectID = "Ed1-aX-cYz"; */
-"Ed1-aX-cYz.text" = "1. Basic information";
+"Ed1-aX-cYz.text" = "1. Basis-Informationen";
 
 /* Class = "UILabel"; text = "Anmeldung abschließen"; ObjectID = "IwX-6I-nI0"; */
-"IwX-6I-nI0.text" = "Complete registration";
+"IwX-6I-nI0.text" = "Anmeldung abschließen";
 
 /* Class = "UIButton"; normalTitle = "keinen Code bekommen?"; ObjectID = "LOL-eW-ZAw"; */
-"LOL-eW-ZAw.normalTitle" = "Didn't get a code?";
+"LOL-eW-ZAw.normalTitle" = "keinen Code bekommen?";
 
 /* Class = "UIButton"; normalTitle = "Einloggen"; ObjectID = "OWH-ru-fmK"; */
-"OWH-ru-fmK.normalTitle" = "Log in";
+"OWH-ru-fmK.normalTitle" = "Einloggen";
 
 /* Class = "UIButton"; normalTitle = "zurück"; ObjectID = "Ozh-tj-zKj"; */
-"Ozh-tj-zKj.normalTitle" = "back";
+"Ozh-tj-zKj.normalTitle" = "zurück";
 
 /* Class = "UIButton"; normalTitle = "Registrieren"; ObjectID = "PUg-FL-8qD"; */
-"PUg-FL-8qD.normalTitle" = "Register";
+"PUg-FL-8qD.normalTitle" = "Registrieren";
 
 /* Class = "UIButton"; normalTitle = "zurück"; ObjectID = "Q6b-5F-83U"; */
-"Q6b-5F-83U.normalTitle" = "back";
+"Q6b-5F-83U.normalTitle" = "zurück";
 
 /* Class = "UIButton"; normalTitle = "Anmelden"; ObjectID = "TL1-uO-uO3"; */
-"TL1-uO-uO3.normalTitle" = "Log in";
+"TL1-uO-uO3.normalTitle" = "Anmelden";
 
 /* Class = "UILabel"; text = "2. Identität verifizieren"; ObjectID = "Tt8-1g-EcY"; */
-"Tt8-1g-EcY.text" = "2. Identity verification";
+"Tt8-1g-EcY.text" = "2. Identität verifizieren";
 
 /* Class = "UIButton"; normalTitle = "Identität verifizieren"; ObjectID = "aha-nm-AKG"; */
-"aha-nm-AKG.normalTitle" = "Identity verification";
+"aha-nm-AKG.normalTitle" = "Identität verifizieren";
 
 /* Class = "UIButton"; normalTitle = "AGB & Datenschutz"; ObjectID = "bvf-UV-IHy"; */
-"bvf-UV-IHy.normalTitle" = "AGB & Data Protection";
+"bvf-UV-IHy.normalTitle" = "AGB & Datenschutz";
 
 /* Class = "UITextField"; placeholder = "Vorname"; ObjectID = "tYd-QA-8v7"; */
-"tYd-QA-8v7.placeholder" = "First name";
+"tYd-QA-8v7.placeholder" = "Vorname";
 
-/* Class = "UILabel"; text = "Please enter your verification code"; ObjectID = "i6w-g8-4ay"; */
-"i6w-g8-4ay.text" = "Please enter your verification code";
+/* Class = "UILabel"; text = "Bitte gib hier deinen Bestätigungs-Code ein"; ObjectID = "i6w-g8-4ay"; */
+"i6w-g8-4ay.text" = "Bitte gib hier deinen Bestätigungs-Code ein";
