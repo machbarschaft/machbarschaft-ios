@@ -40,7 +40,6 @@ class LoginStep2ViewController: SuperViewController {
             return
         }
         accountService.requestCode(phoneNumber: phone)
-            // TODO: - show message for success and failure
             .done(on: .main, {_ in debugPrint("New code requested succeed")})
             .recover(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
     }
@@ -70,6 +69,15 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     // MARK: - Private functions
+    
+    private func handleRequestNewCodeSuccess(_ verificationId: String) {
+        self.verificationId = verificationId
+        codeErrorLabel.text = NSLocalizedString("RequestNewCodeSuccess", comment: "Message that is shown, when the request was successful")
+    }
+    
+    private func handleRequestNewCodeFilure(_ error: Error) {
+        codeErrorLabel.text = NSLocalizedString("RequestNewCodeFailure", comment: "Message that is shown, when the request failed")
+    }
     
     private func handleSignInResult(_ result: AuthDataResult) -> Promise<(Bool, AuthDataResult)> {
         return Promise<(Bool, AuthDataResult)> { resolver in

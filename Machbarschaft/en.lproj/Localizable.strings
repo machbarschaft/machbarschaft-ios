@@ -9,6 +9,8 @@
 "NoConnectionError" = "Oops! Please check your internet connection.";
 "PhoneNumberError" = "Oops! Please check your telephone number.";
 "RequestCodeError" = "Oops! Something went wrong requesting your code.";
+"RequestNewCodeSuccess" = "A new activation code was sent to you.";
+"RequestNewCodeFailure" = "There was an error requesting a new code.";
 "CodeError" = "Oops! You entered an invalid code.";
 "CodeLengthError" = "The code must be 6 digits.";
 "FirstNameError" = "Please enter your first name.";

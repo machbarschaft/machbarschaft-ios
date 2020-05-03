@@ -9,6 +9,8 @@
 "NoConnectionError" = "Ups! Bitte überprüfe deine Internetverbindung.";
 "PhoneNumberError" = "Ups! Bitte überprüfe deine Telefonnummer.";
 "RequestCodeError" = "Ups! Es scheint ein Problem beim Senden des Aktivierungscodes zu geben.";
+"RequestNewCodeSuccess" = "Dir wurde ein neuer Aktivierungscode gesendet.";
+"RequestNewCodeFailure" = "Senden eines neuen Aktivierungscodes ist fehlgeschlagen";
 "CodeError" = "Ups! Dein eingegebener Code ist falsch.";
 "CodeLengthError" = "Der Code muss 6-stellig sein.";
 "FirstNameError" = "Bitte gebe deinen Vornamen ein.";

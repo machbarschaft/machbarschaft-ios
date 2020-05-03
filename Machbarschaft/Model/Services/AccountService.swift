@@ -22,16 +22,12 @@ public class AccountService {
             PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationId, error) in
                 if let error = error {
                     resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                       firebaseErrorCode: error._code))
+                                                                      firebaseErrorCode: error._code))
                 } else if let id = verificationId {
                     resolver.fulfill(id)
                 } else {
                     resolver.reject(AuthenticationError.fatal)
                 }
-                
-                // TODO: - why do you save it to the user defaults here?
-                // Save the verification ID to userDefaults
-                UserDefaults.standard.set(verificationId!, forKey: "authVerificationID")
             }
         }
     }
