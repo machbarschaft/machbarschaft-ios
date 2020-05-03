@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import PromiseKit
 
 class LoginStep2ViewController: SuperViewController {
     
@@ -17,111 +18,106 @@ class LoginStep2ViewController: SuperViewController {
     
     let accountService = AccountService()
     
+    var phoneNumber: String?
+    var verificationId: String?
+    
+    var userId: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LoginStep3ViewController {
+            destination.phoneNumber = phoneNumber
+            destination.userId = userId
+        }
     }
     
     @IBAction func requestNewCode(_ sender: Any) {
-        if let phone = UserDefaults.standard.string(forKey: "phone"){
-            accountService.requestCode(phoneNumber: phone)
+        guard let phone = phoneNumber else {
+            debugPrint("Phone number not set")
+            return
         }
+        accountService.requestCode(phoneNumber: phone)
+            // TODO: - show message for success and failure
+            .done(on: .main, {_ in debugPrint("New code requested succeed")})
+            .recover(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
     }
     
     @IBAction func confirm(_ sender: Any) {
-        
-        let code:String = codeTextField.text!
-        
-        //Check if code is 6 digits
-        if code.count == 6 {
-            
-            //Get verification ID from storage
-            let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")!
-            
-            let credential = PhoneAuthProvider.provider().credential(
-            withVerificationID: verificationID,
-            verificationCode: code)
-            
-            //Test
-            Auth.auth().signIn(with: credential) { (authResult, error) in
-                
-                //Error handling
-                if let error = error {
-                    print(error)
-                    
-                    //Show error message
-                    self.codeErrorLabel.text = NSLocalizedString("CodeError", comment: "")
-                    
-                    return
-                }
-                
-                // User is signed in
-                // ...
-                print("Phone number authentication successful!")
-                
-                //Clear error label
-                self.codeErrorLabel.text = ""
-                
-                //Get user id and save it to UserDefaults
-                let userID:String = (authResult?.user.uid)!
-                UserDefaults.standard.set(userID, forKey: "UID")
-
-                //Check if Phone number is registered
-                if authResult?.additionalUserInfo!.isNewUser ?? true {
-
-                    //Go to register view 3
-                    self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
-                    
-                }else{
-                    
-                    //Save documentID to user defaults
-                    self.accountService.getDocumentID(forUID: userID){ result in
-                        
-                        //TODO: If getDocumentID
-                        switch result{
-                            
-                        case .success(let docID):
-                            
-                            //Complete Account exists
-                            UserDefaults.standard.set(docID, forKey: "docID")
-                            
-                            //GOTO: MapView
-                            self.performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
-                            
-                            break
-                            
-                        case .failure(let error):
-                            
-                            //Print error
-                            if let errorText:String = error.errorDescription{
-                                print(errorText)
-                            }
-                            
-                            //Proceed to Step3 Viewcontroller as phone number exists, but is associated to no account
-                            self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
-                            break
-                            
-                        }
-                        
-                        
-                        
-                    }
-                    
-                    return
-                }
-                
-            }
-            
-        }else{
-            
-            //Show error message
-            codeErrorLabel.text = NSLocalizedString("CodeLengthError", comment: "")
-            
+        guard let verificationId = self.verificationId,
+            let code = codeTextField.text else {
+                debugPrint("verificationId or codeTextField text is nil")
+                return
         }
-        
+        if code.count == 6 {
+            let credential = PhoneAuthProvider.provider().credential(
+                withVerificationID: verificationId,
+                verificationCode: code)
+            accountService.signIn(with: credential)
+                .then(handleSignInResult)
+                .then(handleUser)
+                .done(on: .main, handleSuccess)
+                .recover(on: .main, handleFailure)
+        } else {
+            handleCodeCountError()
+        }
     }
     
     @IBAction func dismissVC(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - Private functions
+    
+    private func handleSignInResult(_ result: AuthDataResult) -> Promise<(Bool, AuthDataResult)> {
+        return Promise<(Bool, AuthDataResult)> { resolver in
+            
+            // User is signed in
+            debugPrint("Phone number authentication successful!")
+            
+            // Get user id and save it to UserDefaults
+            self.userId = result.user.uid
+            resolver.fulfill((result.additionalUserInfo?.isNewUser ?? true, result))
+        }
+    }
+    
+    private func handleUser(_ tuple: (Bool, AuthDataResult)) -> Promise<String> {
+        if tuple.0 {
+            return Promise<String> { $0.fulfill("")}
+        }
+        return self.accountService.getDocumentID(for: tuple.1.user.uid)
+    }
+    
+    private func handleSuccess(for documentId: String) {
+        self.codeErrorLabel.text = ""
+        if documentId.isEmpty {
+            self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
+        } else {
+            
+            // Complete Account exists
+            // TODO: - UserDefaults where do we need it again?
+            UserDefaults.standard.set(documentId, forKey: "docID")
+            performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
+        }
+    }
+    
+    private func handleFailure(_ error: Error) {
+        debugPrint(error.localizedDescription)
+        switch error {
+        case is AuthenticationError:
+            self.codeErrorLabel.text = NSLocalizedString("CodeError", comment: "")
+        case is DatabaseError:
+            
+            //Proceed to Step3 Viewcontroller as phone number exists, but is associated to no account
+            self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
+        default:
+            debugPrint("Unknown error occured, error description: \(error.localizedDescription), error code: \(error._code)")
+        }
+    }
+    
+    private func handleCodeCountError() {
+        codeErrorLabel.text = NSLocalizedString("CodeLengthError", comment: "")
     }
 }

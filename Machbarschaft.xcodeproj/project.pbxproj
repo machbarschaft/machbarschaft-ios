@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,7 +27,7 @@
 		88BF97E824278B16005D8C23 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97E724278B16005D8C23 /* Icons.xcassets */; };
 		88BF97EA24278ED2005D8C23 /* LoginStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */; };
 		88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */; };
-		88BF97EF24279D0D005D8C23 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		88BF97EF24279D0D005D8C23 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		88BF97F12427A578005D8C23 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BF97F02427A578005D8C23 /* Colors.xcassets */; };
 		88BF97F32427A79D005D8C23 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F22427A79D005D8C23 /* JobsTableViewController.swift */; };
 		88BF97F62427A875005D8C23 /* SimplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF97F52427A875005D8C23 /* SimplePicker.swift */; };
@@ -42,8 +42,10 @@
 		88EA5656242762F60070B407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5655242762F60070B407 /* Assets.xcassets */; };
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
+		D50096A3245DD2010083F224 /* LoginStep1PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */; };
 		D5B9D570245A958E005A00CE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */; };
 		D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D571245AA07A005A00CE /* NoConnectionView.swift */; };
+		D5D7F0AC245EAC67002D3C53 /* PhoneNumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */; };
 		E1210C5224279E5300579C67 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1210C5124279E5300579C67 /* Job.swift */; };
 		E1B567002427D7DE008658D9 /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B566FF2427D7DE008658D9 /* JobService.swift */; };
 		E1D883202437C60D00AC3AD5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D8831F2437C60D00AC3AD5 /* SuperViewController.swift */; };
@@ -92,8 +94,10 @@
 		88EA565A242762F60070B407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8A35D0A378E669E70D2447EA /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep1PageViewController.swift; sourceTree = "<group>"; };
 		D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		D5B9D571245AA07A005A00CE /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
+		D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberUtils.swift; sourceTree = "<group>"; };
 		E1210C5124279E5300579C67 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		E17D8A47BBA44B4F9D4BB153 /* Pods-Machbarschaft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Machbarschaft.debug.xcconfig"; path = "Target Support Files/Pods-Machbarschaft/Pods-Machbarschaft.debug.xcconfig"; sourceTree = "<group>"; };
 		E1B566FF2427D7DE008658D9 /* JobService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
@@ -118,7 +122,6 @@
 				E17D8A47BBA44B4F9D4BB153 /* Pods-Machbarschaft.debug.xcconfig */,
 				59FD68C167CB7CA1E349B433 /* Pods-Machbarschaft.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +144,7 @@
 				88BF97E52427896C005D8C23 /* LoginStep1ViewController.swift */,
 				88BF97E924278ED2005D8C23 /* LoginStep2ViewController.swift */,
 				88BF97EB24278EE4005D8C23 /* LoginStep3ViewController.swift */,
+				D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -260,6 +264,7 @@
 				176EAB642427B55B005217CA /* GeoFunctions.swift */,
 				6153C60C242B7E020082CE9B /* Errors.swift */,
 				D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */,
+				D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -442,9 +447,11 @@
 				88082CEF24281BF800DFD022 /* JobStep1ViewController.swift in Sources */,
 				88EA564F242762F50070B407 /* SceneDelegate.swift in Sources */,
 				88BF97FF2427AECA005D8C23 /* AreaCode.swift in Sources */,
+				D5D7F0AC245EAC67002D3C53 /* PhoneNumberUtils.swift in Sources */,
 				88BF97FB2427AAFE005D8C23 /* Extensions.swift in Sources */,
+				D50096A3245DD2010083F224 /* LoginStep1PageViewController.swift in Sources */,
 				E1B567002427D7DE008658D9 /* JobService.swift in Sources */,
-				88BF97EF24279D0D005D8C23 /* BuildFile in Sources */,
+				88BF97EF24279D0D005D8C23 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

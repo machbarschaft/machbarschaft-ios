@@ -8,6 +8,7 @@
 
 "NoConnectionError" = "Ups! Bitte überprüfe deine Internetverbindung.";
 "PhoneNumberError" = "Ups! Bitte überprüfe deine Telefonnummer.";
+"RequestCodeError" = "Ups! Es scheint ein Problem beim Senden des Aktivierungscodes zu geben.";
 "CodeError" = "Ups! Dein eingegebener Code ist falsch.";
 "CodeLengthError" = "Der Code muss 6-stellig sein.";
 "FirstNameError" = "Bitte gebe deinen Vornamen ein.";
@@ -21,3 +22,9 @@
 "Today" = "noch heute";
 "Tomorrow" = "morgen";
 "NotUrgent" = "nicht dringend";
+
+// Error descriptions
+
+"AuthenticationErrorsFatal" = "Ein unerwarteter Fehler ist aufgetreten.";
+"AuthenticationErrorsFirebase" = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.";
+"DatabaseErrorsFirestore" = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut";

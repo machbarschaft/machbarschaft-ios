@@ -23,16 +23,19 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
     @IBOutlet weak var termsCheckbox: M13Checkbox!
     @IBOutlet weak var termsErrorLabel: UILabel!
     
-    //Passbase variable
-    //var passbaseCompleted:Bool = false
+    // Passbase variable
+    // var passbaseCompleted: Bool = false
     
     let accountService = AccountService()
+    
+    var userId: String?
+    var phoneNumber: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set the delegate object to self
-        //Passbase.delegate = self
+        // Set the delegate object to self
+        // Passbase.delegate = self
         
     }
     
@@ -43,17 +46,17 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
     /*Passbase stubs
     func didCompletePassbaseVerification(authenticationKey: String) {
         
-        //Change passbase variable
+        // Change passbase variable
         passbaseCompleted = true
         
-        //Write authentication Key to userdefaults
+        // Write authentication Key to userdefaults
         UserDefaults.standard.set(authenticationKey, forKey: "passbaseKey")
         
     }
     
     func didCancelPassbaseVerification() {
         
-        //Change passbase variable
+        // Change passbase variable
         passbaseCompleted = false
 
     }*/
@@ -63,57 +66,52 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
     }
     
     @IBAction func signup(_ sender: Any) {
-        
-        //Validation messages
-        if firstNameTextField.text!.isEmpty{
+        guard let phoneNumber = phoneNumber, let userId = userId else {
+            debugPrint("phoneNumber or userId is nil")
+            return
+        }
+        firstNameErrorLabel.text = ""
+        lastNameErrorLabel.text = ""
+        guard let firstName = firstNameTextField.text, !firstName.isEmpty else {
             firstNameErrorLabel.text = NSLocalizedString("FirstNameError", comment: "")
-        }else{
-            firstNameErrorLabel.text = ""
+            return
         }
-        
-        if lastNameTextField.text!.isEmpty{
+        guard let lastName = lastNameTextField.text, !lastName.isEmpty else {
             lastNameErrorLabel.text = NSLocalizedString("LastNameError", comment: "")
-        }else{
-            lastNameErrorLabel.text = ""
+            return
         }
         
-        /*if passbaseCompleted{
+        /*if passbaseCompleted {
             identErrorLabel.text = ""
-        }else{
+        } else {
             identErrorLabel.text = "Bitte vervollständige deine Identitätsverifizierung"
         }*/
         
-        //Validation
-        if !firstNameTextField.text!.isEmpty && !lastNameTextField.text!.isEmpty/* && passbaseCompleted*/{
+        // Validation
+//        if /* && passbaseCompleted*/ {
             
             //Add textfield data to user struct
-            let userInput = User(uid: UserDefaults.standard.string(forKey: "UID")!,
+            let userInput = User(uid: userId,
                                  //passbaseKey: UserDefaults.standard.string(forKey: "passbaseKey")!,
                                  credits: 0,
-                                 first_name: firstNameTextField.text!,
-                                 last_name: lastNameTextField.text!,
+                                 first_name: firstName,
+                                 last_name: lastName,
                                  radius: 0,
-                                 phone: UserDefaults.standard.string(forKey: "phone")!)
+                                 phone: phoneNumber)
             
-            //Create account
-            //TODO: Show loading circle
-            accountService.createAccount(user: userInput){ success in
-                
-                if success{
-                    
-                    self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
-                    
-                }else{
-                    
-                    //TODO: Create an own label
-                    self.termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
-                    
-                }
-                
-            }
-            
-        }
-        
+            // Create account
+            // TODO: - Show loading circle
+//            accountService.createAccount(user: userInput) { success in
+//                if success {
+//                    self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
+//                } else {
+//
+//                    // TODO: - Create an own label
+//                    self.termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
+//
+//                }
+//            }
+//        }
     }
     
     @IBAction func dismissVC(_ sender: Any) {

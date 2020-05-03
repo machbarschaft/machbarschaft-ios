@@ -24,6 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase initialization
         FirebaseApp.configure()
         
+        Firestore.firestore().collection("account").document("asdf").getDocument { (snapshot, error) in
+            switch error {
+            case is AuthenticationError:
+                debugPrint(error?.localizedDescription)
+            default:
+                debugPrint(error?.localizedDescription)
+            }
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                return
+            }
+            return
+        }
+        
         return true
     }
 

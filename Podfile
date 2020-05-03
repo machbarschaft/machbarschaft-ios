@@ -23,5 +23,6 @@ target 'Machbarschaft' do
   #pod 'Passbase', '~> 1.6.11'
 
   pod 'SwiftLint', '0.39.2'
+  pod 'PromiseKit', '6.13.1'
 
 end
