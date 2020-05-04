@@ -43,3 +43,6 @@
 
 /* Class = "UITextField"; placeholder = "Vorname"; ObjectID = "tYd-QA-8v7"; */
 "tYd-QA-8v7.placeholder" = "First name";
+
+/* Class = "UILabel"; text = "Please enter your verification code"; ObjectID = "i6w-g8-4ay"; */
+"i6w-g8-4ay.text" = "Please enter your verification code";
