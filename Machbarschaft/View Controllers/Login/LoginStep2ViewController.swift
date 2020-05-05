@@ -64,10 +64,6 @@ class LoginStep2ViewController: SuperViewController {
         }
     }
     
-    @IBAction func dismissVC(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     // MARK: - Private functions
     
     private func handleRequestNewCodeSuccess(_ verificationId: String) {
