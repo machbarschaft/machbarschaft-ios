@@ -45,25 +45,23 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
-        performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
-        // TODO: - remove comments
-//        guard let verificationId = self.verificationId,
-//            let code = codeTextField.text else {
-//                debugPrint("verificationId or codeTextField text is nil")
-//                return
-//        }
-//        if code.count == 6 {
-//            let credential = PhoneAuthProvider.provider().credential(
-//                withVerificationID: verificationId,
-//                verificationCode: code)
-//            accountService.signIn(with: credential)
-//                .then(handleSignInResult)
-//                .then(handleUser)
-//                .done(on: .main, handleSuccess)
-//                .recover(on: .main, handleFailure)
-//        } else {
-//            handleCodeCountError()
-//        }
+        guard let verificationId = self.verificationId,
+            let code = codeTextField.text else {
+                debugPrint("verificationId or codeTextField text is nil")
+                return
+        }
+        if code.count == 6 {
+            let credential = PhoneAuthProvider.provider().credential(
+                withVerificationID: verificationId,
+                verificationCode: code)
+            accountService.signIn(with: credential)
+                .then(handleSignInResult)
+                .then(handleUser)
+                .done(on: .main, handleSuccess)
+                .recover(on: .main, handleFailure)
+        } else {
+            handleCodeCountError()
+        }
     }
     
     // MARK: - Private functions
