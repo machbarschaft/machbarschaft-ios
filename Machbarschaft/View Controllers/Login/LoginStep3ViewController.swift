@@ -113,8 +113,4 @@ class LoginStep3ViewController: SuperViewController/*, PassbaseDelegate */{
 //            }
 //        }
     }
-    
-    @IBAction func dismissVC(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
 }

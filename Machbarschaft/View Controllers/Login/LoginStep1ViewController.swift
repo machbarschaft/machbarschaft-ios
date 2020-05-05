@@ -50,23 +50,25 @@ class LoginStep1ViewController: SuperViewController {
     }
     
     @IBAction func register(_ sender: Any) {
-        guard var phone = phoneNumberTextField.text else {
-            debugPrint("phoneNumberTextField text is nil")
-            return
-        }
-        if phone.hasPrefix("0") {
-            phone = String(phone.dropFirst())
-        }
-        phone = (areaCodeButton.titleLabel?.text?.nonEmpty ?? "+49") + phone
-        if PhoneNumberUtils.validatePhone(phone: phone) {
-            validatedPhone = phone
-            accountService.requestCode(phoneNumber: phone)
-                .done(on: .main, handleRequestCodeSuccess)
-                .recover(on: .main, handleRequestCodeFailure)
-        } else {
-            validatedPhone = nil
-            phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")
-        }
+        performSegue(withIdentifier: "LoginStep1_to_LoginStep2", sender: nil)
+        // TODO: - remove comments after done
+//        guard var phone = phoneNumberTextField.text else {
+//            debugPrint("phoneNumberTextField text is nil")
+//            return
+//        }
+//        if phone.hasPrefix("0") {
+//            phone = String(phone.dropFirst())
+//        }
+//        phone = (areaCodeButton.titleLabel?.text?.nonEmpty ?? "+49") + phone
+//        if PhoneNumberUtils.validatePhone(phone: phone) {
+//            validatedPhone = phone
+//            accountService.requestCode(phoneNumber: phone)
+//                .done(on: .main, handleRequestCodeSuccess)
+//                .recover(on: .main, handleRequestCodeFailure)
+//        } else {
+//            validatedPhone = nil
+//            phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")
+//        }
     }
     
     // MARK: - Private functions

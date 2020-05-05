@@ -14,12 +14,60 @@ class SuperViewController: UIViewController {
         super.viewDidLoad()
         setupKeyboard()
         setupTextFields()
+        configureNavigationBar()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
+    // NavigtaionBar setup
+    
+    private func configureNavigationBar() {
+        makeNavigtaionBarTrasparent()
+        changeBackButton()
+    }
+    
+    private func makeNavigtaionBarTrasparent() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+    }
+    
+    private func changeBackButton() {
+        guard let customBackButton = UIImage(systemName: "arrow.left") else {
+            debugPrint("SuperViewController configureNavigationBar customBackButton systemImage not found")
+            return
+        }
+        guard let customRepositionedBackButton = changeImagePosition(image: customBackButton, origin: CGPoint(x: 0, y: -1)) else {
+            debugPrint("SuperViewController changeBackButton custom button cant be repositioned")
+            return
+        }
+        self.navigationController?.navigationBar.backIndicatorImage = customRepositionedBackButton
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = customRepositionedBackButton
+        self.navigationItem.leftItemsSupplementBackButton = true
+    }
+    
+    private func changeImagePosition(image: UIImage, origin: CGPoint) -> UIImage? {
+        let size = image.size
+        UIGraphicsBeginImageContextWithOptions(size, false, 2)
+        image.draw(in: CGRect(x: origin.x, y: origin.y, width: size.width, height: size.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
+    // MAR: TextField setup
+    
+    private func setupTextFields() {
+        view.allSubviews.compactMap { $0 as? UITextField }.forEach {
+            $0.delegate = self
+        }
+    }
+    
+    // MARK: Keyboard setup
     
     private func setupKeyboard() {
         NotificationCenter.default.addObserver(self,
@@ -29,12 +77,6 @@ class SuperViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
-    }
-    
-    private func setupTextFields() {
-        view.allSubviews.compactMap { $0 as? UITextField }.forEach {
-            $0.delegate = self
-        }
     }
     
     @objc
