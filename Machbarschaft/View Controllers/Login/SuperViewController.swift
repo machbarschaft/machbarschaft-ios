@@ -38,13 +38,14 @@ class SuperViewController: UIViewController {
     
     private func changeBackButton() {
         guard let customBackButton = UIImage(systemName: "arrow.left") else {
-            debugPrint("SuperViewController configureNavigationBar customBackButton systemImage not found")
+            debugPrint("SuperViewController changeBackButton customBackButton systemImage not found")
             return
         }
         guard let customRepositionedBackButton = changeImagePosition(image: customBackButton, origin: CGPoint(x: 0, y: -1)) else {
             debugPrint("SuperViewController changeBackButton custom button cant be repositioned")
             return
         }
+        self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.backIndicatorImage = customRepositionedBackButton
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = customRepositionedBackButton
         self.navigationItem.leftItemsSupplementBackButton = true
