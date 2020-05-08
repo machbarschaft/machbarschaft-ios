@@ -55,4 +55,9 @@ extension LocationHelper: CLLocationManagerDelegate {
             self.locationResolver = nil
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        debugPrint("LocationHelper locationManager didFailWithError: \(error.localizedDescription)")
+        locationResolver?.reject(LocationHelperErrors.clError(clErrorDescription: error.localizedDescription, errorCode: error._code))
+    }
 }
