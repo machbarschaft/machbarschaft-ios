@@ -7,18 +7,13 @@
 //
 
 import UIKit
-//import Passbase
 import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        //Passbase initilaization
-        //Passbase.initialize(publishableApiKey: "3e27309be36f707c9fea64ef81f22d011ed52942952b9e96cb5e5eff7db2c13e")
-        
+
         ConnectionHandler.shared.startMonitoring()
 
         //Firebase initialization

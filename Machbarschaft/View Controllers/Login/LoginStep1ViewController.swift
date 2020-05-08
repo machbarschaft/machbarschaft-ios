@@ -63,6 +63,7 @@ class LoginStep1ViewController: SuperViewController {
             accountService.requestCode(phoneNumber: phone)
                 .done(on: .main, handleRequestCodeSuccess)
                 .recover(on: .main, handleRequestCodeFailure)
+                .catch(on: .main, handleRequestCodeFailure)
         } else {
             validatedPhone = nil
             phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")

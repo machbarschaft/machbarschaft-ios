@@ -8,9 +8,8 @@
 
 import Foundation
 
-public struct User{
+public struct User {
   var uid: String
-  //var passbaseKey: String
   var credits: Int
   var first_name: String
   var last_name: String
