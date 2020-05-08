@@ -23,10 +23,9 @@ class LocationHelper: NSObject {
     }
     
     private func setupLocationManager() {
-        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
     }
 }
 
