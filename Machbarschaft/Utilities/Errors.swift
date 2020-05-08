@@ -40,3 +40,9 @@ enum AuthenticationError: LocalizedError {
         }
     }
 }
+
+enum LocationHelperErrors: LocalizedError {
+    case locationIsNil
+    case clError(clErrorDescription: String, errorCode: Int)
+    case noPlacesFound
+}

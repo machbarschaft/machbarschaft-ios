@@ -46,3 +46,6 @@
 
 /* Class = "UILabel"; text = "Please enter your verification code"; ObjectID = "i6w-g8-4ay"; */
 "i6w-g8-4ay.text" = "Please enter your verification code";
+
+/* Class = "UITextField"; placeholder = "Adresse"; ObjectID = "5xv-fB-hQk"; */
+"5xv-fB-hQk.placeholder" = "Address";

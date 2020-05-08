@@ -13,9 +13,8 @@ import PromiseKit
 
 public class AccountService {
     
-    // Initialise Database
     let db = Firestore.firestore()
-
+    
     // Function to send a request code
     func requestCode(phoneNumber: String) -> Promise<String> {
         return Promise { resolver in
@@ -43,7 +42,7 @@ public class AccountService {
                 if let error = optionalError {
                     debugPrint("AccountService login error: \(error.localizedDescription)")
                     resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                       firebaseErrorCode: error._code))
+                                                                      firebaseErrorCode: error._code))
                     return
                 }
                 if let result = result {
@@ -65,11 +64,10 @@ public class AccountService {
                 if let error = optionalError {
                     debugPrint("Error updating user information: \(error)")
                     resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                       firebaseErrorCode: error._code))
+                                                                      firebaseErrorCode: error._code))
                     return
                 }
                 debugPrint("User information updated.")
-                debugPrint("User's name: " + Auth.auth().currentUser!.displayName!)
                 resolver.fulfill(())
             }
         }
@@ -79,6 +77,7 @@ public class AccountService {
         let settingsData = ["settings": ["notify_nearby_orders": "false"]]
         
         return Promise { resolver in
+            
             // create account document in database
             db.collection("account").document(user.uid).setData(settingsData) { optionalError in
                 if let error = optionalError {

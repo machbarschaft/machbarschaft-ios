@@ -9,6 +9,7 @@
 import UIKit
 import M13Checkbox
 import Firebase
+import CoreLocation
 
 class LoginStep3ViewController: SuperViewController {
     
@@ -16,13 +17,14 @@ class LoginStep3ViewController: SuperViewController {
     @IBOutlet weak var firstNameErrorLabel: UILabel!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var lastNameErrorLabel: UILabel!
-    @IBOutlet weak var identTextField: UITextField!
-    @IBOutlet weak var identErrorLabel: UILabel!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var addressErrorLabel: UILabel!
     
     @IBOutlet weak var termsCheckbox: M13Checkbox!
     @IBOutlet weak var termsErrorLabel: UILabel!
     
     let accountService = AccountService()
+    var locationHelper: LocationHelper?
     
     var userId: String?
     var phoneNumber: String?
@@ -31,12 +33,16 @@ class LoginStep3ViewController: SuperViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func showIdentInfo(_ sender: Any) {
-        
-    }
-    
     @IBAction func toggleTermsCheckbox() {
         termsCheckbox.toggleCheckState(true)
+    }
+    
+    @IBAction func getCurrentLocationAction(_ sender: Any) {
+        locationHelper = LocationHelper()
+        locationHelper?.getCurrentLocation()
+            .done(on: .main, handleGetCurrentLocationSuccess)
+            .recover(on: .main, handleGetCurrentLocationFailure)
+            .catch(on: .main, handleGetCurrentLocationFailure)
     }
     
     @IBAction func signup(_ sender: Any) {
@@ -46,6 +52,7 @@ class LoginStep3ViewController: SuperViewController {
         }
         firstNameErrorLabel.text = ""
         lastNameErrorLabel.text = ""
+        termsErrorLabel.text = ""
         guard let firstName = firstNameTextField.text, !firstName.isEmpty else {
             firstNameErrorLabel.text = NSLocalizedString("FirstNameError", comment: "")
             return
@@ -54,24 +61,22 @@ class LoginStep3ViewController: SuperViewController {
             lastNameErrorLabel.text = NSLocalizedString("LastNameError", comment: "")
             return
         }
-        
-        /*if passbaseCompleted {
-         identErrorLabel.text = ""
-         } else {
-         identErrorLabel.text = "Bitte vervollständige deine Identitätsverifizierung"
-         }*/
-        
-        // Validation
-        //        if /* && passbaseCompleted*/ {
+        guard let address = addressTextField.text, !address.isEmpty else {
+            addressErrorLabel.text = NSLocalizedString("AddressError", comment: "")
+            return
+        }
+        if termsCheckbox.checkState == .unchecked {
+            termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
+            return
+        }
         
         //Add textfield data to user struct
         let userInput = User(uid: userId,
-                             //passbaseKey: UserDefaults.standard.string(forKey: "passbaseKey")!,
-            credits: 0,
-            first_name: firstName,
-            last_name: lastName,
-            radius: 0,
-            phone: phoneNumber)
+                             credits: 0,
+                             first_name: firstName,
+                             last_name: lastName,
+                             radius: 0,
+                             phone: phoneNumber)
         
         // Create account
         // TODO: - Show loading circle
@@ -81,11 +86,28 @@ class LoginStep3ViewController: SuperViewController {
             .catch(on: .main, handleCreateAccountFailure)
     }
     
+    // MARK: - Private functions
+    
     private func handleCreateAccountSuccess() {
         self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
     }
     
     private func handleCreateAccountFailure(_ error: Error) {
         self.termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
+    }
+    
+    private func handleGetCurrentLocationSuccess(with location: CLPlacemark) {
+        let street = location.name ?? ""
+        let postalCode = location.postalCode ?? ""
+        let city = location.locality ?? ""
+        let country = location.country ?? ""
+        
+        addressTextField.text = "\(street) \(postalCode) \(city) \(country)"
+        locationHelper = nil
+    }
+    
+    private func handleGetCurrentLocationFailure(_ error: Error) {
+        debugPrint("LoginStep3ViewController handleGetCurrentLocationFailure error: \(error.localizedDescription)")
+        locationHelper = nil
     }
 }
