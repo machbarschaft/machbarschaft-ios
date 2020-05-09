@@ -79,7 +79,7 @@ class LoginStep3ViewController: SuperViewController {
                              phone: phoneNumber)
         
         // Create account
-        // TODO: - Show loading circle
+        showLoadingIndicator()
         accountService.createAccount(user: userInput)
             .done(on: .main, handleCreateAccountSuccess)
             .recover(on: .main, handleCreateAccountFailure)
@@ -89,10 +89,12 @@ class LoginStep3ViewController: SuperViewController {
     // MARK: - Private functions
     
     private func handleCreateAccountSuccess() {
+        hideLoadingIndicator()
         self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
     }
     
     private func handleCreateAccountFailure(_ error: Error) {
+        hideLoadingIndicator()
         self.termsErrorLabel.text = NSLocalizedString("TermsError", comment: "")
     }
     

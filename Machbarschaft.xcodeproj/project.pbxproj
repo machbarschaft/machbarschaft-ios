@@ -44,6 +44,7 @@
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
 		D50096A3245DD2010083F224 /* LoginStep1PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */; };
 		D503A40124657C1C0058690F /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503A40024657C1C0058690F /* LocationHelper.swift */; };
+		D5A375E124668AE90040428F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A375E024668AE90040428F /* LoadingView.swift */; };
 		D5B9D570245A958E005A00CE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */; };
 		D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D571245AA07A005A00CE /* NoConnectionView.swift */; };
 		D5D7F0AC245EAC67002D3C53 /* PhoneNumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */; };
@@ -98,6 +99,7 @@
 		D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep1PageViewController.swift; sourceTree = "<group>"; };
 		D503A40024657C1C0058690F /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		D559ED01245EC0ED00BE1F5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Login.strings; sourceTree = "<group>"; };
+		D5A375E024668AE90040428F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		D5B9D571245AA07A005A00CE /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
 		D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberUtils.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				88A50D1B24353DBA00048732 /* PrimaryButton.swift */,
 				88BF97F52427A875005D8C23 /* SimplePicker.swift */,
 				D5B9D571245AA07A005A00CE /* NoConnectionView.swift */,
+				D5A375E024668AE90040428F /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				88082CF5242827E500DFD022 /* JobCompletedViewController.swift in Sources */,
 				6153C60D242B7E020082CE9B /* Errors.swift in Sources */,
 				88EA5651242762F50070B407 /* MapViewController.swift in Sources */,
+				D5A375E124668AE90040428F /* LoadingView.swift in Sources */,
 				88082CF32428267F00DFD022 /* JobStep3ViewController.swift in Sources */,
 				88BF97EC24278EE4005D8C23 /* LoginStep3ViewController.swift in Sources */,
 				616BE9FA2427B7CB00F59B41 /* AccountService.swift in Sources */,
