@@ -9,13 +9,14 @@
 "NoConnectionError" = "Oops! Please check your internet connection.";
 "PhoneNumberError" = "Oops! Please check your telephone number.";
 "RequestCodeError" = "Oops! Something went wrong requesting your code.";
+"TermsError" = "Please accept the terms to use this app.";
+"AddressError" = "Please enter your address.";
 "RequestNewCodeSuccess" = "A new activation code was sent to you.";
 "RequestNewCodeFailure" = "There was an error requesting a new code.";
 "CodeError" = "Oops! You entered an invalid code.";
 "CodeLengthError" = "The code must be 6 digits.";
 "FirstNameError" = "Please enter your first name.";
 "LastNameError" = "Please enter your last name.";
-"TermsError" = "An error occurred while creating your account. Please try again.";
 "TaskLabel" = "Please talk to";
 "Medicine" = "Medicine";
 "Groceries" = "Groceries";

@@ -22,7 +22,7 @@ class SuperViewController: UIViewController {
         view.endEditing(true)
     }
     
-    // NavigtaionBar setup
+    // MARK: NavigtaionBar setup
     
     private func configureNavigationBar() {
         makeNavigtaionBarTrasparent()
@@ -60,7 +60,7 @@ class SuperViewController: UIViewController {
         return newImage
     }
     
-    // MAR: TextField setup
+    // MARK: TextField setup
     
     private func setupTextFields() {
         view.allSubviews.compactMap { $0 as? UITextField }.forEach {
@@ -92,12 +92,16 @@ class SuperViewController: UIViewController {
             maxY > (screenHeight - keyboardHeight) else {
                 return
         }
-        self.view.frame.origin.y = -keyboardHeight // move view up when keyboard shows up
+        
+        // move view up when keyboard shows up
+        self.view.frame.origin.y = -keyboardHeight
     }
     
     @objc
     private func keyboardWillHide() {
-        self.view.frame.origin.y = 0 // move view back down when keyboard hides
+        
+        // move view back down when keyboard hides
+        self.view.frame.origin.y = 0
     }
 }
 

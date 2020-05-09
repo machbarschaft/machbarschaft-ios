@@ -42,6 +42,7 @@ class LoginStep2ViewController: SuperViewController {
         accountService.requestCode(phoneNumber: phone)
             .done(on: .main, {_ in debugPrint("New code requested succeed")})
             .recover(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
+            .catch(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
     }
     
     @IBAction func confirm(_ sender: Any) {
@@ -59,6 +60,7 @@ class LoginStep2ViewController: SuperViewController {
                 .then(handleUser)
                 .done(on: .main, handleSuccess)
                 .recover(on: .main, handleFailure)
+                .catch(on: . main, handleFailure)
         } else {
             handleCodeCountError()
         }

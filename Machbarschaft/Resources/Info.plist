@@ -34,7 +34,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Wir benötigen deine Kamera, um deine Identität zu verifizieren.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Wir benötigen deinen Standort um für dich relevante Einträge anzeigen zu können.</string>
+	<string>Wir benötigen deinen Standort um für dich relevante Einträge anzeigen und deine Adresse automatisch ausfüllen zu können.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Wir benötigen Zugriff zu deiner Foto Bibliothek, um deine Identität zu verifizieren.</string>
 	<key>UIApplicationSceneManifest</key>

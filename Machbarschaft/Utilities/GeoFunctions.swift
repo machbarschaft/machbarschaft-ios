@@ -10,11 +10,11 @@ import Foundation
 import CoreLocation
 
 struct GeoBounds {
-    let center : CLLocationCoordinate2D
-    let leftBound : CLLocationCoordinate2D
-    let rightBound : CLLocationCoordinate2D
-    let upperBound : CLLocationCoordinate2D
-    let lowerBound : CLLocationCoordinate2D
+    let center: CLLocationCoordinate2D
+    let leftBound: CLLocationCoordinate2D
+    let rightBound: CLLocationCoordinate2D
+    let upperBound: CLLocationCoordinate2D
+    let lowerBound: CLLocationCoordinate2D
 }
 
 // Distance in Kilometer
@@ -35,7 +35,7 @@ func getDistance(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> In
     return distance
 }
 
-fileprivate func calculateCoordinations(midCoordinate: CLLocationCoordinate2D, distance: Double, heading: Double) -> CLLocationCoordinate2D {
+private func calculateCoordinations(midCoordinate: CLLocationCoordinate2D, distance: Double, heading: Double) -> CLLocationCoordinate2D {
     let earthR = 6378.14
     // Degree to Radian
     let latitude1 = deg2rad(deg: Double(midCoordinate.latitude))
@@ -43,16 +43,14 @@ fileprivate func calculateCoordinations(midCoordinate: CLLocationCoordinate2D, d
     let bearing = heading * Double.pi / 180
     
     let latitude2 = asin(sin(latitude1) * cos(distance/earthR) + cos(latitude1) * sin(distance/earthR) * cos(bearing))
-    let longitude2 = longitude1 + atan2(sin(bearing) * sin(distance/earthR) * cos(latitude1) , cos(distance/earthR) - sin(latitude1) * sin(latitude2))
+    let longitude2 = longitude1 + atan2(sin(bearing) * sin(distance/earthR) * cos(latitude1), cos(distance/earthR) - sin(latitude1) * sin(latitude2))
     return CLLocationCoordinate2D(latitude: ((180 / Double.pi) * latitude2), longitude: ((180 / Double.pi) * longitude2))
 }
 
-
-fileprivate func deg2rad(deg:Double) -> Double {
+private func deg2rad(deg: Double) -> Double {
     return deg * Double.pi / 180
 }
 
-fileprivate func rad2deg(rad:Double) -> Double {
+private func rad2deg(rad: Double) -> Double {
     return rad * 180.0 / Double.pi
 }
-

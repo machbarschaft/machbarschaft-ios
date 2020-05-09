@@ -43,7 +43,7 @@ class LoginStep1ViewController: SuperViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        
+            
         // TODO: - validations here
         // TODO: - what should be validated? The phone number?
         performSegue(withIdentifier: "LoginStep1_to_Map", sender: nil)
@@ -63,6 +63,7 @@ class LoginStep1ViewController: SuperViewController {
             accountService.requestCode(phoneNumber: phone)
                 .done(on: .main, handleRequestCodeSuccess)
                 .recover(on: .main, handleRequestCodeFailure)
+                .catch(on: .main, handleRequestCodeFailure)
         } else {
             validatedPhone = nil
             phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")

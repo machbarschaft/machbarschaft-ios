@@ -43,6 +43,7 @@
 		88EA5659242762F60070B407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA5657242762F60070B407 /* LaunchScreen.storyboard */; };
 		88EA56622427640B0070B407 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88EA56602427640B0070B407 /* Login.storyboard */; };
 		D50096A3245DD2010083F224 /* LoginStep1PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */; };
+		D503A40124657C1C0058690F /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503A40024657C1C0058690F /* LocationHelper.swift */; };
 		D5B9D570245A958E005A00CE /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */; };
 		D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B9D571245AA07A005A00CE /* NoConnectionView.swift */; };
 		D5D7F0AC245EAC67002D3C53 /* PhoneNumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */; };
@@ -95,6 +96,7 @@
 		88EA56612427640B0070B407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		8A35D0A378E669E70D2447EA /* Pods_Machbarschaft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Machbarschaft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50096A2245DD2010083F224 /* LoginStep1PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStep1PageViewController.swift; sourceTree = "<group>"; };
+		D503A40024657C1C0058690F /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		D559ED01245EC0ED00BE1F5D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Login.strings; sourceTree = "<group>"; };
 		D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		D5B9D571245AA07A005A00CE /* NoConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				6153C60C242B7E020082CE9B /* Errors.swift */,
 				D5B9D56F245A958E005A00CE /* ConnectionHandler.swift */,
 				D5D7F0AB245EAC67002D3C53 /* PhoneNumberUtils.swift */,
+				D503A40024657C1C0058690F /* LocationHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				88082CEC24281B9300DFD022 /* JobSummaryViewController.swift in Sources */,
 				88EA564D242762F50070B407 /* AppDelegate.swift in Sources */,
 				88A50D1E24353DBA00048732 /* Button.swift in Sources */,
+				D503A40124657C1C0058690F /* LocationHelper.swift in Sources */,
 				616BE9FC2427E32600F59B41 /* User.swift in Sources */,
 				D5B9D572245AA07A005A00CE /* NoConnectionView.swift in Sources */,
 				88A50D1D24353DBA00048732 /* PrimaryButton.swift in Sources */,
@@ -629,6 +633,7 @@
 			baseConfigurationReference = E17D8A47BBA44B4F9D4BB153 /* Pods-Machbarschaft.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Machbarschaft/Resources/Info.plist";
@@ -639,6 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.machbarschaft-ios.Machbarschaft";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -649,6 +655,7 @@
 			baseConfigurationReference = 59FD68C167CB7CA1E349B433 /* Pods-Machbarschaft.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Machbarschaft/Resources/Info.plist";
@@ -659,6 +666,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.machbarschaft-ios.Machbarschaft";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
