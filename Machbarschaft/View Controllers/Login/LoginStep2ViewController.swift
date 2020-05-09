@@ -39,10 +39,23 @@ class LoginStep2ViewController: SuperViewController {
             debugPrint("Phone number not set")
             return
         }
+        showLoadingIndicator()
         accountService.requestCode(phoneNumber: phone)
-            .done(on: .main, {_ in debugPrint("New code requested succeed")})
-            .recover(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
-            .catch(on: .main, {debugPrint("Error requesting new code: \($0.localizedDescription)")})
+            .done(on: .main, handleRequestCodeSuccess)
+            .recover(on: .main, handleRequestCodeFailure)
+            .catch(on: .main, handleRequestCodeFailure)
+    }
+    
+    private func handleRequestCodeSuccess(_ code: String) {
+        hideLoadingIndicator()
+        debugPrint("New code requested succeed")
+        codeErrorLabel.text = NSLocalizedString("RequestNewCodeSuccess", comment: "")
+    }
+    
+    private func handleRequestCodeFailure(_ error: Error) {
+        hideLoadingIndicator()
+        debugPrint("Error requesting new code: \(error.localizedDescription)")
+        codeErrorLabel.text = NSLocalizedString("RequestNewCodeFailure", comment: "")
     }
     
     @IBAction func confirm(_ sender: Any) {
@@ -55,6 +68,7 @@ class LoginStep2ViewController: SuperViewController {
             let credential = PhoneAuthProvider.provider().credential(
                 withVerificationID: verificationId,
                 verificationCode: code)
+            showLoadingIndicator()
             accountService.signIn(with: credential)
                 .then(handleSignInResult)
                 .then(handleUser)
@@ -97,6 +111,7 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     private func handleSuccess(for documentId: String) {
+        hideLoadingIndicator()
         self.codeErrorLabel.text = ""
         if documentId.isEmpty {
             self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
@@ -110,6 +125,7 @@ class LoginStep2ViewController: SuperViewController {
     }
     
     private func handleFailure(_ error: Error) {
+        hideLoadingIndicator()
         debugPrint(error.localizedDescription)
         switch error {
         case is AuthenticationError:

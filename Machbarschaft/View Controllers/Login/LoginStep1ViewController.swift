@@ -31,12 +31,13 @@ class LoginStep1ViewController: SuperViewController {
     }
     
     @IBAction func selectAreaCode(_ button: UIButton) {
-        //Initilize prefix picker
+        
+        // Initilize prefix picker
         guard let areaCodes = [AreaCode].parse(jsonFile: "area-codes")?.removingDuplicates() else { return }
         var picker = SimplePicker(data: areaCodes.compactMap { $0.dialCode }.sorted(), presenter: self)
         picker.options.initialItem = button.titleLabel?.text ?? "+49"
         
-        //Show picker
+        // Show picker
         picker.show(anchor: button) {
             button.setTitle($1, for: .normal)
         }
@@ -60,6 +61,7 @@ class LoginStep1ViewController: SuperViewController {
         phone = (areaCodeButton.titleLabel?.text?.nonEmpty ?? "+49") + phone
         if PhoneNumberUtils.validatePhone(phone: phone) {
             validatedPhone = phone
+            showLoadingIndicator()
             accountService.requestCode(phoneNumber: phone)
                 .done(on: .main, handleRequestCodeSuccess)
                 .recover(on: .main, handleRequestCodeFailure)
@@ -73,12 +75,14 @@ class LoginStep1ViewController: SuperViewController {
     // MARK: - Private functions
     
     private func handleRequestCodeSuccess(_ verificationId: String) {
+        hideLoadingIndicator()
         self.verificationId = verificationId
         phoneNumberErrorLabel.text = ""
         performSegue(withIdentifier: "LoginStep1_to_LoginStep2", sender: nil)
     }
     
     private func handleRequestCodeFailure(_ error: Error) {
+        hideLoadingIndicator()
         validatedPhone = nil
         verificationId = nil
         debugPrint(error.localizedDescription)
