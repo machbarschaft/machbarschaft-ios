@@ -153,6 +153,19 @@ extension UIViewController {
         child.view.removeFromSuperview()
         child.removeFromParent()
     }
+    
+    func showLoadingIndicator() {
+        let loadingView = LoadingView(frame: self.view.frame)
+        self.view.addSubview(loadingView)
+    }
+    
+    func hideLoadingIndicator() {
+        self.view.subviews.forEach {
+            if $0.isKind(of: LoadingView.self) {
+                $0.removeFromSuperview()
+            }
+        }
+    }
 }
 
 public func viewController(withID id: String, from storyboardID: String = "Main") -> UIViewController {
