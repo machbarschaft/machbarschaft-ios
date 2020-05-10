@@ -22,19 +22,6 @@ class SuperViewController: UIViewController {
         view.endEditing(true)
     }
     
-    func showLoadingIndicator() {
-        let loadingView = LoadingView(frame: self.view.frame)
-        self.view.addSubview(loadingView)
-    }
-    
-    func hideLoadingIndicator() {
-        self.view.subviews.forEach {
-            if $0.isKind(of: LoadingView.self) {
-                $0.removeFromSuperview()
-            }
-        }
-    }
-    
     // MARK: NavigtaionBar setup
     
     private func configureNavigationBar() {
