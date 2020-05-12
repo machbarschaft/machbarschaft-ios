@@ -30,7 +30,7 @@ class JobStep3ViewController: UIViewController {
     }
     
     @IBAction func getRoute(_ sender: Any) {
-        
+        // TODO - get the route to the client
     }
     
     @IBAction func callNow(_ sender: Any) {
@@ -39,6 +39,7 @@ class JobStep3ViewController: UIViewController {
     }
     
     @IBAction func completeJob(_ sender: Any) {
+        // TODO - set job completed?
         performSegue(withIdentifier: "JobStep3_to_JobCompleted", sender: nil)
     }
 }

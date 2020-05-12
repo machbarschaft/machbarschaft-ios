@@ -116,10 +116,7 @@ class LoginStep2ViewController: SuperViewController {
         if documentId.isEmpty {
             self.performSegue(withIdentifier: "LoginStep2_to_LoginStep3", sender: nil)
         } else {
-            
-            // Complete Account exists
-            // TODO: - UserDefaults where do we need it again?
-            UserDefaults.standard.set(documentId, forKey: "docID")
+            UserDefaults.standard.set(true, forKey: "userLoggedIn")
             performSegue(withIdentifier: "LoginStep2_to_Map", sender: nil)
         }
     }

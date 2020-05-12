@@ -90,6 +90,7 @@ class LoginStep3ViewController: SuperViewController {
     
     private func handleCreateAccountSuccess() {
         hideLoadingIndicator()
+        UserDefaults.standard.set(true, forKey: "userLoggedIn")
         self.performSegue(withIdentifier: "LoginStep3_to_Map", sender: nil)
     }
     

@@ -489,7 +489,7 @@
         <!--Navigation Controller-->
         <scene sceneID="H2j-IY-8iA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cTi-qb-Hmy" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cTi-qb-Hmy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ceA-dD-jhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -567,7 +567,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tVP-bT-bXQ"/>
+        <segue reference="gSb-eg-wzG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo-Black-RGB-neg-RZ" width="842" height="384"/>

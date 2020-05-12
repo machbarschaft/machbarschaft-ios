@@ -213,3 +213,13 @@ extension UIButton {
         setTitleColor(titleColor, for: .normal)
     }
 }
+
+extension UINavigationController {
+    func popAllPreviousViewControllers() {
+        guard let topMostViewController = self.viewControllers.last else {
+            return
+        }
+        self.viewControllers.removeAll()
+        self.viewControllers = [topMostViewController]
+    }
+}
