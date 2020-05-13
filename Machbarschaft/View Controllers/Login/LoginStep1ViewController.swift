@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginStep1ViewController: SuperViewController {
     
@@ -44,13 +45,22 @@ class LoginStep1ViewController: SuperViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-            
-        // TODO: - validations here
-        // TODO: - what should be validated? The phone number?
-        performSegue(withIdentifier: "LoginStep1_to_Map", sender: nil)
+        if Auth.auth().currentUser == nil {
+            registerUser()
+        } else {
+            debugPrint("LoginStep1ViewController login user was already logged in on this device")
+            UserDefaults.standard.set(true, forKey: "userLoggedIn")
+            performSegue(withIdentifier: "LoginStep1_to_Map", sender: nil)
+        }
     }
     
     @IBAction func register(_ sender: Any) {
+        registerUser()
+    }
+    
+    // MARK: - Private functions
+    
+    private func registerUser() {
         guard var phone = phoneNumberTextField.text else {
             debugPrint("phoneNumberTextField text is nil")
             return
@@ -71,8 +81,6 @@ class LoginStep1ViewController: SuperViewController {
             phoneNumberErrorLabel.text = NSLocalizedString("PhoneNumberError", comment: "")
         }
     }
-    
-    // MARK: - Private functions
     
     private func handleRequestCodeSuccess(_ verificationId: String) {
         hideLoadingIndicator()

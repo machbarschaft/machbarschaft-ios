@@ -25,11 +25,11 @@ class JobStep2ViewController: UIViewController {
     }
     
     @IBAction func leavingLater(_ sender: Any) {
-        
+        // TODO
     }
     
     @IBAction func couldntReachAnyone(_ sender: Any) {
-        
+        // TODO
     }
     
     @IBAction func callNow(_ sender: Any) {

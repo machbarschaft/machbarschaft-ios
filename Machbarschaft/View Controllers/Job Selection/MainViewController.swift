@@ -22,7 +22,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.popAllPreviousViewControllers()
         overlayController.delegate = self
         overlayController.viewControllers = [jobTableViewController!]
         addChild(overlayController, in: view)
