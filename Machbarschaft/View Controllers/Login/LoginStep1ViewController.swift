@@ -94,6 +94,8 @@ class LoginStep1ViewController: SuperViewController {
         validatedPhone = nil
         verificationId = nil
         debugPrint(error.localizedDescription)
+        let alert = UIAlertController(title: "error occured", message: error.localizedDescription, preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
         phoneNumberErrorLabel.text = NSLocalizedString("RequestCodeError", comment: "Something went wrong while requesting the code.")
     }
 }
