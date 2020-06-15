@@ -42,8 +42,9 @@ public class AccountService {
             Auth.auth().signIn(with: credential) { (result, optionalError) in
                 if let error = optionalError {
                     debugPrint("AccountService login error: \(error.localizedDescription)")
-                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                      firebaseErrorCode: error._code))
+                    resolver.reject(error)
+//                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
+//                                                                      firebaseErrorCode: error._code))
                     return
                 }
                 if let result = result {
@@ -64,8 +65,9 @@ public class AccountService {
             changeRequest?.commitChanges { optionalError in
                 if let error = optionalError {
                     debugPrint("Error updating user information: \(error)")
-                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                      firebaseErrorCode: error._code))
+//                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
+//                                                                      firebaseErrorCode: error._code))
+                    resolver.reject(error)
                     return
                 }
                 debugPrint("User information updated.")
@@ -83,8 +85,9 @@ public class AccountService {
             db.collection("account").document(user.uid).setData(settingsData) { optionalError in
                 if let error = optionalError {
                     debugPrint("Error creating account document: \(error)")
-                    resolver.reject(DatabaseError.firestoreError(firestoreErrorDescription: error.localizedDescription,
-                                                                 firestoreErrorCode: error._code))
+//                    resolver.reject(DatabaseError.firestoreError(firestoreErrorDescription: error.localizedDescription,
+//                                                                 firestoreErrorCode: error._code))
+                    resolver.reject(error)
                     return
                 }
                 resolver.fulfill(user)
@@ -101,8 +104,9 @@ public class AccountService {
             query.getDocument { (document, optionalError) in
                 if let error = optionalError {
                     debugPrint("Error getting document: \(error)")
-                    resolver.reject(DatabaseError.firestoreError(firestoreErrorDescription: error.localizedDescription,
-                                                                 firestoreErrorCode: error._code))
+//                    resolver.reject(DatabaseError.firestoreError(firestoreErrorDescription: error.localizedDescription,
+//                                                                 firestoreErrorCode: error._code))
+                    resolver.reject(error)
                     return
                 }
                 
