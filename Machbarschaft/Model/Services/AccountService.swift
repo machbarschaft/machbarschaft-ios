@@ -20,8 +20,9 @@ public class AccountService {
         return Promise { resolver in
             PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationId, error) in
                 if let error = error {
-                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
-                                                                      firebaseErrorCode: error._code))
+//                    resolver.reject(AuthenticationError.firebaseError(firebaseErrorDescription: error.localizedDescription,
+//                                                                      firebaseErrorCode: error._code))
+                    resolver.reject(error)
                 } else if let id = verificationId {
                     resolver.fulfill(id)
                 } else {

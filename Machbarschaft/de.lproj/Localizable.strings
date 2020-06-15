@@ -28,6 +28,6 @@
 
 // Error descriptions
 
-"AuthenticationErrorsFatal" = "Ein unerwarteter Fehler ist aufgetreten.";
+"AuthenticationErrorsFatal" = "Ein unerwarteter Fehler ist aufgetreten. VerifcationId is nil";
 "AuthenticationErrorsFirebase" = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.";
 "DatabaseErrorsFirestore" = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut";
